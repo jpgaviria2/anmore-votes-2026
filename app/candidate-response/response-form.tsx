@@ -1,7 +1,6 @@
 "use client";
 
 import { FormEvent, useMemo, useState } from "react";
-import Link from "next/link";
 import { candidates, questions, schoolTrusteeQuestions } from "../data";
 
 export function CandidateResponseForm() {
@@ -35,8 +34,11 @@ export function CandidateResponseForm() {
     <main className="form-page">
       <div className="election-strip"><span>Candidate participation is voluntary</span><strong>Submissions are reviewed before publication</strong></div>
       <header className="site-header shell">
-        <Link className="brand" href="/"><span className="brand-mark">A</span><span>Anmore Votes <b>2026</b></span></Link>
-        <Link className="button secondary" href="/">Return to voter guide</Link>
+        {/* Plain anchors keep this shared component compatible with the Hostinger static build. */}
+        {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+        <a className="brand" href="/"><span className="brand-mark">A</span><span>Anmore Votes <b>2026</b></span></a>
+        {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+        <a className="button secondary" href="/">Return to voter guide</a>
       </header>
       <section className="form-header shell">
         <p className="eyebrow">Candidate submission</p>

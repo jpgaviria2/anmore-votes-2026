@@ -8,9 +8,10 @@
   "scripts": {
     "dev": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext dev",
     "build": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext build",
+    "build:hostinger": "vite build --config hostinger/vite.config.ts && cp hostinger/public/.htaccess hostinger-dist/.htaccess && cp -R hostinger/public/api hostinger-dist/api",
     "start": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext start",
     "test": "npm run build && node --test tests/rendered-html.test.mjs",
-    "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
+    "lint": "eslint . --ignore-pattern dist --ignore-pattern .next --ignore-pattern hostinger-dist",
     "db:generate": "drizzle-kit generate"
   },
   "dependencies": {

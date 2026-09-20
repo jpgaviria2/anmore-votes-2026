@@ -1,7 +1,6 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import Link from "next/link";
 import { candidates, questions } from "./data";
 
 const groups = ["Mayor", "Councillor", "School Trustee"] as const;
@@ -113,7 +112,7 @@ export function VoterGuide() {
         ))}
         <div className="candidate-invite">
           <div><p className="eyebrow">Are you a candidate?</p><h3>Add your own biography and answers.</h3><p>Submissions are verified and reviewed before publication. Nothing is posted automatically.</p></div>
-          <Link className="button light" href="/candidate-response">Submit candidate information</Link>
+          <a className="button light" href="/candidate-response/">Submit candidate information</a>
         </div>
       </section>
 

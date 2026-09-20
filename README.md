@@ -23,6 +23,21 @@ npm run dev
 
 The application uses a Cloudflare D1 binding named `DB` for private community-question and candidate-submission moderation queues.
 
+## Hostinger deployment
+
+The repository also includes a Hostinger-native build for the production
+`anmore.me` shared-hosting account:
+
+```bash
+npm run build:hostinger
+```
+
+This produces the static frontend and PHP form endpoints in
+`hostinger-dist/`. The PHP endpoints store pending submissions in a private
+SQLite database outside `public_html`; submissions never publish automatically.
+The `hostinger/private/` directory must be deployed beside `public_html`, not
+inside it.
+
 ## Validation
 
 ```bash
