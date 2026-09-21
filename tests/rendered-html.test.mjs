@@ -25,6 +25,10 @@ test("contains the complete neutral voter guide", async () => {
   const growthPosition = data.indexOf("What is your position on housing growth");
   const recreationPosition = data.indexOf("How will you support community recreation");
   assert.ok(residencyPosition < prioritiesPosition && prioritiesPosition < growthPosition && growthPosition < recreationPosition);
+  const questionBlock = data.match(/export const questions = \[([\s\S]*?)\];/);
+  assert.ok(questionBlock);
+  assert.equal((questionBlock[1].match(/^  "/gm) || []).length, 9);
+  assert.doesNotMatch(questionBlock[1], /drinking-water resilience|wildfire prevention|protect forests|Metro Vancouver/);
   assert.match(data, /Doug Richardson/);
   assert.match(data, /Kerri Palmer Isaak/);
   assert.doesNotMatch(data, /schoolTrusteeQuestions/);
@@ -73,6 +77,11 @@ test("provides a neutral reply-ready candidate email campaign", async () => {
   assert.match(html, /We do not endorse, rank, score, or recommend candidates/);
   assert.match(html, /mailto:election@anmore\.me/);
   assert.match(html, /final profile proof for approval/);
+  const emailQuestionBlock = html.match(/<ol[^>]*>([\s\S]*?)<\/ol>/);
+  assert.ok(emailQuestionBlock);
+  assert.equal((emailQuestionBlock[1].match(/<li /g) || []).length, 9);
+  assert.match(html + plain, /Residents may also submit additional community questions/);
+  assert.doesNotMatch(html + plain, /drinking-water resilience|wildfire prevention|protect forests|Metro Vancouver/);
   assert.doesNotMatch(html, /<form|tracking|pixel|<img/i);
   assert.match(plain, /COMMON CANDIDATE QUESTIONS/);
   assert.match(plain, /Nothing is published automatically/);

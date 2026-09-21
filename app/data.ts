@@ -62,12 +62,8 @@ export const questions = [
   "What is your position on housing growth and the upcoming Official Community Plan process?",
   "How will you support community recreation in Anmore, including Spirit Park development, year-round recreation activities, and community-led projects such as a pump track?",
   "How should Anmore balance property taxes, service levels, reserves, and long-term infrastructure costs?",
-  "What should the Village do about drinking-water resilience, stormwater, septic constraints, and future infrastructure capacity?",
-  "What specific wildfire prevention, evacuation, and emergency-readiness improvements would you support?",
   "How would you address traffic, road safety, transit, visitor pressure, and parking around regional destinations?",
-  "How should Anmore protect forests, waterways, trails, and biodiversity while accommodating legally required housing?",
   "What changes would you make to public consultation, meeting transparency, records, and resident communications?",
-  "How would you work with Metro Vancouver, Port Moody, Belcarra, SD43, the Province, and local First Nations?",
   "What experience best prepares you to govern, and where would you seek outside expertise?",
   "What potential conflicts of interest would you proactively disclose or recuse yourself from?",
 ];
