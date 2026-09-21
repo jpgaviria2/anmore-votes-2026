@@ -54,3 +54,27 @@ test("uses email-only candidate and community intake", async () => {
   assert.doesNotMatch(hostingerQuestionRoute + hostingerCandidateRoute, /store_submission|notify_candidate_submission/);
   await access(new URL("dist/server/index.js", root));
 });
+
+test("provides a neutral reply-ready candidate email campaign", async () => {
+  const [html, plain, campaign] = await Promise.all([
+    readFile(new URL("communications/candidate-invitation.html", root), "utf8"),
+    readFile(new URL("communications/candidate-invitation.txt", root), "utf8"),
+    readFile(new URL("communications/candidate-invitation.json", root), "utf8"),
+  ]);
+  const metadata = JSON.parse(campaign);
+  assert.equal(metadata.from, "election@anmore.me");
+  assert.equal(metadata.replyTo, "election@anmore.me");
+  assert.equal(metadata.delivery.mode, "individual");
+  assert.equal(metadata.delivery.excludeSchoolTrustee, true);
+  assert.equal(metadata.delivery.requireOfficialRegistrationEmail, true);
+  assert.equal(metadata.delivery.sendAutomatically, false);
+  assert.match(html, /Hello \{\{candidate_name\}\}/);
+  assert.match(html, /Reply directly to this email/);
+  assert.match(html, /We do not endorse, rank, score, or recommend candidates/);
+  assert.match(html, /mailto:election@anmore\.me/);
+  assert.match(html, /final profile proof for approval/);
+  assert.doesNotMatch(html, /<form|tracking|pixel|<img/i);
+  assert.match(plain, /COMMON CANDIDATE QUESTIONS/);
+  assert.match(plain, /Nothing is published automatically/);
+  assert.doesNotMatch(html + plain, /school trustee questionnaire/i);
+});

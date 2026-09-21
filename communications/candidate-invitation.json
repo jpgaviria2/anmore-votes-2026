@@ -1,0 +1,16 @@
+{
+  "campaign": "anmore-votes-2026-candidate-invitation",
+  "senderName": "Anmore Votes 2026",
+  "from": "election@anmore.me",
+  "replyTo": "election@anmore.me",
+  "subject": "Invitation to participate in Anmore Votes 2026",
+  "htmlTemplate": "candidate-invitation.html",
+  "textTemplate": "candidate-invitation.txt",
+  "mergeFields": ["candidate_name"],
+  "delivery": {
+    "mode": "individual",
+    "excludeSchoolTrustee": true,
+    "requireOfficialRegistrationEmail": true,
+    "sendAutomatically": false
+  }
+}
