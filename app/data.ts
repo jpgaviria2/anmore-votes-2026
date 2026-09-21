@@ -71,18 +71,3 @@ export const questions = [
   "What experience best prepares you to govern, and where would you seek outside expertise?",
   "What potential conflicts of interest would you proactively disclose or recuse yourself from?",
 ];
-
-export const schoolTrusteeQuestions = [
-  "What are your three measurable priorities for students and families in Anmore and Belcarra?",
-  "How would you improve student achievement and reduce gaps in outcomes?",
-  "What changes would you support for inclusive education, special education, and student mental-health services?",
-  "How should SD43 plan for enrolment, school capacity, seismic safety, and facility renewal?",
-  "How would you balance classroom priorities, staffing, and fiscal responsibility in the district budget?",
-  "What should SD43 do to improve school safety, emergency readiness, and student well-being?",
-  "How will you ensure Anmore and Belcarra families are heard within a large school district?",
-  "How should the board improve public consultation, transparency, and accountability?",
-  "What is the appropriate role of technology, digital literacy, and artificial intelligence in schools?",
-  "How would you work with Indigenous communities to advance reconciliation and student success?",
-  "What experience best prepares you to govern, and where would you seek outside expertise?",
-  "What potential conflicts of interest would you proactively disclose or recuse yourself from?",
-];

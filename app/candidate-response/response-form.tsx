@@ -1,4 +1,4 @@
-import { questions, schoolTrusteeQuestions } from "../data";
+import { questions } from "../data";
 
 export function CandidateResponseForm() {
   return (
@@ -35,12 +35,6 @@ export function CandidateResponseForm() {
           <legend>Council questionnaire</legend>
           <ol className="question-list">
             {questions.map((question, index) => <li key={question}><span>{String(index + 1).padStart(2, "0")}</span><p>{question}</p></li>)}
-          </ol>
-        </fieldset>
-        <fieldset>
-          <legend>School trustee questionnaire</legend>
-          <ol className="question-list">
-            {schoolTrusteeQuestions.map((question, index) => <li key={question}><span>{String(index + 1).padStart(2, "0")}</span><p>{question}</p></li>)}
           </ol>
         </fieldset>
         <a className="button primary" href="mailto:election@anmore.me?subject=Candidate%20information%20for%20Anmore%20Votes%202026">Email election@anmore.me</a>

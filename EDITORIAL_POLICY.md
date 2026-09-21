@@ -8,7 +8,7 @@ Anmore Votes 2026 helps residents make an informed voting decision by presenting
 
 - Candidates appear alphabetically within each office.
 - Every candidate receives the same invitation, questions, word limits, deadlines, and reminders.
-- Non-response is displayed neutrally as “No questionnaire response published yet.”
+- Council candidate non-response is displayed neutrally as “No questionnaire response published yet.” No school trustee questionnaire is requested because there is only one registered candidate.
 - The project does not endorse, score, rank, or recommend candidates.
 
 ## Candidate submissions

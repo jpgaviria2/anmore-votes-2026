@@ -14,6 +14,7 @@ test("contains the complete neutral voter guide", async () => {
   assert.match(guide, /Know your ballot/);
   assert.match(guide, /Not affiliated with the Village of Anmore/);
   assert.match(guide, /No questionnaire response published yet/);
+  assert.match(guide, /Sole candidate — no questionnaire requested/);
   assert.match(guide, /alphabetically by last name within each office/);
   assert.match(guide, /sort\(alphabeticalByLastName\)/);
   assert.match(data, /How will you support community recreation in Anmore, including Spirit Park development/);
@@ -26,6 +27,7 @@ test("contains the complete neutral voter guide", async () => {
   assert.ok(residencyPosition < prioritiesPosition && prioritiesPosition < growthPosition && growthPosition < recreationPosition);
   assert.match(data, /Doug Richardson/);
   assert.match(data, /Kerri Palmer Isaak/);
+  assert.doesNotMatch(data, /schoolTrusteeQuestions/);
   assert.doesNotMatch(guide + layout, /codex-preview|react-loading-skeleton|Your site is taking shape/);
 });
 
@@ -42,6 +44,7 @@ test("uses email-only candidate and community intake", async () => {
   assert.match(candidateForm, /same address published in your official nomination registration/);
   assert.match(candidateForm, /match the sender against the email published in the candidate&apos;s official nomination registration/);
   assert.match(candidateForm, /must approve the final profile proof/);
+  assert.doesNotMatch(candidateForm, /School trustee questionnaire|schoolTrusteeQuestions/);
   assert.doesNotMatch(guide + candidateForm, /<form/);
   for (const route of [questionRoute, candidateRoute, hostingerQuestionRoute, hostingerCandidateRoute]) {
     assert.match(route, /410/);

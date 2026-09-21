@@ -88,7 +88,11 @@ export function VoterGuide() {
                   ) : (
                     <p className="awaiting">Awaiting a voluntary candidate biography.</p>
                   )}
-                  <div className="response-state"><span className="dot" /> No questionnaire response published yet</div>
+                  {candidate.office === "School Trustee" ? (
+                    <div className="response-state"><span className="dot" /> Sole candidate — no questionnaire requested</div>
+                  ) : (
+                    <div className="response-state"><span className="dot" /> No questionnaire response published yet</div>
+                  )}
                 </article>
               ))}
             </div>
