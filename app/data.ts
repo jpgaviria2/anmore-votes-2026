@@ -4,6 +4,10 @@ export type Candidate = {
   initials: string;
   officialNote?: string;
   publicService?: string[];
+  biography?: string;
+  answers?: Partial<Record<number, string>>;
+  responseApprovedAt?: string;
+  website?: string;
 };
 
 export const candidates: Candidate[] = [

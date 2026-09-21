@@ -14,6 +14,14 @@ The site gives every verified candidate the same opportunity to provide a biogra
 
 See [EDITORIAL_POLICY.md](EDITORIAL_POLICY.md) and [SOURCES.md](SOURCES.md).
 
+## Public routes
+
+- `/` — ballot, candidates, and question-by-question comparison
+- `/candidate-response/` — verified email participation instructions
+- `/legal/` — election compliance, candidate consent, privacy, corrections, and terms
+
+Unanswered questions are displayed neutrally. No candidate answer is invented, summarized, ranked, or published before identity verification, written consent, and final proof approval.
+
 ## Local development
 
 ```bash

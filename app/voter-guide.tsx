@@ -1,4 +1,5 @@
-import { candidates, questions } from "./data";
+import { candidates } from "./data";
+import { CandidateComparison } from "./candidate-comparison";
 
 const groups = ["Mayor", "Councillor", "School Trustee"] as const;
 
@@ -6,6 +7,10 @@ function alphabeticalByLastName(left: { name: string }, right: { name: string })
   const leftLastName = left.name.trim().split(/\s+/).at(-1) || left.name;
   const rightLastName = right.name.trim().split(/\s+/).at(-1) || right.name;
   return leftLastName.localeCompare(rightLastName) || left.name.localeCompare(right.name);
+}
+
+function candidateId(name: string) {
+  return `candidate-${name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`;
 }
 
 export function VoterGuide() {
@@ -76,7 +81,7 @@ export function VoterGuide() {
             <div className="group-title"><h3>{group}</h3><span>{group === "Councillor" ? "4 to be elected" : "1 to be elected"}</span></div>
             <div className="candidate-grid">
               {candidates.filter((candidate) => candidate.office === group).sort(alphabeticalByLastName).map((candidate) => (
-                <article className="candidate-card" key={candidate.name}>
+                <article className="candidate-card" id={candidateId(candidate.name)} key={candidate.name}>
                   <div className="candidate-top">
                     <div className="portrait-placeholder" aria-hidden="true">{candidate.initials}</div>
                     {candidate.officialNote && <span className="status-badge">{candidate.officialNote}</span>}
@@ -110,9 +115,7 @@ export function VoterGuide() {
             <div><p className="eyebrow">Common questionnaire</p><h2>The questions every council candidate receives</h2></div>
             <p>These questions reflect issues in current Village plans and public records. Responses are voluntary and shown without scoring.</p>
           </div>
-          <ol className="question-list">
-            {questions.map((question, index) => <li key={question}><span>{String(index + 1).padStart(2, "0")}</span><p>{question}</p></li>)}
-          </ol>
+          <CandidateComparison />
         </div>
       </section>
 
@@ -149,12 +152,15 @@ export function VoterGuide() {
             <a href="https://anmore.com/village-hall/elections/" target="_blank" rel="noreferrer">Village election page ↗</a>
             <a href="https://localelections.ca/election_candidates/3_2026_candidates.html" target="_blank" rel="noreferrer">CivicInfo candidate roster ↗</a>
             <a href="https://elections.bc.ca/local-elections/2026-general-local-elections/" target="_blank" rel="noreferrer">Elections BC ↗</a>
+            <a href="/legal/#compliance">Compliance & independence</a>
+            <a href="/legal/#privacy">Privacy</a>
+            <a href="/legal/#candidate-consent">Candidate consent</a>
           </div>
         </div>
       </section>
 
       <footer>
-        <div className="shell footer-inner"><div className="brand"><span className="brand-mark">A</span><span>Anmore Votes <b>2026</b></span></div><p>Built for an informed community. Last verified September 20, 2026.</p><a href="#top">Back to top ↑</a></div>
+        <div className="shell footer-inner"><div className="brand"><span className="brand-mark">A</span><span>Anmore Votes <b>2026</b></span></div><p>Built for an informed community. Last verified September 20, 2026.</p><div className="footer-links"><a href="/legal/">Policies</a><a href="mailto:election@anmore.me">Contact</a><a href="#top">Back to top ↑</a></div></div>
       </footer>
     </main>
   );

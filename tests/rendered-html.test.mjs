@@ -112,3 +112,60 @@ test("provides Kerri a biography-only invitation", async () => {
   assert.match(html + plain, /final profile proof for approval/);
   assert.doesNotMatch(html, /<form|tracking|pixel|<img/i);
 });
+
+test("provides an equal question-by-question comparison", async () => {
+  const [comparison, guide, data] = await Promise.all([
+    readFile(new URL("app/candidate-comparison.tsx", root), "utf8"),
+    readFile(new URL("app/voter-guide.tsx", root), "utf8"),
+    readFile(new URL("app/data.ts", root), "utf8"),
+  ]);
+  assert.match(guide, /<CandidateComparison/);
+  assert.match(comparison, /Compare every candidate on the same question/);
+  assert.match(comparison, /No response provided/);
+  assert.match(comparison, /alphabetically by last name/);
+  assert.match(comparison, /does not rank, endorse, summarize, or score/);
+  assert.match(comparison, /aria-live="polite"/);
+  assert.match(comparison, /\["All", "Mayor", "Councillor"\]/);
+  assert.match(data, /answers\?: Partial<Record<number, string>>/);
+  assert.doesNotMatch(data, /answers:\s*\{/);
+});
+
+test("publishes election compliance, privacy, consent, and correction safeguards", async () => {
+  const [legal, candidateForm, register, policy, vite, legalHtml] = await Promise.all([
+    readFile(new URL("app/legal/legal-page.tsx", root), "utf8"),
+    readFile(new URL("app/candidate-response/response-form.tsx", root), "utf8"),
+    readFile(new URL("COMPLIANCE_REGISTER.md", root), "utf8"),
+    readFile(new URL("EDITORIAL_POLICY.md", root), "utf8"),
+    readFile(new URL("hostinger/vite.config.ts", root), "utf8"),
+    readFile(new URL("hostinger/legal/index.html", root), "utf8"),
+  ]);
+  assert.match(legal, /campaign period runs September 19 through October 17, 2026/);
+  assert.match(legal, /Paid-promotion stop rule/);
+  assert.match(legal, /No paid advertisements, sponsored posts, boosted content/);
+  assert.match(legal, /not legal advice or a ruling from Elections BC/);
+  assert.match(legal, /Candidate consent & limited release/);
+  assert.match(legal, /I confirm that I am the candidate identified in this email/);
+  assert.match(legal, /Privacy Officer/);
+  assert.match(legal, /retained for at least one year/);
+  assert.match(legal, /Personal Information Protection Act/);
+  assert.match(candidateForm, /I have read and agree to the Candidate Consent and Publication Authorization/);
+  assert.match(register, /No paid placement/);
+  assert.match(register, /does not claim Elections BC third-party sponsor registration/);
+  assert.match(policy, /same selected question for every candidate/);
+  assert.match(vite, /legal: resolve\(__dirname, "legal\/index.html"\)/);
+  assert.match(legalHtml, /Policies and compliance/);
+});
+
+test("email invitations require written publication authorization", async () => {
+  const files = await Promise.all([
+    "communications/candidate-invitation.html",
+    "communications/candidate-invitation.txt",
+    "communications/trustee-biography-invitation.html",
+    "communications/trustee-biography-invitation.txt",
+  ].map((file) => readFile(new URL(file, root), "utf8")));
+  for (const file of files) {
+    assert.match(file, /Candidate Consent and Publication Authorization/);
+    assert.match(file, /I have read and agree/);
+    assert.match(file, /https:\/\/anmore\.me\/legal\/#candidate-consent/);
+  }
+});

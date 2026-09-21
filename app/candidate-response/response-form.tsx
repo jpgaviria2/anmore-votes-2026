@@ -32,12 +32,19 @@ export function CandidateResponseForm() {
           <p>Before publication, we match the sender against the email published in the candidate&apos;s official nomination registration. If no email appears there, we verify identity through another independently sourced official contact route. The candidate then receives and must approve the final profile proof.</p>
         </fieldset>
         <fieldset>
+          <legend>Consent to publish</legend>
+          <p>Candidate-supplied material is published only after written consent. Please read the <a href="/legal/#candidate-consent">Candidate Consent and Publication Authorization</a>, then include this sentence in your reply:</p>
+          <blockquote className="consent-text">I have read and agree to the Candidate Consent and Publication Authorization.</blockquote>
+          <p className="privacy-note">You may request a correction or withdrawal later. Private contact information is not published.</p>
+        </fieldset>
+        <fieldset>
           <legend>Council questionnaire</legend>
           <ol className="question-list">
             {questions.map((question, index) => <li key={question}><span>{String(index + 1).padStart(2, "0")}</span><p>{question}</p></li>)}
           </ol>
         </fieldset>
         <a className="button primary" href="mailto:election@anmore.me?subject=Candidate%20information%20for%20Anmore%20Votes%202026">Email election@anmore.me</a>
+        <div className="source-links"><a href="/legal/#privacy">Privacy policy</a><a href="/legal/#corrections">Corrections and withdrawals</a><a href="/legal/#compliance">Election compliance</a></div>
       </section>
     </main>
   );
