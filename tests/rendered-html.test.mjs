@@ -77,6 +77,9 @@ test("provides a neutral reply-ready candidate email campaign", async () => {
   assert.equal(metadata.response.answerCharacterLimit, 1000);
   assert.match(html, /Hello \{\{candidate_name\}\}/);
   assert.match(html, /Reply directly to this email/);
+  assert.match(html + plain, /Why this project exists/i);
+  assert.match(html + plain, /algorithms prioritize engagement/);
+  assert.match(html + plain, /The goal is not to influence anyone's vote/);
   assert.match(html, /We do not endorse, rank, score, or recommend candidates/);
   assert.match(html, /mailto:election@anmore\.me/);
   assert.match(html + plain, /September 25, 2026 at 5:00 p\.m\. Pacific Time/);

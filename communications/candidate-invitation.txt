@@ -4,6 +4,12 @@ Hello {{candidate_name}},
 
 You are invited to participate in Anmore Votes 2026, an independent, community-run voter guide where Anmore residents can compare candidate biographies and answers to the same questions.
 
+WHY THIS PROJECT EXISTS
+
+I started Anmore Votes 2026 because I had questions about candidates I did not yet know and wanted a practical way to share what I learned with the community. Social media can be useful, but its algorithms prioritize engagement, which can fragment information and amplify conflict.
+
+This guide is intended to be different: a calm, non-partisan place where every candidate receives the same questions, limits, deadlines, and publication process. The goal is not to influence anyone's vote, but to make reliable information easier for Anmore residents to find and compare.
+
 The platform is neutral by design. Every candidate for Mayor or Council receives the same invitation, questions, space, and publication process. We do not endorse, rank, score, or recommend candidates.
 
 HOW TO PARTICIPATE
