@@ -7,6 +7,9 @@ This package is prepared for the 1stanmore Nostr agent or another approved maile
 - `candidate-invitation.html`: table-based rich HTML with inline styles for broad email-client compatibility.
 - `candidate-invitation.txt`: plain-text fallback.
 - `candidate-invitation.json`: campaign headers, merge fields, and sending safeguards.
+- `trustee-biography-invitation.html`: rich HTML biography-only invitation for Kerri Palmer Isaak.
+- `trustee-biography-invitation.txt`: plain-text fallback for the trustee invitation.
+- `trustee-biography-invitation.json`: trustee campaign headers and safeguards; no questionnaire is included.
 
 ## Sending rules
 

@@ -87,3 +87,22 @@ test("provides a neutral reply-ready candidate email campaign", async () => {
   assert.match(plain, /Nothing is published automatically/);
   assert.doesNotMatch(html + plain, /school trustee questionnaire/i);
 });
+
+test("provides Kerri a biography-only invitation", async () => {
+  const [html, plain, campaign] = await Promise.all([
+    readFile(new URL("communications/trustee-biography-invitation.html", root), "utf8"),
+    readFile(new URL("communications/trustee-biography-invitation.txt", root), "utf8"),
+    readFile(new URL("communications/trustee-biography-invitation.json", root), "utf8"),
+  ]);
+  const metadata = JSON.parse(campaign);
+  assert.equal(metadata.recipientName, "Kerri Palmer Isaak");
+  assert.equal(metadata.replyTo, "election@anmore.me");
+  assert.equal(metadata.delivery.requireOfficialRegistrationEmail, true);
+  assert.equal(metadata.delivery.questionnaireIncluded, false);
+  assert.equal(metadata.delivery.sendAutomatically, false);
+  assert.match(html + plain, /No questionnaire is requested/);
+  assert.match(html + plain, /any information you would like (?:Anmore residents to know|to share with Anmore residents)/);
+  assert.match(html, /mailto:election@anmore\.me/);
+  assert.match(html + plain, /final profile proof for approval/);
+  assert.doesNotMatch(html, /<form|tracking|pixel|<img/i);
+});
