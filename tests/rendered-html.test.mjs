@@ -46,5 +46,7 @@ test("contains moderated candidate and community submission flows", async () => 
   assert.match(hostingerBootstrap, /Candidate submission pending verification/);
   assert.match(hostingerBootstrap, /Publish manually only after explicit approval/);
   assert.match(hostingerBootstrap, /election@anmore\.me/);
+  assert.match(hostingerBootstrap, /X-Auto-Response-Suppress: All/);
+  assert.doesNotMatch(hostingerBootstrap, /From:.*@anmore\.me/);
   await access(new URL("dist/server/index.js", root));
 });

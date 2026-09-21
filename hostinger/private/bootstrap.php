@@ -134,9 +134,9 @@ function notify_candidate_submission(int $submissionId, array $payload): bool
         . json_encode($payload, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE)
         . "\n";
     $headers = [
-        'From: Anmore Votes 2026 <no-reply@anmore.me>',
         'Reply-To: ' . $replyTo,
         'Content-Type: text/plain; charset=UTF-8',
+        'X-Auto-Response-Suppress: All',
     ];
     $sent = mail($recipient, $subject, $body, implode("\r\n", $headers));
     if (!$sent) {
