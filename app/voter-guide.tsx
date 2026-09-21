@@ -58,10 +58,6 @@ export function VoterGuide() {
           <p className="hero-lede">
             A simple, neutral place for Anmore voters to compare voluntary candidate biographies and answers to the same community questions.
           </p>
-          <a className="priority-question" href="#questions">
-            <span>Featured question for every council candidate</span>
-            <strong>{questions[3]}</strong>
-          </a>
           <div className="hero-actions">
             <a className="button primary" href="#candidates">Meet the candidates</a>
             <a className="button secondary" href="#ask">Ask a question</a>

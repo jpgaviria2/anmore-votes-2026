@@ -116,7 +116,7 @@ function store_submission(string $kind, array $payload): int
 
 function notify_candidate_submission(int $submissionId, array $payload): bool
 {
-    $recipient = getenv('ANMORE_NOTIFY_EMAIL') ?: 'jp@trailscoffee.com';
+    $recipient = getenv('ANMORE_NOTIFY_EMAIL') ?: 'election@anmore.me';
     $candidate = clean_text($payload['candidateName'] ?? '', 120);
     $replyTo = clean_text($payload['verificationEmail'] ?? '', 200);
     $subject = "Candidate submission pending verification: {$candidate}";

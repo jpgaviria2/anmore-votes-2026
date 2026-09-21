@@ -17,7 +17,7 @@ test("contains the complete neutral voter guide", async () => {
   assert.match(guide, /alphabetically by last name within each office/);
   assert.match(guide, /sort\(alphabeticalByLastName\)/);
   assert.match(data, /How will you support community recreation in Anmore, including Spirit Park development/);
-  assert.match(guide, /<strong>\{questions\[3\]\}<\/strong>/);
+  assert.doesNotMatch(guide, /priority-question|Featured question for every council candidate/);
   assert.doesNotMatch(data, /If a new Anmore South proposal is submitted/);
   const residencyPosition = data.indexOf("How long have you been a resident of Anmore?");
   const prioritiesPosition = data.indexOf("What are your three measurable priorities");
@@ -45,5 +45,6 @@ test("contains moderated candidate and community submission flows", async () => 
   assert.match(hostingerCandidateRoute, /notify_candidate_submission/);
   assert.match(hostingerBootstrap, /Candidate submission pending verification/);
   assert.match(hostingerBootstrap, /Publish manually only after explicit approval/);
+  assert.match(hostingerBootstrap, /election@anmore\.me/);
   await access(new URL("dist/server/index.js", root));
 });
