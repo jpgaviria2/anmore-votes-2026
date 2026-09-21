@@ -14,6 +14,8 @@ The site gives every verified candidate the same opportunity to provide a biogra
 
 See [EDITORIAL_POLICY.md](EDITORIAL_POLICY.md) and [SOURCES.md](SOURCES.md).
 
+Operational releases follow [OPERATIONS.md](OPERATIONS.md). Private security and privacy reports use [SECURITY.md](SECURITY.md).
+
 ## Public routes
 
 - `/` — ballot, candidates, and question-by-question comparison
@@ -52,6 +54,7 @@ official nomination registration and candidate approval.
 ```bash
 npm run lint
 npm test
+npm run smoke:production
 ```
 
 ## Election sources
