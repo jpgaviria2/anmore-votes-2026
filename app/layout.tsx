@@ -14,6 +14,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://anmore.me"),
+  alternates: { canonical: "/" },
+  robots: { index: true, follow: true },
   title: "Anmore Votes 2026 | A neutral community voter guide",
   description:
     "A neutral, community-run guide to Anmore's 2026 local election, with voluntary candidate biographies and answers.",
@@ -32,6 +34,7 @@ export const metadata: Metadata = {
     description: "A neutral community voter guide for Anmore's 2026 local election.",
     images: ["/og.png"],
   },
+  themeColor: "#173f31",
 };
 
 export default function RootLayout({

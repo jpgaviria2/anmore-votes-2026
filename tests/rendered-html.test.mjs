@@ -172,3 +172,36 @@ test("email invitations require written publication authorization", async () => 
     assert.match(file, /https:\/\/anmore\.me\/legal\/#candidate-consent/);
   }
 });
+
+test("ships accessible navigation, discovery metadata, and hardened hosting headers", async () => {
+  const [guide, candidate, legal, css, homeHtml, candidateHtml, legalHtml, htaccess, robots, sitemap] = await Promise.all([
+    readFile(new URL("app/voter-guide.tsx", root), "utf8"),
+    readFile(new URL("app/candidate-response/response-form.tsx", root), "utf8"),
+    readFile(new URL("app/legal/legal-page.tsx", root), "utf8"),
+    readFile(new URL("app/globals.css", root), "utf8"),
+    readFile(new URL("hostinger/index.html", root), "utf8"),
+    readFile(new URL("hostinger/candidate-response/index.html", root), "utf8"),
+    readFile(new URL("hostinger/legal/index.html", root), "utf8"),
+    readFile(new URL("hostinger/public/.htaccess", root), "utf8"),
+    readFile(new URL("public/robots.txt", root), "utf8"),
+    readFile(new URL("public/sitemap.xml", root), "utf8"),
+  ]);
+  for (const page of [guide, candidate, legal]) {
+    assert.match(page, /className="skip-link"/);
+    assert.match(page, /id="main-content"/);
+  }
+  assert.match(css, /\.skip-link:focus/);
+  for (const html of [homeHtml, candidateHtml, legalHtml]) {
+    assert.match(html, /rel="canonical"/);
+    assert.match(html, /name="theme-color"/);
+    assert.match(html, /property="og:image"/);
+  }
+  assert.match(htaccess, /Content-Security-Policy/);
+  assert.match(htaccess, /frame-ancestors 'none'/);
+  assert.match(htaccess, /Strict-Transport-Security/);
+  assert.match(htaccess, /Cross-Origin-Opener-Policy/);
+  assert.match(htaccess, /Cache-Control "no-cache"/);
+  assert.match(robots, /Sitemap: https:\/\/anmore\.me\/sitemap\.xml/);
+  assert.match(sitemap, /https:\/\/anmore\.me\/candidate-response\//);
+  assert.match(sitemap, /https:\/\/anmore\.me\/legal\//);
+});

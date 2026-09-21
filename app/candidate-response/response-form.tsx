@@ -2,7 +2,9 @@ import { questions } from "../data";
 
 export function CandidateResponseForm() {
   return (
-    <main className="form-page">
+    <>
+    <a className="skip-link" href="#main-content">Skip to main content</a>
+    <main className="form-page" id="main-content">
       <div className="election-strip"><span>Candidate participation is voluntary</span><strong>Information is verified before publication</strong></div>
       <header className="site-header shell">
         {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
@@ -47,5 +49,6 @@ export function CandidateResponseForm() {
         <div className="source-links"><a href="/legal/#privacy">Privacy policy</a><a href="/legal/#corrections">Corrections and withdrawals</a><a href="/legal/#compliance">Election compliance</a></div>
       </section>
     </main>
+    </>
   );
 }

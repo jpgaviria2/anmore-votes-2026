@@ -23,6 +23,20 @@ body {
   line-height: 1.55;
 }
 a { color: inherit; }
+.skip-link {
+  position: fixed;
+  z-index: 1000;
+  top: 10px;
+  left: 10px;
+  padding: 11px 15px;
+  background: var(--white);
+  color: var(--forest-deep);
+  border: 3px solid var(--gold);
+  font-weight: 800;
+  text-decoration: none;
+  transform: translateY(-160%);
+}
+.skip-link:focus { transform: translateY(0); }
 button, input, textarea, select { font: inherit; }
 button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
   outline: 3px solid var(--gold);

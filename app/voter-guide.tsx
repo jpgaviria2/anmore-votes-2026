@@ -15,7 +15,9 @@ function candidateId(name: string) {
 
 export function VoterGuide() {
   return (
-    <main>
+    <>
+    <a className="skip-link" href="#main-content">Skip to main content</a>
+    <main id="main-content">
       <div className="election-strip">
         <span>Advance vote: Wed, Oct 7</span>
         <strong>Election day: Sat, Oct 17, 2026</strong>
@@ -163,5 +165,6 @@ export function VoterGuide() {
         <div className="shell footer-inner"><div className="brand"><span className="brand-mark">A</span><span>Anmore Votes <b>2026</b></span></div><p>Built for an informed community. Last verified September 20, 2026.</p><div className="footer-links"><a href="/legal/">Policies</a><a href="mailto:election@anmore.me">Contact</a><a href="#top">Back to top ↑</a></div></div>
       </footer>
     </main>
+    </>
   );
 }

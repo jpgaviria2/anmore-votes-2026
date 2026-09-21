@@ -1,7 +1,9 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 export function LegalPage() {
   return (
-    <main className="legal-page" id="top">
+    <>
+    <a className="skip-link" href="#main-content">Skip to main content</a>
+    <main className="legal-page" id="main-content">
       <div className="election-strip"><span>Independent community voter guide</span><strong>Policies reviewed September 20, 2026</strong></div>
       <header className="site-header shell">
         <a className="brand" href="/"><span className="brand-mark">A</span><span>Anmore Votes <b>2026</b></span></a>
@@ -112,7 +114,8 @@ export function LegalPage() {
         </div>
       </div>
 
-      <footer><div className="shell footer-inner"><div className="brand"><span className="brand-mark">A</span><span>Anmore Votes <b>2026</b></span></div><p>Questions or policy concerns: election@anmore.me</p><div className="footer-links"><a href="/">Voter guide</a><a href="#top">Back to top ↑</a></div></div></footer>
+      <footer><div className="shell footer-inner"><div className="brand"><span className="brand-mark">A</span><span>Anmore Votes <b>2026</b></span></div><p>Questions or policy concerns: election@anmore.me</p><div className="footer-links"><a href="/">Voter guide</a><a href="#main-content">Back to top ↑</a></div></div></footer>
     </main>
+    </>
   );
 }
