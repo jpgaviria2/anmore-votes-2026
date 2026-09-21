@@ -29,24 +29,25 @@ test("contains the complete neutral voter guide", async () => {
   assert.doesNotMatch(guide + layout, /codex-preview|react-loading-skeleton|Your site is taking shape/);
 });
 
-test("contains moderated candidate and community submission flows", async () => {
-  const [candidateForm, questionRoute, candidateRoute, hostingerCandidateRoute, hostingerBootstrap] = await Promise.all([
+test("uses email-only candidate and community intake", async () => {
+  const [guide, candidateForm, questionRoute, candidateRoute, hostingerQuestionRoute, hostingerCandidateRoute] = await Promise.all([
+    readFile(new URL("app/voter-guide.tsx", root), "utf8"),
     readFile(new URL("app/candidate-response/response-form.tsx", root), "utf8"),
     readFile(new URL("app/api/questions/route.ts", root), "utf8"),
     readFile(new URL("app/api/candidate-submissions/route.ts", root), "utf8"),
+    readFile(new URL("hostinger/public/api/questions/index.php", root), "utf8"),
     readFile(new URL("hostinger/public/api/candidate-submissions/index.php", root), "utf8"),
-    readFile(new URL("hostinger/private/bootstrap.php", root), "utf8"),
   ]);
-  assert.match(candidateForm, /Submissions are reviewed before publication/);
-  assert.match(candidateForm, /Submit for review/);
-  assert.match(questionRoute, /communityQuestions/);
-  assert.match(candidateRoute, /candidateSubmissions/);
-  assert.match(candidateForm, /Nothing is published until your identity is independently verified/);
-  assert.match(hostingerCandidateRoute, /notify_candidate_submission/);
-  assert.match(hostingerBootstrap, /Candidate submission pending verification/);
-  assert.match(hostingerBootstrap, /Publish manually only after explicit approval/);
-  assert.match(hostingerBootstrap, /election@anmore\.me/);
-  assert.match(hostingerBootstrap, /X-Auto-Response-Suppress: All/);
-  assert.doesNotMatch(hostingerBootstrap, /From:.*@anmore\.me/);
+  assert.match(guide, /mailto:election@anmore\.me/);
+  assert.match(candidateForm, /same address published in your official nomination registration/);
+  assert.match(candidateForm, /match the sender against the email published in the candidate&apos;s official nomination registration/);
+  assert.match(candidateForm, /must approve the final profile proof/);
+  assert.doesNotMatch(guide + candidateForm, /<form/);
+  for (const route of [questionRoute, candidateRoute, hostingerQuestionRoute, hostingerCandidateRoute]) {
+    assert.match(route, /410/);
+    assert.match(route, /election@anmore\.me/);
+  }
+  assert.doesNotMatch(questionRoute + candidateRoute, /communityQuestions|candidateSubmissions/);
+  assert.doesNotMatch(hostingerQuestionRoute + hostingerCandidateRoute, /store_submission|notify_candidate_submission/);
   await access(new URL("dist/server/index.js", root));
 });

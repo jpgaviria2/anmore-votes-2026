@@ -1,6 +1,3 @@
-"use client";
-
-import { FormEvent, useState } from "react";
 import { candidates, questions } from "./data";
 
 const groups = ["Mayor", "Councillor", "School Trustee"] as const;
@@ -12,25 +9,6 @@ function alphabeticalByLastName(left: { name: string }, right: { name: string })
 }
 
 export function VoterGuide() {
-  const [questionStatus, setQuestionStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
-
-  async function submitQuestion(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    setQuestionStatus("sending");
-    const form = event.currentTarget;
-    const response = await fetch("/api/questions", {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify(Object.fromEntries(new FormData(form))),
-    });
-    if (response.ok) {
-      form.reset();
-      setQuestionStatus("sent");
-    } else {
-      setQuestionStatus("error");
-    }
-  }
-
   return (
     <main>
       <div className="election-strip">
@@ -60,7 +38,7 @@ export function VoterGuide() {
           </p>
           <div className="hero-actions">
             <a className="button primary" href="#candidates">Meet the candidates</a>
-            <a className="button secondary" href="#ask">Ask a question</a>
+            <a className="button secondary" href="mailto:election@anmore.me?subject=Community%20question%20for%20Anmore%20Votes%202026">Ask a question</a>
           </div>
           <p className="fine-print">Not affiliated with the Village of Anmore, any candidate, or any political organization.</p>
         </div>
@@ -117,8 +95,8 @@ export function VoterGuide() {
           </div>
         ))}
         <div className="candidate-invite">
-          <div><p className="eyebrow">Are you a candidate?</p><h3>Add your own biography and answers.</h3><p>Submissions are verified and reviewed before publication. Nothing is posted automatically.</p></div>
-          <a className="button light" href="/candidate-response/">Submit candidate information</a>
+          <div><p className="eyebrow">Are you a candidate?</p><h3>Send your biography and answers by email.</h3><p>Identity is checked against the official email in your nomination registration. Nothing is posted automatically, and you approve the final profile before publication.</p></div>
+          <a className="button light" href="/candidate-response/">View candidate instructions</a>
         </div>
       </section>
 
@@ -138,24 +116,15 @@ export function VoterGuide() {
         <div className="ask-copy">
           <p className="eyebrow">Community questions</p>
           <h2>What do you want every candidate to answer?</h2>
-          <p>Suggest one specific, respectful question. Selected questions will be sent to every candidate at the same time and attributed as a community question, not to an individual unless you ask us to credit you.</p>
+          <p>Email one specific, respectful question or relevant election information to <strong>election@anmore.me</strong>. Selected questions will be sent to every candidate at the same time and attributed as a community question, not to an individual unless you ask us to credit you.</p>
           <ul className="check-list"><li>Questions are moderated for relevance and civility.</li><li>Similar submissions may be combined.</li><li>No candidate receives a private or preferential question.</li></ul>
         </div>
-        <form className="question-form" onSubmit={submitQuestion}>
-          <input className="honeypot" name="website_confirm" tabIndex={-1} autoComplete="off" aria-hidden="true" />
-          <label>Your question<textarea name="question" required maxLength={600} rows={6} placeholder="What specific action would you take on…" /></label>
-          <div className="field-row">
-            <label>Name <span>(optional)</span><input name="name" maxLength={100} autoComplete="name" /></label>
-            <label>Email <span>(optional)</span><input name="email" type="email" maxLength={200} autoComplete="email" /></label>
-          </div>
-          <label className="checkbox"><input type="checkbox" name="consent" value="yes" required /><span>I understand this question may be edited for clarity or combined with similar questions.</span></label>
-          <p className="privacy-note">Contact details are optional, never published without permission, and used only to follow up about this question.</p>
-          <button className="button primary" disabled={questionStatus === "sending"} type="submit">{questionStatus === "sending" ? "Sending…" : "Submit a community question"}</button>
-          <p className={`form-status ${questionStatus}`} aria-live="polite">
-            {questionStatus === "sent" && "Thank you. Your question is now in the moderation queue."}
-            {questionStatus === "error" && "The question could not be saved. Please try again shortly."}
-          </p>
-        </form>
+        <div className="question-form">
+          <p className="mono-label">Email the editor</p>
+          <h3>Send questions or information directly.</h3>
+          <p>Your email address is used only for editorial follow-up and is never published without your permission.</p>
+          <a className="button primary" href="mailto:election@anmore.me?subject=Community%20question%20for%20Anmore%20Votes%202026">Email election@anmore.me</a>
+        </div>
       </section>
 
       <section className="voting shell" id="voting">

@@ -2,7 +2,7 @@
 
 An independent, community-run voter guide for the October 17, 2026 Village of Anmore local election.
 
-The site gives every verified candidate the same opportunity to submit a biography, public links, portrait, and answers to a common questionnaire. Candidate participation is voluntary. Public submissions are moderated and nothing is published automatically.
+The site gives every verified candidate the same opportunity to provide a biography, public links, portrait, and answers to a common questionnaire. Candidate participation is voluntary. Information is sent directly to `election@anmore.me`, verified against official nomination records, and never published automatically.
 
 ## Principles
 
@@ -21,7 +21,7 @@ npm install
 npm run dev
 ```
 
-The application uses a Cloudflare D1 binding named `DB` for private community-question and candidate-submission moderation queues.
+The public site does not collect candidate or community submissions. Questions and candidate information are sent directly to `election@anmore.me`.
 
 ## Hostinger deployment
 
@@ -32,13 +32,12 @@ The repository also includes a Hostinger-native build for the production
 npm run build:hostinger
 ```
 
-This produces the static frontend and PHP form endpoints in
-`hostinger-dist/`. The PHP endpoints store pending submissions in a private
-SQLite database outside `public_html`; submissions never publish automatically.
-The `hostinger/private/` directory must be deployed beside `public_html`, not
-inside it. Candidate submissions also send a private review notification to
-the editor; publication remains a separate, manual action after independent
-identity verification and candidate approval.
+This produces the static frontend and compatibility endpoints in
+`hostinger-dist/`. The old form endpoints return HTTP 410 and direct visitors
+to `election@anmore.me`. Historical private submission data remains outside
+`public_html` and is not modified by a normal site deployment. Publication
+remains a separate, manual action after identity verification against the
+official nomination registration and candidate approval.
 
 ## Validation
 

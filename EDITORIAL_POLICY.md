@@ -14,8 +14,8 @@ Anmore Votes 2026 helps residents make an informed voting decision by presenting
 ## Candidate submissions
 
 - Candidate biographies, portraits, links, and answers are voluntary.
-- Every submission enters a private pending queue and triggers an editor notification; nothing publishes automatically.
-- Identity is verified through an independently sourced official contact channel, not solely through the email address or phone number supplied in the form.
+- Candidates send biographies, portraits, links, and answers directly to `election@anmore.me`; the website does not collect candidate information through a public form.
+- Identity is matched against the email published in the candidate's official nomination registration. If no email is published, identity is verified through another independently sourced official contact route.
 - The candidate receives a final profile proof and must explicitly approve it before publication.
 - Candidate answers are not substantively edited. Formatting and minor clarity edits require candidate approval.
 - Candidate-supplied material is labelled as such.
@@ -23,6 +23,7 @@ Anmore Votes 2026 helps residents make an informed voting decision by presenting
 
 ## Community questions
 
+- Residents send questions and relevant election information directly to `election@anmore.me`; the website does not collect these through a public form.
 - Questions are moderated for relevance, specificity, civility, privacy, and potential legal harm.
 - Similar questions may be combined without changing their substance.
 - Selected questions are sent to all candidates for the relevant office at the same time.
