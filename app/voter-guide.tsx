@@ -5,6 +5,12 @@ import { candidates, questions } from "./data";
 
 const groups = ["Mayor", "Councillor", "School Trustee"] as const;
 
+function alphabeticalByLastName(left: { name: string }, right: { name: string }) {
+  const leftLastName = left.name.trim().split(/\s+/).at(-1) || left.name;
+  const rightLastName = right.name.trim().split(/\s+/).at(-1) || right.name;
+  return leftLastName.localeCompare(rightLastName) || left.name.localeCompare(right.name);
+}
+
 export function VoterGuide() {
   const [questionStatus, setQuestionStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
@@ -52,6 +58,10 @@ export function VoterGuide() {
           <p className="hero-lede">
             A simple, neutral place for Anmore voters to compare voluntary candidate biographies and answers to the same community questions.
           </p>
+          <a className="priority-question" href="#questions">
+            <span>Question for every council candidate</span>
+            <strong>{questions[0]}</strong>
+          </a>
           <div className="hero-actions">
             <a className="button primary" href="#candidates">Meet the candidates</a>
             <a className="button secondary" href="#ask">Ask a question</a>
@@ -85,13 +95,13 @@ export function VoterGuide() {
       <section className="section shell" id="candidates">
         <div className="section-heading">
           <div><p className="eyebrow">Verified ballot</p><h2>Meet the candidates</h2></div>
-          <p>Official status is sourced from the Village of Anmore and CivicInfo BC. Candidate biographies and portraits will appear only after candidates voluntarily submit and approve them.</p>
+          <p>Official status is sourced from the Village of Anmore and CivicInfo BC. Candidates are listed alphabetically by last name within each office. Biographies and portraits appear only after candidates voluntarily submit and approve them.</p>
         </div>
         {groups.map((group) => (
           <div className="candidate-group" key={group}>
             <div className="group-title"><h3>{group}</h3><span>{group === "Councillor" ? "4 to be elected" : "1 to be elected"}</span></div>
             <div className="candidate-grid">
-              {candidates.filter((candidate) => candidate.office === group).map((candidate) => (
+              {candidates.filter((candidate) => candidate.office === group).sort(alphabeticalByLastName).map((candidate) => (
                 <article className="candidate-card" key={candidate.name}>
                   <div className="candidate-top">
                     <div className="portrait-placeholder" aria-hidden="true">{candidate.initials}</div>

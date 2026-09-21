@@ -91,7 +91,7 @@ function ip_hash(): string
     return hash('sha256', $salt . '|' . ($_SERVER['REMOTE_ADDR'] ?? 'unknown'));
 }
 
-function store_submission(string $kind, array $payload): void
+function store_submission(string $kind, array $payload): int
 {
     $db = database();
     $hash = ip_hash();
@@ -111,4 +111,36 @@ function store_submission(string $kind, array $payload): void
         ':ip_hash' => $hash,
         ':created_at' => gmdate('c'),
     ]);
+    return (int) $db->lastInsertId();
+}
+
+function notify_candidate_submission(int $submissionId, array $payload): bool
+{
+    $recipient = getenv('ANMORE_NOTIFY_EMAIL') ?: 'jp@trailscoffee.com';
+    $candidate = clean_text($payload['candidateName'] ?? '', 120);
+    $replyTo = clean_text($payload['verificationEmail'] ?? '', 200);
+    $subject = "Candidate submission pending verification: {$candidate}";
+    $body = "A candidate submission is waiting in the private Anmore Votes review queue.\n\n"
+        . "Submission ID: {$submissionId}\n"
+        . "Candidate selected: {$candidate}\n"
+        . "Submitted verification email: {$replyTo}\n"
+        . "Received (UTC): " . gmdate('c') . "\n\n"
+        . "Verification required before publication:\n"
+        . "1. Do not rely on this submitted email or phone number alone.\n"
+        . "2. Contact the candidate through an independently sourced official channel.\n"
+        . "3. Confirm the submission and send the final profile proof for approval.\n"
+        . "4. Publish manually only after explicit approval.\n\n"
+        . "Submitted content (private):\n"
+        . json_encode($payload, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE)
+        . "\n";
+    $headers = [
+        'From: Anmore Votes 2026 <no-reply@anmore.me>',
+        'Reply-To: ' . $replyTo,
+        'Content-Type: text/plain; charset=UTF-8',
+    ];
+    $sent = mail($recipient, $subject, $body, implode("\r\n", $headers));
+    if (!$sent) {
+        error_log("Anmore Votes candidate notification failed for submission {$submissionId}");
+    }
+    return $sent;
 }

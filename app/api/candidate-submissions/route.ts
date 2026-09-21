@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { getDb } from "../../../db";
 import { candidateSubmissions } from "../../../db/schema";
-import { candidates } from "../../data";
+import { candidates, questions, schoolTrusteeQuestions } from "../../data";
 
 export async function POST(request: Request) {
   try {
@@ -21,7 +21,8 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Invalid submission" }, { status: 400 });
     }
 
-    const answers = Array.from({ length: 12 }, (_, index) => String(data[`answer${index + 1}`] || "").trim().slice(0, 2500));
+    const answerCount = candidateName === "Kerri Palmer Isaak" ? schoolTrusteeQuestions.length : questions.length;
+    const answers = Array.from({ length: answerCount }, (_, index) => String(data[`answer${index + 1}`] || "").trim().slice(0, 2500));
     await getDb().insert(candidateSubmissions).values({
       candidateName,
       verificationEmail: email.slice(0, 200),

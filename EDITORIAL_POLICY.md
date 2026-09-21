@@ -14,7 +14,9 @@ Anmore Votes 2026 helps residents make an informed voting decision by presenting
 ## Candidate submissions
 
 - Candidate biographies, portraits, links, and answers are voluntary.
-- Identity is verified before publication.
+- Every submission enters a private pending queue and triggers an editor notification; nothing publishes automatically.
+- Identity is verified through an independently sourced official contact channel, not solely through the email address or phone number supplied in the form.
+- The candidate receives a final profile proof and must explicitly approve it before publication.
 - Candidate answers are not substantively edited. Formatting and minor clarity edits require candidate approval.
 - Candidate-supplied material is labelled as such.
 - Portraits publish only with confirmation that the candidate may authorize their use.

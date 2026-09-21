@@ -37,5 +37,6 @@ $clean['verificationEmail'] = $verificationEmail;
 $clean['biography'] = $biography;
 $clean['consent'] = 'yes';
 
-store_submission('candidate_submission', $clean);
+$submissionId = store_submission('candidate_submission', $clean);
+notify_candidate_submission($submissionId, $clean);
 json_response(201, ['ok' => true]);

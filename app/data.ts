@@ -57,6 +57,7 @@ export const candidates: Candidate[] = [
 ];
 
 export const questions = [
+  "How will you support community recreation in Anmore, including Spirit Park development, year-round recreation activities, and community-led projects such as a pump track?",
   "What are your three measurable priorities for the 2026–2030 term?",
   "What is your position on housing growth and the upcoming Official Community Plan process?",
   "If a new Anmore South proposal is submitted, what principles and non-negotiable conditions should guide your vote?",

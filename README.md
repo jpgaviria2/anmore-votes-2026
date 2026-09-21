@@ -36,7 +36,9 @@ This produces the static frontend and PHP form endpoints in
 `hostinger-dist/`. The PHP endpoints store pending submissions in a private
 SQLite database outside `public_html`; submissions never publish automatically.
 The `hostinger/private/` directory must be deployed beside `public_html`, not
-inside it.
+inside it. Candidate submissions also send a private review notification to
+the editor; publication remains a separate, manual action after independent
+identity verification and candidate approval.
 
 ## Validation
 

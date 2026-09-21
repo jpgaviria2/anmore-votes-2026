@@ -43,7 +43,7 @@ export function CandidateResponseForm() {
       <section className="form-header shell">
         <p className="eyebrow">Candidate submission</p>
         <h1>Share your information in your own words.</h1>
-        <p>Every verified candidate receives the same space and questionnaire. Your submission remains private until your identity is verified and you approve the final profile.</p>
+        <p>Every verified candidate receives the same space and questionnaire. Your submission enters a private review queue and emails the editor. Nothing is published until your identity is independently verified and you approve the final profile.</p>
         {status === "sent" && <p className="success-callout" role="status">Thank you. Your information is in the review queue. We will verify your identity before anything is published.</p>}
       </section>
       <form className="candidate-form shell" onSubmit={submit}>
