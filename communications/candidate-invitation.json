@@ -7,6 +7,12 @@
   "htmlTemplate": "candidate-invitation.html",
   "textTemplate": "candidate-invitation.txt",
   "mergeFields": ["candidate_name"],
+  "response": {
+    "preferredDeadline": "2026-09-25T17:00:00-07:00",
+    "deadlineIsFlexible": true,
+    "biographyCharacterLimit": 1500,
+    "answerCharacterLimit": 1000
+  },
   "delivery": {
     "mode": "individual",
     "excludeSchoolTrustee": true,

@@ -72,11 +72,17 @@ test("provides a neutral reply-ready candidate email campaign", async () => {
   assert.equal(metadata.delivery.excludeSchoolTrustee, true);
   assert.equal(metadata.delivery.requireOfficialRegistrationEmail, true);
   assert.equal(metadata.delivery.sendAutomatically, false);
+  assert.equal(metadata.response.preferredDeadline, "2026-09-25T17:00:00-07:00");
+  assert.equal(metadata.response.deadlineIsFlexible, true);
+  assert.equal(metadata.response.answerCharacterLimit, 1000);
   assert.match(html, /Hello \{\{candidate_name\}\}/);
   assert.match(html, /Reply directly to this email/);
   assert.match(html, /We do not endorse, rank, score, or recommend candidates/);
   assert.match(html, /mailto:election@anmore\.me/);
-  assert.match(html, /final profile proof for approval/);
+  assert.match(html + plain, /September 25, 2026 at 5:00 p\.m\. Pacific Time/);
+  assert.match(html + plain, /This is not a cutoff/);
+  assert.match(html + plain, /1,000 characters per answer/);
+  assert.match(html, /final profile proof and you approve it/);
   const emailQuestionBlock = html.match(/<ol[^>]*>([\s\S]*?)<\/ol>/);
   assert.ok(emailQuestionBlock);
   assert.equal((emailQuestionBlock[1].match(/<li /g) || []).length, 9);

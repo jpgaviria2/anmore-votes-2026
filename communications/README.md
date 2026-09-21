@@ -20,3 +20,5 @@ This package is prepared for the 1stanmore Nostr agent or another approved maile
 5. Do not send to the school trustee candidate; no school trustee questionnaire is being requested.
 6. If an official registration contains no email, hold the invitation for a separately verified delivery route.
 7. Sending requires a separate explicit approval; creating or testing this template is not authorization to contact candidates.
+8. Keep the preferred response date at September 25, 2026, 5:00 p.m. Pacific Time, while accepting later submissions for subsequent guide updates.
+9. Apply the same 1,000-character limit to each questionnaire answer.
