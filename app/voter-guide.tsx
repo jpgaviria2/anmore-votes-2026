@@ -60,7 +60,7 @@ export function VoterGuide() {
           </p>
           <a className="priority-question" href="#questions">
             <span>Featured question for every council candidate</span>
-            <strong>{questions[2]}</strong>
+            <strong>{questions[3]}</strong>
           </a>
           <div className="hero-actions">
             <a className="button primary" href="#candidates">Meet the candidates</a>
