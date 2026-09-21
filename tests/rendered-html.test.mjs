@@ -17,6 +17,12 @@ test("contains the complete neutral voter guide", async () => {
   assert.match(guide, /alphabetically by last name within each office/);
   assert.match(guide, /sort\(alphabeticalByLastName\)/);
   assert.match(data, /How will you support community recreation in Anmore, including Spirit Park development/);
+  assert.match(guide, /<strong>\{questions\[2\]\}<\/strong>/);
+  assert.doesNotMatch(data, /If a new Anmore South proposal is submitted/);
+  const prioritiesPosition = data.indexOf("What are your three measurable priorities");
+  const growthPosition = data.indexOf("What is your position on housing growth");
+  const recreationPosition = data.indexOf("How will you support community recreation");
+  assert.ok(prioritiesPosition < growthPosition && growthPosition < recreationPosition);
   assert.match(data, /Doug Richardson/);
   assert.match(data, /Kerri Palmer Isaak/);
   assert.doesNotMatch(guide + layout, /codex-preview|react-loading-skeleton|Your site is taking shape/);
