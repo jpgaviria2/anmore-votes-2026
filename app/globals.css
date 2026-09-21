@@ -276,7 +276,8 @@ footer { background: var(--forest-deep); color: white; padding: 40px 0; }
 .legal-sources a { color: var(--forest); font-weight: 700; }
 
 @media (max-width: 900px) {
-  nav { display: none; }
+  .site-header { height: auto; min-height: 84px; padding-block: 14px; flex-wrap: wrap; gap: 12px 20px; }
+  nav { width: 100%; gap: 20px; overflow-x: auto; padding: 12px 0 3px; border-top: 1px solid var(--line); white-space: nowrap; scrollbar-width: thin; }
   .hero { grid-template-columns: 1fr; gap: 45px; padding-block: 60px; }
   .ballot-card { max-width: 560px; transform: none; }
   .principles, .ask-section, .about, .voting, .section-heading, .comparison-intro { grid-template-columns: 1fr; gap: 36px; }
@@ -290,7 +291,7 @@ footer { background: var(--forest-deep); color: white; padding: 40px 0; }
 @media (max-width: 620px) {
   .shell { width: min(100% - 28px, 1180px); }
   .election-strip { flex-direction: column; gap: 0; align-items: center; font-size: 11px; }
-  .site-header { height: 70px; }
+  .site-header { min-height: 70px; }
   .hero { min-height: auto; }
   h1 { font-size: 50px; }
   h2 { font-size: 36px; }

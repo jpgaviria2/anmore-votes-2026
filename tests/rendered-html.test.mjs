@@ -191,6 +191,8 @@ test("ships accessible navigation, discovery metadata, and hardened hosting head
     assert.match(page, /id="main-content"/);
   }
   assert.match(css, /\.skip-link:focus/);
+  assert.doesNotMatch(css, /nav\s*\{\s*display:\s*none/);
+  assert.match(css, /nav \{ width: 100%; gap: 20px; overflow-x: auto/);
   for (const html of [homeHtml, candidateHtml, legalHtml]) {
     assert.match(html, /rel="canonical"/);
     assert.match(html, /name="theme-color"/);
