@@ -30,25 +30,25 @@ export function LegalPage() {
         <div className="legal-content">
           <section id="compliance">
             <p className="eyebrow">Election compliance</p>
-            <h2>Unpaid, neutral, and independently operated.</h2>
+            <h2>Permanently unpaid, neutral, and independently operated.</h2>
             <p>The 2026 local-election pre-campaign period began July 20, 2026; the campaign period runs September 19 through October 17, 2026. Elections BC administers campaign-financing and election-advertising rules under the <em>Local Elections Campaign Financing Act</em> (LECFA).</p>
             <p>Elections BC&apos;s 2026 guide says free websites, blogs, and internet messages without a placement or production cost are excluded from third-party advertising. The same guide also identifies comparisons of candidate positions as a factor that may indicate third-party advertising. This project therefore applies the following controls:</p>
             <ul>
-              <li>No paid advertisements, sponsored posts, boosted content, robocalls, paid canvassing, or preferential placement.</li>
+              <li>No paid advertisements, sponsored posts, boosted content, robocalls, paid canvassing, or preferential placement—ever.</li>
               <li>No candidate or elector organization may pay for, direct, coordinate, or receive preferential treatment on the site.</li>
               <li>Every candidate for the same office receives the same invitation, questions, space, deadlines, and display rules.</li>
               <li>Candidate responses are published verbatim apart from approved formatting or clarity corrections.</li>
               <li>Names and answers appear alphabetically, without endorsements, rankings, scores, summaries, or recommendations.</li>
               <li>Costs, funding, services, and promotion decisions must be recorded in the project&apos;s compliance register.</li>
             </ul>
-            <div className="policy-callout"><strong>Paid-promotion stop rule:</strong> before any paid placement, commercial promotion, or material paid production is introduced, publication and promotion must be reassessed with Elections BC. If the activity is regulated, third-party sponsor registration must be approved before it begins, and every regulated communication must carry the required authorization statement and be included in expense and disclosure records.</div>
+            <div className="policy-callout"><strong>Permanent no-paid-promotion rule:</strong> Anmore Votes 2026 will never purchase or accept paid placement, commercial promotion, sponsored distribution, candidate funding, or preferential exposure. Any proposal to do so is incompatible with this project and must be rejected.</div>
           </section>
 
           <section id="independence">
             <p className="eyebrow">Editorial independence</p>
             <h2>Equal process, not coordinated advocacy.</h2>
             <p>Candidate contact is limited to identity verification, collecting voluntary material, correcting factual or formatting issues, and obtaining final approval. Approval confirms that a candidate&apos;s own material is represented accurately; it does not give any candidate control over the questionnaire, other profiles, editorial policy, or site operation.</p>
-            <p>Candidate-supplied content is labelled. Official facts are checked against the Village of Anmore, Elections BC, and CivicInfo BC. Community questions are moderated for relevance, civility, privacy, and equal applicability.</p>
+            <p>Candidate-supplied content is labelled and published only after the candidate agrees to the final version. Official facts are checked independently against the Village of Anmore, Elections BC, and CivicInfo BC. Community questions are moderated for relevance, civility, privacy, and equal applicability.</p>
           </section>
 
           <section id="candidate-consent">

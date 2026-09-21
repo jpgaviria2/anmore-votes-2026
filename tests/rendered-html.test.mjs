@@ -140,8 +140,9 @@ test("publishes election compliance, privacy, consent, and correction safeguards
     readFile(new URL("hostinger/legal/index.html", root), "utf8"),
   ]);
   assert.match(legal, /campaign period runs September 19 through October 17, 2026/);
-  assert.match(legal, /Paid-promotion stop rule/);
-  assert.match(legal, /No paid advertisements, sponsored posts, boosted content/);
+  assert.match(legal, /Permanent no-paid-promotion rule/);
+  assert.match(legal, /No paid advertisements, sponsored posts, boosted content, robocalls, paid canvassing, or preferential placement—ever/);
+  assert.match(legal, /candidate agrees to the final version/);
   assert.match(legal, /not legal advice or a ruling from Elections BC/);
   assert.match(legal, /Candidate consent & limited release/);
   assert.match(legal, /I confirm that I am the candidate identified in this email/);
@@ -150,6 +151,8 @@ test("publishes election compliance, privacy, consent, and correction safeguards
   assert.match(legal, /Personal Information Protection Act/);
   assert.match(candidateForm, /I have read and agree to the Candidate Consent and Publication Authorization/);
   assert.match(register, /No paid placement/);
+  assert.match(register, /now or in the future/);
+  assert.match(register, /must be rejected/);
   assert.match(register, /does not claim Elections BC third-party sponsor registration/);
   assert.match(policy, /same selected question for every candidate/);
   assert.match(vite, /legal: resolve\(__dirname, "legal\/index.html"\)/);

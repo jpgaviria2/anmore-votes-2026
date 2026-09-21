@@ -41,7 +41,9 @@ Anmore Votes 2026 helps residents make an informed voting decision by presenting
 
 The project accepts no candidate advertising or paid placement and is not affiliated with the Village of Anmore, Elections BC, any candidate, or any political organization.
 
-No paid advertisements, sponsored posts, boosted distribution, robocalls, paid canvassing, or preferential placement are authorized. Any proposed paid promotion or material paid production must stop until its status is reassessed with Elections BC and any required third-party sponsor registration, authorization statement, and expense records are in place.
+Paid advertisements, sponsored posts, boosted distribution, robocalls, paid canvassing, candidate funding, and preferential placement are permanently prohibited. Any proposal to introduce them is incompatible with Anmore Votes 2026 and must be rejected.
+
+All candidate-supplied biographies, answers, links, portraits, and other statements must be agreed to by that candidate before publication. Official public-record facts remain independently sourced and clearly distinguished from candidate-supplied material.
 
 ## Privacy
 

@@ -6,7 +6,7 @@ The site gives every verified candidate the same opportunity to provide a biogra
 
 ## Principles
 
-- Neutrality: no endorsements, rankings, paid placement, or candidate preference.
+- Neutrality: no endorsements, rankings, paid placement, or candidate preference—ever.
 - Equality: the same invitation, questions, word limits, and deadlines for every candidate.
 - Attribution: official records and candidate-supplied statements are clearly distinguished.
 - Consent: candidate-supplied biographies, images, and answers publish only after verification and approval.
@@ -20,7 +20,7 @@ See [EDITORIAL_POLICY.md](EDITORIAL_POLICY.md) and [SOURCES.md](SOURCES.md).
 - `/candidate-response/` — verified email participation instructions
 - `/legal/` — election compliance, candidate consent, privacy, corrections, and terms
 
-Unanswered questions are displayed neutrally. No candidate answer is invented, summarized, ranked, or published before identity verification, written consent, and final proof approval.
+Unanswered questions are displayed neutrally. No candidate-supplied information is invented, summarized, ranked, or published before identity verification, written consent, and final proof approval. Paid promotion is permanently prohibited.
 
 ## Local development
 
