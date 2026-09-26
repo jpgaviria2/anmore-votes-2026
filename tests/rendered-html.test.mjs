@@ -16,6 +16,7 @@ test("contains the complete neutral voter guide", async () => {
   assert.match(guide, /No questionnaire response published yet/);
   assert.match(guide, /Sole candidate — no questionnaire requested/);
   assert.match(guide, /alphabetically by last name within each office/);
+  assert.match(guide, /Last verified September 26, 2026\./);
   assert.match(guide, /sort\(alphabeticalByLastName\)/);
   assert.match(data, /How will you support community recreation in Anmore, including Spirit Park development/);
   assert.doesNotMatch(guide, /priority-question|Featured question for every council candidate/);
@@ -130,7 +131,7 @@ test("provides an equal question-by-question comparison", async () => {
   assert.match(comparison, /aria-live="polite"/);
   assert.match(comparison, /\["All", "Mayor", "Councillor"\]/);
   assert.match(data, /answers\?: Partial<Record<number, string>>/);
-  assert.doesNotMatch(data, /answers:\s*\{/);
+  assert.match(data, /name: "Paul Weverink"[\s\S]*?answers:\s*\{/);
 });
 
 test("publishes election compliance, privacy, consent, and correction safeguards", async () => {
@@ -174,6 +175,49 @@ test("email invitations require written publication authorization", async () => 
     assert.match(file, /I have read and agree/);
     assert.match(file, /https:\/\/anmore\.me\/legal\/#candidate-consent/);
   }
+});
+
+test("publishes Paul Weverink's exact full profile at /Paul and in comparisons", async () => {
+  const [data, paulPage, paulProfile, voterGuide, css, vite, paulHtml, sitemap] = await Promise.all([
+    readFile(new URL("app/data.ts", root), "utf8"),
+    readFile(new URL("app/Paul/page.tsx", root), "utf8"),
+    readFile(new URL("app/Paul/paul-profile.tsx", root), "utf8"),
+    readFile(new URL("app/voter-guide.tsx", root), "utf8"),
+    readFile(new URL("app/globals.css", root), "utf8"),
+    readFile(new URL("hostinger/vite.config.ts", root), "utf8"),
+    readFile(new URL("hostinger/Paul/index.html", root), "utf8"),
+    readFile(new URL("public/sitemap.xml", root), "utf8"),
+  ]);
+
+  const exactContent = [
+    "I grew up in Port Moody and Port Coquitlam after arriving from the Netherlands with my family in 1966. I moved into a 100-plus-year-old house located in the Birchwynde subdivision in Anmore in 1998 with my wife Sandy and son Ian. My son Morgan was born soon after moving here. My sons both moved away from Anmore as young adults and my wife currently lives in a long-term care facility in Port Coquitlam. I love Anmore and all it has to offer. I am an avid mountain biker. I regularly ride and walk in our local trails and swim in the local lakes.",
+    "I am a semi-retired Engineering Manager, working for the same company for the last 38 years. I have served on Council for the last 12 years. My work on Council includes serving as the Environment Committee Chair for 2 terms as well as three terms as an SVFD Trustee. I was the Alternate Director for the Metro Vancouver Board of Directors for two terms and I sat on the Metro Van Zero Waste Committee for one term. I was the Group Commissioner and a leader with the 1st Anmore Scouts for many years.",
+    "I have been a resident of Anmore for 28 years.",
+    "Improve opportunities for residents to engage with Council, particularly at Council meetings. I have already started this process by putting a motion on the table to change our procedure bylaw to allow more public input at Council meetings. It was passed by Council.",
+    "Continue the conversation around fire safety in the village.",
+    "Continue to support our Sasamat Volunteer Fire Department.",
+    "I am committed to a very public OCP process regarding how the Village will grow. I will look at pros and cons of the different kinds of growth scenarios proposed and ensure that residents understand my position on what I support with regards to the OCP and why.",
+    "I have been an advocate on Council for all of those projects.",
+    "By constantly reviewing our Asset Management Plan to ensure that money is put away for future infrastructure replacement. By continuing to ensure that development pays for itself over time or create a surplus. In the past, we have leveraged developments to pay for much needed infrastructure upgrades as part of the new developments proposed. We need to ensure that any increased density beyond current allowable zoning, benefits the village as well as the developer.",
+    "Council worked with B.C. Hydro to manage traffic to Buntzen Lake. The reservation system has greatly reduced summer traffic in and out of the village. Without this excessive summer traffic, the village roads are under capacity with regards to regular, everyday traffic. Road safety efforts continue to be a Council and staff priority, and law enforcement may need to increase. Transit, considering our small population is fairly good and has improved over the years.",
+    "As stated above, I continue to support the opportunities for residents to engage with Council, particularly at Council meetings. I have already started this process by putting a motion on the table to change our procedure bylaw to allow more public input at Council meetings. It was passed by Council. There are rules around public consultation that are respected by the village and will continue as such.",
+    "12 years on Council speaks to my experience. As for outside expertise, Council works with staff and contracted consultants to provide Council with the information needed to make good decisions.",
+    "I don’t currently have any conflicts.",
+  ];
+  for (const text of exactContent) assert.ok(data.includes(text), `Missing exact candidate text: ${text.slice(0, 45)}`);
+
+  assert.match(data, /portrait:\s*"\/candidates\/paul-weverink\.jpg"/);
+  assert.match(data, /profilePath:\s*"\/Paul\/"/);
+  assert.match(paulPage, /PaulProfile/);
+  assert.match(paulProfile, /Candidate supplied/);
+  assert.match(paulProfile, /Occupation, professional background, and community service/);
+  assert.match(paulProfile, /questions\.map/);
+  assert.match(css, /\.profile-intro \.eyebrow, \.profile-background \.eyebrow, \.profile-label \{ color: var\(--forest\); \}/);
+  assert.match(css, /\.profile-section-heading \.eyebrow \{ color: #9cc0a8; \}/);
+  assert.match(voterGuide, /candidate\.profilePath/);
+  assert.match(vite, /paul: resolve\(__dirname, "Paul\/index.html"\)/);
+  assert.match(paulHtml, /canonical" href="https:\/\/anmore\.me\/Paul\/"/);
+  assert.match(sitemap, /https:\/\/anmore\.me\/Paul\//);
 });
 
 test("ships accessible navigation, discovery metadata, and hardened hosting headers", async () => {

@@ -95,8 +95,11 @@ export function VoterGuide() {
                   ) : (
                     <p className="awaiting">Awaiting a voluntary candidate biography.</p>
                   )}
+                  {candidate.profilePath && <a className="profile-link" href={candidate.profilePath}>View full profile →</a>}
                   {candidate.office === "School Trustee" ? (
                     <div className="response-state"><span className="dot" /> Sole candidate — no questionnaire requested</div>
+                  ) : candidate.answers ? (
+                    <div className="response-state answered"><span className="dot" /> Questionnaire response available</div>
                   ) : (
                     <div className="response-state"><span className="dot" /> No questionnaire response published yet</div>
                   )}
@@ -162,7 +165,7 @@ export function VoterGuide() {
       </section>
 
       <footer>
-        <div className="shell footer-inner"><div className="brand"><span className="brand-mark">A</span><span>Anmore Votes <b>2026</b></span></div><p>Built for an informed community. Last verified September 20, 2026.</p><div className="footer-links"><a href="/legal/">Policies</a><a href="mailto:election@anmore.me">Contact</a><a href="#top">Back to top ↑</a></div></div>
+        <div className="shell footer-inner"><div className="brand"><span className="brand-mark">A</span><span>Anmore Votes <b>2026</b></span></div><p>Built for an informed community. Last verified September 26, 2026.</p><div className="footer-links"><a href="/legal/">Policies</a><a href="mailto:election@anmore.me">Contact</a><a href="#top">Back to top ↑</a></div></div>
       </footer>
     </main>
     </>

@@ -14,6 +14,7 @@ export default defineConfig({
         home: resolve(__dirname, "index.html"),
         candidate: resolve(__dirname, "candidate-response/index.html"),
         legal: resolve(__dirname, "legal/index.html"),
+        paul: resolve(__dirname, "Paul/index.html"),
       },
     },
   },

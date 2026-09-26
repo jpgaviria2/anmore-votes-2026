@@ -70,12 +70,12 @@ export function CandidateComparison() {
                 {answer ? (
                   <>
                     <blockquote>{answer}</blockquote>
-                    <p className="answer-meta">Candidate supplied · Identity verified · Approved {candidate.responseApprovedAt}</p>
+                    <p className="answer-meta">Candidate supplied · Identity verified{candidate.responseApprovedAt ? ` · Approved ${candidate.responseApprovedAt}` : ""}</p>
                   </>
                 ) : (
                   <p className="no-answer">No response provided.</p>
                 )}
-                <a href={`#${candidateId(candidate.name)}`}>View candidate card</a>
+                <a href={candidate.profilePath || `#${candidateId(candidate.name)}`}>{candidate.profilePath ? "View full profile" : "View candidate card"}</a>
               </article>
             );
           })}
