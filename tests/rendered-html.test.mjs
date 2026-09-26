@@ -221,7 +221,7 @@ test("publishes Paul Weverink's exact full profile at /Paul and in comparisons",
 });
 
 test("ships accessible navigation, discovery metadata, and hardened hosting headers", async () => {
-  const [guide, candidate, legal, css, homeHtml, candidateHtml, legalHtml, htaccess, robots, sitemap] = await Promise.all([
+  const [guide, candidate, legal, css, homeHtml, candidateHtml, legalHtml, htaccess, robots, sitemap, packageJson] = await Promise.all([
     readFile(new URL("app/voter-guide.tsx", root), "utf8"),
     readFile(new URL("app/candidate-response/response-form.tsx", root), "utf8"),
     readFile(new URL("app/legal/legal-page.tsx", root), "utf8"),
@@ -232,6 +232,7 @@ test("ships accessible navigation, discovery metadata, and hardened hosting head
     readFile(new URL("hostinger/public/.htaccess", root), "utf8"),
     readFile(new URL("public/robots.txt", root), "utf8"),
     readFile(new URL("public/sitemap.xml", root), "utf8"),
+    readFile(new URL("package.json", root), "utf8"),
   ]);
   for (const page of [guide, candidate, legal]) {
     assert.match(page, /className="skip-link"/);
@@ -253,4 +254,5 @@ test("ships accessible navigation, discovery metadata, and hardened hosting head
   assert.match(robots, /Sitemap: https:\/\/anmore\.me\/sitemap\.xml/);
   assert.match(sitemap, /https:\/\/anmore\.me\/candidate-response\//);
   assert.match(sitemap, /https:\/\/anmore\.me\/legal\//);
+  assert.match(JSON.parse(packageJson).scripts["build:hostinger"], /chmod -R a\+rX hostinger-dist/);
 });
