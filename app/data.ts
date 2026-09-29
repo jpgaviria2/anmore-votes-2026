@@ -13,12 +13,8 @@ export type Candidate = {
   website?: string;
   publicProfile?: {
     compiledAt: string;
-    posts: {
-      label: string;
-      url: string;
-      embedded: boolean;
-    }[];
-    noSubstantiveInformation?: string;
+    driveDocumentId: string;
+    driveDocumentTitle: string;
   };
 };
 
@@ -41,9 +37,8 @@ export const candidates: Candidate[] = [
     profilePath: "/Harriette/",
     publicProfile: {
       compiledAt: "September 29, 2026",
-      posts: [
-        { label: "Anmore Alternative News — complete candidate questionnaire post", url: "https://www.facebook.com/anmorealternativenews/posts/pfbid07Eg5Z1HVaNUuZAKerHHaacUemA7BBL3sQvpNed54T572ytzj9JNG1fSzipkiTfGdl", embedded: true },
-      ],
+      driveDocumentId: "1bzWQ9evdxL1y6uGz5ze-xYWjw7-b_VmTJNNTe_TwaqM",
+      driveDocumentTitle: "Harriette Chang — Anmore Council Candidate Pack",
     },
   },
   {
@@ -53,9 +48,8 @@ export const candidates: Candidate[] = [
     profilePath: "/Will/",
     publicProfile: {
       compiledAt: "September 29, 2026",
-      posts: [
-        { label: "Anmore Alternative News — complete candidate questionnaire post", url: "https://www.facebook.com/anmorealternativenews/posts/pfbid02ow99TUsDmRSgUtzjkCsHBnZGoMHSVr9GWi4YKZMv44dt2UfgXECvocwdN23GQKm4l", embedded: true },
-      ],
+      driveDocumentId: "1S3bvSQtZdAkwSK8zD0dBULpy8Cz9pn1Rcq1DdqNdU0k",
+      driveDocumentTitle: "Will Crocker — Anmore Council Candidate Pack",
     },
   },
   {
@@ -65,8 +59,8 @@ export const candidates: Candidate[] = [
     profilePath: "/Nylah/",
     publicProfile: {
       compiledAt: "September 29, 2026",
-      posts: [],
-      noSubstantiveInformation: "No substantive public profile information was found in the Facebook sources reviewed as of September 29, 2026.",
+      driveDocumentId: "1kxd2anLLDv3tNEmMUV6ezALJ-IdZ0s9d9lOYOAxeI38",
+      driveDocumentTitle: "Nylah Froese — Anmore Council Candidate Pack",
     },
   },
   {
@@ -76,9 +70,8 @@ export const candidates: Candidate[] = [
     profilePath: "/Georgia/",
     publicProfile: {
       compiledAt: "September 29, 2026",
-      posts: [
-        { label: "Anmore Conversations — complete candidacy announcement", url: "https://facebook.com/groups/AnmoreConversations/permalink/2233329337236497/", embedded: false },
-      ],
+      driveDocumentId: "1OaQy_YPr2o52wXGb_VgXnFPr3SQLs5jCTtTjUFruRXg",
+      driveDocumentTitle: "Georgia Lyons — Anmore Council Candidate Pack",
     },
   },
   {
@@ -88,8 +81,8 @@ export const candidates: Candidate[] = [
     profilePath: "/Neil/",
     publicProfile: {
       compiledAt: "September 29, 2026",
-      posts: [],
-      noSubstantiveInformation: "No substantive public profile information was found in the Facebook sources reviewed as of September 29, 2026.",
+      driveDocumentId: "14MD5-B3arfKUqoZKa16TlRA0y-SDePx8fg-GIlEK7aM",
+      driveDocumentTitle: "Neil Lyons — Anmore Council Candidate Pack",
     },
   },
   {
@@ -99,9 +92,8 @@ export const candidates: Candidate[] = [
     profilePath: "/Wade/",
     publicProfile: {
       compiledAt: "September 29, 2026",
-      posts: [
-        { label: "Anmore Alternative News — complete candidate questionnaire post", url: "https://www.facebook.com/anmorealternativenews/posts/pfbid0jpC1MGQVvXVHvCfZTD3dXaccdiBKVy6q39P6oW2FfAtHdES1m4aYMyF3n1xk5Yfql", embedded: true },
-      ],
+      driveDocumentId: "1sVyaRRWSFGyiLuc4kHtSUg-xSPxnAyn3MYf2HDqF9Ks",
+      driveDocumentTitle: "Wade Parrish — Anmore Council Candidate Pack",
     },
   },
   {
@@ -111,9 +103,8 @@ export const candidates: Candidate[] = [
     profilePath: "/Rod/",
     publicProfile: {
       compiledAt: "September 29, 2026",
-      posts: [
-        { label: "Anmore Alternative News — complete candidate questionnaire post", url: "https://www.facebook.com/anmorealternativenews/posts/pfbid02H9SsDfCHzWM13EazwyqCCqYVhvLSNXNwmAZMGuAveG46VmUxGmkJ6UqPJQL4nuEfl", embedded: true },
-      ],
+      driveDocumentId: "1du9vdsbCnGUkKJsNcoRU1aSLKCRMIlxEiYkYTa2JQrs",
+      driveDocumentTitle: "Rod Rempel — Anmore Council Candidate Pack",
     },
   },
   {
@@ -123,8 +114,8 @@ export const candidates: Candidate[] = [
     profilePath: "/Carl/",
     publicProfile: {
       compiledAt: "September 29, 2026",
-      posts: [],
-      noSubstantiveInformation: "No substantive public profile information was found in the Facebook sources reviewed as of September 29, 2026.",
+      driveDocumentId: "1yDxvv38KVvdn_fuBb8jONre8ZEKmmQykUHFRQPnFLww",
+      driveDocumentTitle: "Carl Schmidt — Anmore Council Candidate Pack",
     },
   },
   {
@@ -135,8 +126,8 @@ export const candidates: Candidate[] = [
     profilePath: "/Kim/",
     publicProfile: {
       compiledAt: "September 29, 2026",
-      posts: [],
-      noSubstantiveInformation: "No substantive public profile information was found in the Facebook sources reviewed as of September 29, 2026.",
+      driveDocumentId: "1gTpIXVrI8AlPp2fcSGtKi-pItv2jKa5QalnmrdjDLk8",
+      driveDocumentTitle: "Kim Trowbridge — Anmore Council Candidate Pack",
     },
     publicService: [
       "Current Village of Anmore councillor",

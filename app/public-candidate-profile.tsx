@@ -29,7 +29,7 @@ export function PublicCandidateProfile({ candidateName }: { candidateName: strin
 
         <div className="public-profile-notice" role="note">
           <div className="shell">
-            <strong>Staging-only original sources.</strong> Complete public posts are displayed directly from Facebook where embedding is available. Anmore Votes has not summarized or rewritten them.
+            <strong>Staging-only Google Drive research document.</strong> The complete document is displayed below without summarizing or rewriting it.
           </div>
         </div>
 
@@ -38,45 +38,29 @@ export function PublicCandidateProfile({ candidateName }: { candidateName: strin
             <span>{candidate.initials}</span>
           </div>
           <div className="profile-intro">
-            <p className="eyebrow">Full original public posts</p>
+            <p className="eyebrow">Full Google Drive research document</p>
             <p className="office">Candidate for {candidate.office}</p>
             <h1>{candidate.name}</h1>
             {candidate.officialNote && <span className="status-badge">{candidate.officialNote}</span>}
             <p className="profile-label">Research status</p>
-            <p className="profile-copy">Compiled {publicProfile.compiledAt} from Facebook and other public sources. No portrait was supplied, so an initials placeholder is shown.</p>
+            <p className="profile-copy">The full research document from the shared Google Drive folder is displayed below. No portrait was supplied, so an initials placeholder is shown.</p>
           </div>
         </section>
 
         <section className="public-profile-sources shell" aria-labelledby="sources-heading">
-          <p className="eyebrow">Original source material</p>
-          <h2 id="sources-heading">Complete posts, questions, and answers</h2>
-          {publicProfile.posts.length > 0 ? (
-            <div className="public-post-list">
-              {publicProfile.posts.map((post) => (
-                <article className="public-post" key={post.url}>
-                  <h3>{post.label}</h3>
-                  {post.embedded && (
-                    <iframe
-                      className="facebook-post"
-                      src={`https://www.facebook.com/plugins/post.php?href=${encodeURIComponent(post.url)}&show_text=true&width=500`}
-                      title={`${candidate.name} — complete Facebook post`}
-                      width="500"
-                      height="780"
-                      scrolling="yes"
-                      frameBorder="0"
-                      allowFullScreen
-                      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                    />
-                  )}
-                  {!post.embedded && <p>This Facebook group post cannot be embedded publicly.</p>}
-                  <p><a href={post.url} target="_blank" rel="noreferrer">View original post on Facebook ↗</a></p>
-                </article>
-              ))}
-            </div>
-          ) : (
-            <p className="public-profile-empty">{publicProfile.noSubstantiveInformation}</p>
-          )}
-          <p>Compilation date: {publicProfile.compiledAt}. Facebook supplies the embedded content; use “See more” inside a post to reveal its complete questions and answers.</p>
+          <p className="eyebrow">Complete source document</p>
+          <h2 id="sources-heading">{publicProfile.driveDocumentTitle}</h2>
+          <iframe
+            className="google-drive-document"
+            src={`https://docs.google.com/document/d/${publicProfile.driveDocumentId}/preview`}
+            title={`${candidate.name} — full Google Drive research document`}
+            width="100%"
+            height="900"
+            frameBorder="0"
+            allowFullScreen
+          />
+          <p><a href={`https://docs.google.com/document/d/${publicProfile.driveDocumentId}/edit?usp=sharing`} target="_blank" rel="noreferrer">Open the complete document in Google Drive ↗</a></p>
+          <p>Document compilation date: {publicProfile.compiledAt}. The embedded Google document is shown in full and has not been rewritten by Anmore Votes.</p>
         </section>
 
         <section className="profile-answers" aria-labelledby="answers-heading">
