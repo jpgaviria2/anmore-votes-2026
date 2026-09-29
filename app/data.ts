@@ -11,10 +11,12 @@ export type Candidate = {
   answers?: Partial<Record<number, string>>;
   responseApprovedAt?: string;
   website?: string;
+  publicInformationUnavailable?: boolean;
   publicProfile?: {
     compiledAt: string;
-    driveDocumentId: string;
-    driveDocumentTitle: string;
+    sourceLabel: string;
+    sourceUrl: string;
+    embeddable: boolean;
   };
 };
 
@@ -37,8 +39,9 @@ export const candidates: Candidate[] = [
     profilePath: "/Harriette/",
     publicProfile: {
       compiledAt: "September 29, 2026",
-      driveDocumentId: "1bzWQ9evdxL1y6uGz5ze-xYWjw7-b_VmTJNNTe_TwaqM",
-      driveDocumentTitle: "Harriette Chang — Anmore Council Candidate Pack",
+      sourceLabel: "Anmore Alternative News — candidate questionnaire post",
+      sourceUrl: "https://www.facebook.com/anmorealternativenews/posts/pfbid07Eg5Z1HVaNUuZAKerHHaacUemA7BBL3sQvpNed54T572ytzj9JNG1fSzipkiTfGdl",
+      embeddable: true,
     },
   },
   {
@@ -48,20 +51,16 @@ export const candidates: Candidate[] = [
     profilePath: "/Will/",
     publicProfile: {
       compiledAt: "September 29, 2026",
-      driveDocumentId: "1S3bvSQtZdAkwSK8zD0dBULpy8Cz9pn1Rcq1DdqNdU0k",
-      driveDocumentTitle: "Will Crocker — Anmore Council Candidate Pack",
+      sourceLabel: "Anmore Alternative News — candidate questionnaire post",
+      sourceUrl: "https://www.facebook.com/anmorealternativenews/posts/pfbid02ow99TUsDmRSgUtzjkCsHBnZGoMHSVr9GWi4YKZMv44dt2UfgXECvocwdN23GQKm4l",
+      embeddable: true,
     },
   },
   {
     name: "Nylah Froese",
     office: "Councillor",
     initials: "NF",
-    profilePath: "/Nylah/",
-    publicProfile: {
-      compiledAt: "September 29, 2026",
-      driveDocumentId: "1kxd2anLLDv3tNEmMUV6ezALJ-IdZ0s9d9lOYOAxeI38",
-      driveDocumentTitle: "Nylah Froese — Anmore Council Candidate Pack",
-    },
+    publicInformationUnavailable: true,
   },
   {
     name: "Georgia Lyons",
@@ -70,20 +69,16 @@ export const candidates: Candidate[] = [
     profilePath: "/Georgia/",
     publicProfile: {
       compiledAt: "September 29, 2026",
-      driveDocumentId: "1OaQy_YPr2o52wXGb_VgXnFPr3SQLs5jCTtTjUFruRXg",
-      driveDocumentTitle: "Georgia Lyons — Anmore Council Candidate Pack",
+      sourceLabel: "Anmore Conversations — candidacy announcement post",
+      sourceUrl: "https://www.facebook.com/groups/AnmoreConversations/posts/2233329337236497/",
+      embeddable: false,
     },
   },
   {
     name: "Neil Lyons",
     office: "Councillor",
     initials: "NL",
-    profilePath: "/Neil/",
-    publicProfile: {
-      compiledAt: "September 29, 2026",
-      driveDocumentId: "14MD5-B3arfKUqoZKa16TlRA0y-SDePx8fg-GIlEK7aM",
-      driveDocumentTitle: "Neil Lyons — Anmore Council Candidate Pack",
-    },
+    publicInformationUnavailable: true,
   },
   {
     name: "Wade Parrish",
@@ -92,8 +87,9 @@ export const candidates: Candidate[] = [
     profilePath: "/Wade/",
     publicProfile: {
       compiledAt: "September 29, 2026",
-      driveDocumentId: "1sVyaRRWSFGyiLuc4kHtSUg-xSPxnAyn3MYf2HDqF9Ks",
-      driveDocumentTitle: "Wade Parrish — Anmore Council Candidate Pack",
+      sourceLabel: "Anmore Alternative News — candidate questionnaire post",
+      sourceUrl: "https://www.facebook.com/anmorealternativenews/posts/pfbid0jpC1MGQVvXVHvCfZTD3dXaccdiBKVy6q39P6oW2FfAtHdES1m4aYMyF3n1xk5Yfql",
+      embeddable: true,
     },
   },
   {
@@ -103,32 +99,23 @@ export const candidates: Candidate[] = [
     profilePath: "/Rod/",
     publicProfile: {
       compiledAt: "September 29, 2026",
-      driveDocumentId: "1du9vdsbCnGUkKJsNcoRU1aSLKCRMIlxEiYkYTa2JQrs",
-      driveDocumentTitle: "Rod Rempel — Anmore Council Candidate Pack",
+      sourceLabel: "Anmore Alternative News — candidate questionnaire post",
+      sourceUrl: "https://www.facebook.com/anmorealternativenews/posts/pfbid02H9SsDfCHzWM13EazwyqCCqYVhvLSNXNwmAZMGuAveG46VmUxGmkJ6UqPJQL4nuEfl",
+      embeddable: true,
     },
   },
   {
     name: "Carl Schmidt",
     office: "Councillor",
     initials: "CS",
-    profilePath: "/Carl/",
-    publicProfile: {
-      compiledAt: "September 29, 2026",
-      driveDocumentId: "1yDxvv38KVvdn_fuBb8jONre8ZEKmmQykUHFRQPnFLww",
-      driveDocumentTitle: "Carl Schmidt — Anmore Council Candidate Pack",
-    },
+    publicInformationUnavailable: true,
   },
   {
     name: "Kim Trowbridge",
     office: "Councillor",
     initials: "KT",
     officialNote: "Incumbent",
-    profilePath: "/Kim/",
-    publicProfile: {
-      compiledAt: "September 29, 2026",
-      driveDocumentId: "1gTpIXVrI8AlPp2fcSGtKi-pItv2jKa5QalnmrdjDLk8",
-      driveDocumentTitle: "Kim Trowbridge — Anmore Council Candidate Pack",
-    },
+    publicInformationUnavailable: true,
     publicService: [
       "Current Village of Anmore councillor",
       "Chair, Parks and Recreation Committee",

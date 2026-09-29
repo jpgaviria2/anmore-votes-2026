@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
-import { candidates, questions } from "./data";
+import { candidates } from "./data";
 
 export function PublicCandidateProfile({ candidateName }: { candidateName: string }) {
   const candidate = candidates.find((entry) => entry.name === candidateName);
@@ -29,7 +29,7 @@ export function PublicCandidateProfile({ candidateName }: { candidateName: strin
 
         <div className="public-profile-notice" role="note">
           <div className="shell">
-            <strong>Staging-only Google Drive research document.</strong> The complete document is displayed below without summarizing or rewriting it.
+            <strong>Taken from the candidate’s public profile.</strong> This material was publicly posted and was not submitted or approved by the candidate for Anmore Votes.
           </div>
         </div>
 
@@ -38,51 +38,36 @@ export function PublicCandidateProfile({ candidateName }: { candidateName: strin
             <span>{candidate.initials}</span>
           </div>
           <div className="profile-intro">
-            <p className="eyebrow">Full Google Drive research document</p>
+            <p className="eyebrow">Public profile information</p>
             <p className="office">Candidate for {candidate.office}</p>
             <h1>{candidate.name}</h1>
             {candidate.officialNote && <span className="status-badge">{candidate.officialNote}</span>}
-            <p className="profile-label">Research status</p>
-            <p className="profile-copy">The full research document from the shared Google Drive folder is displayed below. No portrait was supplied, so an initials placeholder is shown.</p>
+            <p className="profile-label">Source</p>
+            <p className="profile-copy">Taken from the candidate’s public profile. No portrait was supplied, so an initials placeholder is shown.</p>
           </div>
         </section>
 
         <section className="public-profile-sources shell" aria-labelledby="sources-heading">
-          <p className="eyebrow">Complete source document</p>
-          <h2 id="sources-heading">{publicProfile.driveDocumentTitle}</h2>
-          <iframe
-            className="google-drive-document"
-            src={`https://docs.google.com/document/d/${publicProfile.driveDocumentId}/preview`}
-            title={`${candidate.name} — full Google Drive research document`}
-            width="100%"
-            height="900"
-            frameBorder="0"
-            allowFullScreen
-          />
-          <p><a href={`https://docs.google.com/document/d/${publicProfile.driveDocumentId}/edit?usp=sharing`} target="_blank" rel="noreferrer">Open the complete document in Google Drive ↗</a></p>
-          <p>Document compilation date: {publicProfile.compiledAt}. The embedded Google document is shown in full and has not been rewritten by Anmore Votes.</p>
-        </section>
-
-        <section className="profile-answers" aria-labelledby="answers-heading">
-          <div className="shell">
-            <div className="profile-section-heading">
-              <p className="eyebrow">Common questionnaire</p>
-              <h2 id="answers-heading">No questionnaire response provided</h2>
-              <p>Public statements have not been mapped into Anmore Votes questionnaire answers. All nine answers remain empty unless the candidate submits and approves a response.</p>
-            </div>
-            <div className="profile-answer-list">
-              {questions.map((question, index) => (
-                <article className="profile-answer" key={question}>
-                  <div className="profile-question-number">{String(index + 1).padStart(2, "0")}</div>
-                  <div>
-                    <h3>{question}</h3>
-                    <p>No response provided.</p>
-                  </div>
-                </article>
-              ))}
-            </div>
-            <a className="button light profile-back" href="/#questions">Compare candidates side by side</a>
-          </div>
+          <p className="eyebrow">Public Facebook post</p>
+          <h2 id="sources-heading">{publicProfile.sourceLabel}</h2>
+          {publicProfile.embeddable ? (
+            <iframe
+              className="facebook-post"
+              src={`https://www.facebook.com/plugins/post.php?href=${encodeURIComponent(publicProfile.sourceUrl)}&show_text=true&width=500`}
+              title={`${candidate.name} — public Facebook post`}
+              width="500"
+              height="900"
+              scrolling="yes"
+              frameBorder="0"
+              allowFullScreen
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            />
+          ) : (
+            <p className="public-profile-empty">Facebook does not permit this public group post to be embedded.</p>
+          )}
+          <p><a href={publicProfile.sourceUrl} target="_blank" rel="noreferrer">View the original public Facebook post ↗</a></p>
+          <p>Source reviewed {publicProfile.compiledAt}. Public statements are not treated as answers to the Anmore Votes questionnaire.</p>
+          <a className="button secondary profile-back" href="/#candidates">Back to candidates</a>
         </section>
 
         <footer>

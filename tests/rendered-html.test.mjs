@@ -220,17 +220,19 @@ test("publishes Paul Weverink's exact full profile at /Paul and in comparisons",
   assert.match(sitemap, /https:\/\/anmore\.me\/Paul\//);
 });
 
-test("stages nine clearly labelled public-source council profiles without questionnaire answers", async () => {
+test("stages five public-source council profiles and omits four empty profiles", async () => {
   const profiles = [
-    ["Carl Schmidt", "Carl"],
     ["Georgia Lyons", "Georgia"],
     ["Harriette Chang", "Harriette"],
-    ["Kim Trowbridge", "Kim"],
-    ["Neil Lyons", "Neil"],
-    ["Nylah Froese", "Nylah"],
     ["Rod Rempel", "Rod"],
     ["Wade Parrish", "Wade"],
     ["Will Crocker", "Will"],
+  ];
+  const unavailableProfiles = [
+    ["Carl Schmidt", "Carl"],
+    ["Kim Trowbridge", "Kim"],
+    ["Neil Lyons", "Neil"],
+    ["Nylah Froese", "Nylah"],
   ];
   const [data, profile, guide, vite, sitemap] = await Promise.all([
     readFile(new URL("app/data.ts", root), "utf8"),
@@ -240,18 +242,17 @@ test("stages nine clearly labelled public-source council profiles without questi
     readFile(new URL("public/sitemap.xml", root), "utf8"),
   ]);
 
-  assert.match(profile, /Full Google Drive research document/);
-  assert.match(profile, /docs\.google\.com\/document\/d/);
-  assert.match(profile, /publicProfile\.driveDocumentId/);
-  assert.match(profile, /Open the complete document in Google Drive/);
-  assert.match(profile, /No questionnaire response provided/);
-  assert.doesNotMatch(profile, /facebook\.com\/plugins\/post\.php/);
-  assert.doesNotMatch(profile, /<blockquote/);
-  assert.match(guide, /Full Google Drive research document — displayed without rewriting/);
-  assert.match(data, /1bzWQ9evdxL1y6uGz5ze-xYWjw7-b_VmTJNNTe_TwaqM/);
-  assert.match(data, /1S3bvSQtZdAkwSK8zD0dBULpy8Cz9pn1Rcq1DdqNdU0k/);
-  assert.match(data, /1sVyaRRWSFGyiLuc4kHtSUg-xSPxnAyn3MYf2HDqF9Ks/);
-  assert.match(data, /1du9vdsbCnGUkKJsNcoRU1aSLKCRMIlxEiYkYTa2JQrs/);
+  assert.match(profile, /Taken from the candidate’s public profile/);
+  assert.match(profile, /facebook\.com\/plugins\/post\.php/);
+  assert.match(profile, /View the original public Facebook post/);
+  assert.doesNotMatch(profile, /Google Drive|word-for-word|No questionnaire response provided/);
+  assert.match(guide, /View public profile information/);
+  assert.match(guide, /Information taken from the candidate’s public profile\./);
+  assert.match(guide, /We have not received any information\./);
+  assert.match(data, /pfbid07Eg5Z1HVaNUuZAKerHHaacUemA7BBL3sQvpNed54T572ytzj9JNG1fSzipkiTfGdl/);
+  assert.match(data, /pfbid02ow99TUsDmRSgUtzjkCsHBnZGoMHSVr9GWi4YKZMv44dt2UfgXECvocwdN23GQKm4l/);
+  assert.match(data, /pfbid0jpC1MGQVvXVHvCfZTD3dXaccdiBKVy6q39P6oW2FfAtHdES1m4aYMyF3n1xk5Yfql/);
+  assert.match(data, /pfbid02H9SsDfCHzWM13EazwyqCCqYVhvLSNXNwmAZMGuAveG46VmUxGmkJ6UqPJQL4nuEfl/);
 
   for (const [name, route] of profiles) {
     const candidateBlock = data.slice(data.indexOf(`name: "${name}"`), data.indexOf("},", data.indexOf(`name: "${name}"`)) + 2);
@@ -269,6 +270,16 @@ test("stages nine clearly labelled public-source council profiles without questi
     assert.match(hostingerHtml, new RegExp(`canonical" href="https://anmore\\.me/${route}/"`));
     assert.match(vite, new RegExp(`${route.toLowerCase()}: resolve\\(__dirname, "${route}\\/index\\.html"\\)`));
     assert.doesNotMatch(sitemap, new RegExp(`https://anmore\\.me/${route}/`));
+  }
+
+  for (const [name, route] of unavailableProfiles) {
+    const candidateBlock = data.slice(data.indexOf(`name: "${name}"`), data.indexOf("},", data.indexOf(`name: "${name}"`)) + 2);
+    assert.match(candidateBlock, /publicInformationUnavailable:\s*true/);
+    assert.doesNotMatch(candidateBlock, /profilePath:|publicProfile:/);
+    assert.doesNotMatch(vite, new RegExp(`${route.toLowerCase()}: resolve`));
+    assert.doesNotMatch(sitemap, new RegExp(`https://anmore\\.me/${route}/`));
+    await assert.rejects(access(new URL(`app/${route}/page.tsx`, root)));
+    await assert.rejects(access(new URL(`hostinger/${route}/index.html`, root)));
   }
 });
 

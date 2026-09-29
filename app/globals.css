@@ -280,7 +280,7 @@ footer { background: var(--forest-deep); color: white; padding: 40px 0; }
 .public-profile-sources li { margin-bottom: 12px; }
 .public-profile-sources a { color: var(--forest); font-weight: 700; }
 .public-profile-sources > p:last-child { max-width: 900px; color: var(--muted); font-size: 14px; }
-.google-drive-document { display: block; width: 100%; min-height: 900px; margin: 30px 0 18px; border: 1px solid var(--line); background: white; }
+.facebook-post { display: block; width: min(100%, 500px); max-width: 100%; min-height: 900px; margin: 30px 0 18px; border: 1px solid var(--line); background: white; }
 .public-profile-link { line-height: 1.45; }
 
 /* Candidate response */
