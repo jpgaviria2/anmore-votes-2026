@@ -29,7 +29,7 @@ export function PublicCandidateProfile({ candidateName }: { candidateName: strin
 
         <div className="public-profile-notice" role="note">
           <div className="shell">
-            <strong>Staging-only independent summary.</strong> This page was compiled from Facebook and other public sources. It is not candidate-supplied or candidate-approved.
+            <strong>Staging-only source excerpts.</strong> Text below is quoted directly from linked Facebook and public sources. It is not an Anmore Votes interpretation.
           </div>
         </div>
 
@@ -38,7 +38,7 @@ export function PublicCandidateProfile({ candidateName }: { candidateName: strin
             <span>{candidate.initials}</span>
           </div>
           <div className="profile-intro">
-            <p className="eyebrow">Independent public-source summary</p>
+            <p className="eyebrow">Direct text from public sources</p>
             <p className="office">Candidate for {candidate.office}</p>
             <h1>{candidate.name}</h1>
             {candidate.officialNote && <span className="status-badge">{candidate.officialNote}</span>}
@@ -47,43 +47,23 @@ export function PublicCandidateProfile({ candidateName }: { candidateName: strin
           </div>
         </section>
 
-        <section className="profile-background shell" aria-labelledby="background-heading">
-          <p className="eyebrow">Public-source background</p>
-          <h2 id="background-heading">Biography and background</h2>
-          <div className="profile-copy">
-            {publicProfile.background.length > 0 ? (
-              <ul className="public-profile-list">
-                {publicProfile.background.map((item) => <li key={item}>{item}</li>)}
-              </ul>
-            ) : (
-              <p className="public-profile-empty">{publicProfile.noSubstantiveInformation}</p>
-            )}
-          </div>
-        </section>
-
-        <section className="profile-background shell" aria-labelledby="priorities-heading">
-          <p className="eyebrow">Public-source positions</p>
-          <h2 id="priorities-heading">Priorities and positions</h2>
-          <div className="profile-copy">
-            {publicProfile.priorities.length > 0 ? (
-              <ul className="public-profile-list">
-                {publicProfile.priorities.map((item) => <li key={item}>{item}</li>)}
-              </ul>
-            ) : (
-              <p className="public-profile-empty">No substantive priorities or positions were found in the public sources reviewed as of September 28, 2026.</p>
-            )}
-          </div>
-        </section>
-
         <section className="public-profile-sources shell" aria-labelledby="sources-heading">
-          <p className="eyebrow">Source record</p>
-          <h2 id="sources-heading">Sources reviewed</h2>
-          <ul>
-            {publicProfile.sources.map((source) => (
-              <li key={source.url}><a href={source.url} target="_blank" rel="noreferrer">{source.label} ↗</a></li>
-            ))}
-          </ul>
-          <p>Compilation date: {publicProfile.compiledAt}. Public-source summaries are kept separate from candidate submissions and may be corrected when better source information becomes available.</p>
+          <p className="eyebrow">Verbatim public text</p>
+          <h2 id="sources-heading">Direct excerpts and source articles</h2>
+          {publicProfile.excerpts.length > 0 ? (
+            <div className="public-excerpt-list">
+              {publicProfile.excerpts.map((excerpt) => (
+                <article className="public-excerpt" key={`${excerpt.sourceUrl}-${excerpt.heading}`}>
+                  <h3>{excerpt.heading}</h3>
+                  <blockquote>“{excerpt.text}”</blockquote>
+                  <a href={excerpt.sourceUrl} target="_blank" rel="noreferrer">Read source article: {excerpt.sourceLabel} ↗</a>
+                </article>
+              ))}
+            </div>
+          ) : (
+            <p className="public-profile-empty">{publicProfile.noSubstantiveInformation}</p>
+          )}
+          <p>Compilation date: {publicProfile.compiledAt}. Excerpts preserve the source wording; follow each link for the complete article or post.</p>
         </section>
 
         <section className="profile-answers" aria-labelledby="answers-heading">

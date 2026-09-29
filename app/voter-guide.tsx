@@ -76,7 +76,7 @@ export function VoterGuide() {
       <section className="section shell" id="candidates">
         <div className="section-heading">
           <div><p className="eyebrow">Verified ballot</p><h2>Meet the candidates</h2></div>
-          <p>Official status is sourced from the Village of Anmore and CivicInfo BC. Candidates are listed alphabetically by last name within each office. Candidate-supplied material is published only after approval; separately labelled staging profiles summarize public sources without treating them as candidate submissions.</p>
+          <p>Official status is sourced from the Village of Anmore and CivicInfo BC. Candidates are listed alphabetically by last name within each office. Candidate-supplied material is published only after approval; staging profiles use direct excerpts linked to their public sources.</p>
         </div>
         {groups.map((group) => (
           <div className="candidate-group" key={group}>
@@ -96,7 +96,7 @@ export function VoterGuide() {
                     <p className="awaiting">Awaiting a voluntary candidate biography.</p>
                   )}
                   {candidate.publicProfile ? (
-                    <a className="profile-link public-profile-link" href={candidate.profilePath}>Public-source profile compiled from Facebook and other public sources — not candidate-supplied →</a>
+                    <a className="profile-link public-profile-link" href={candidate.profilePath}>Direct Facebook and public-source excerpts — linked word-for-word →</a>
                   ) : candidate.profilePath ? (
                     <a className="profile-link" href={candidate.profilePath}>View full profile →</a>
                   ) : null}

@@ -240,18 +240,20 @@ test("stages nine clearly labelled public-source council profiles without questi
     readFile(new URL("public/sitemap.xml", root), "utf8"),
   ]);
 
-  assert.match(profile, /Independent public-source summary/);
-  assert.match(profile, /compiled from Facebook and other public sources/i);
-  assert.match(profile, /not candidate-supplied or candidate-approved/i);
-  assert.match(profile, /Compiled \{publicProfile\.compiledAt\}/);
+  assert.match(profile, /Direct text from public sources/);
+  assert.match(profile, /<blockquote/);
+  assert.match(profile, /Read source article/);
   assert.match(profile, /No questionnaire response provided/);
-  assert.match(profile, /publicProfile\.sources\.map/);
-  assert.match(guide, /Public-source profile compiled from Facebook and other public sources — not candidate-supplied/);
-  assert.match(data, /spent the last 20-plus years working in facilities management/i);
-  assert.match(data, /served the last 13 years with the Sasamat Volunteer Fire Department/i);
-  assert.match(data, /Reviewing, updating, and following the Official Community Plan/i);
-  assert.doesNotMatch(data, /retired after 37 years as a BC Ferries captain/i);
-  assert.doesNotMatch(data, /Former UBC varsity rower/i);
+  assert.match(profile, /publicProfile\.excerpts\.map/);
+  assert.match(guide, /Direct Facebook and public-source excerpts — linked word-for-word/);
+  assert.match(data, /I have proudly served the last 13 years with our Sasamat Volunteer Fire Department\./);
+  assert.match(data, /Reviewing, updating and following, our Official Community Plan \(OCP\)\./);
+  assert.match(data, /I will bring teamwork, common sense, communication, outside the box thinking, kindness, and a sprinkle of humor to Anmore Council/);
+  assert.match(data, /Update the Official Community Plan with strong resident input\./);
+  assert.match(data, /I’m excited to announce that I’m running for Anmore Council!/);
+  assert.doesNotMatch(data, /Identifies community voice/);
+  assert.doesNotMatch(data, /Prioritizes effective management/);
+  assert.doesNotMatch(data, /Cites construction and development-planning expertise/);
 
   for (const [name, route] of profiles) {
     const candidateBlock = data.slice(data.indexOf(`name: "${name}"`), data.indexOf("},", data.indexOf(`name: "${name}"`)) + 2);
