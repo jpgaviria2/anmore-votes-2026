@@ -11,6 +11,13 @@ export type Candidate = {
   answers?: Partial<Record<number, string>>;
   responseApprovedAt?: string;
   website?: string;
+  publicProfile?: {
+    compiledAt: string;
+    background: string[];
+    priorities: string[];
+    noSubstantiveInformation?: string;
+    sources: { label: string; url: string }[];
+  };
 };
 
 export const candidates: Candidate[] = [
@@ -25,19 +32,178 @@ export const candidates: Candidate[] = [
       "Liaison, Tri-Cities Region Food Council",
     ],
   },
-  { name: "Harriette Chang", office: "Councillor", initials: "HC" },
-  { name: "Will Crocker", office: "Councillor", initials: "WC" },
-  { name: "Nylah Froese", office: "Councillor", initials: "NF" },
-  { name: "Georgia Lyons", office: "Councillor", initials: "GL" },
-  { name: "Neil Lyons", office: "Councillor", initials: "NL" },
-  { name: "Wade Parrish", office: "Councillor", initials: "WP" },
-  { name: "Rod Rempel", office: "Councillor", initials: "RR" },
-  { name: "Carl Schmidt", office: "Councillor", initials: "CS" },
+  {
+    name: "Harriette Chang",
+    office: "Councillor",
+    initials: "HC",
+    profilePath: "/Harriette/",
+    publicProfile: {
+      compiledAt: "September 28, 2026",
+      background: [
+        "Anmore resident for nearly 20 years.",
+        "Teacher and school counsellor in the Coquitlam School District for more than 30 years, with a Master's in Counselling and Leadership and a Bachelor of Education; also studied Environmental Geography.",
+        "Twenty-year coordinator of Real Acts of Caring (RAC); her students present annually at Anmore Council; has planted more than 100,000 trees.",
+      ],
+      priorities: [
+        "Identifies community voice, sustainable development, and emergency preparedness as priorities.",
+        "Wants a welcoming environment for public input so residents feel heard.",
+        "Advocates updating the Official Community Plan before development decisions and improving emergency communication with visible leadership.",
+      ],
+      sources: [
+        { label: "Anmore Alternative News — candidate questionnaire answers (published September 23, 2026)", url: "https://www.facebook.com/anmorealternativenews/posts/pfbid07Eg5Z1HVaNUuZAKerHHaacUemA7BBL3sQvpNed54T572ytzj9JNG1fSzipkiTfGdl" },
+        { label: "Village of Anmore — 2026 election nominated candidates list", url: "https://anmore.com/elections" },
+      ],
+    },
+  },
+  {
+    name: "Will Crocker",
+    office: "Councillor",
+    initials: "WC",
+    profilePath: "/Will/",
+    publicProfile: {
+      compiledAt: "September 29, 2026",
+      background: [
+        "Has spent the last 20-plus years working in facilities management, including 11 years operating large college and university facilities and the past 10 years managing maintenance, improvements, capital replacements, and operating budgets for government, social-housing, and health-services projects.",
+        "Has served the last 13 years with the Sasamat Volunteer Fire Department.",
+        "Has volunteered in Anmore and the Tri-Cities for the past 20 years, including coaching soccer, officiating hockey, and supporting youth theatre and dance performances.",
+      ],
+      priorities: [
+        "Identifies reviewing, updating, and following the Official Community Plan through a comprehensive community process as a priority.",
+        "Wants to re-establish healthy communication between residents and council, with clearer answers and decision-making information.",
+        "Prioritizes effective management of the domestic water supply and stormwater systems, drawing on his facilities-management experience.",
+      ],
+      sources: [
+        { label: "Anmore Alternative News — candidate questionnaire answers (published September 28, 2026)", url: "https://www.facebook.com/anmorealternativenews/posts/pfbid02ow99TUsDmRSgUtzjkCsHBnZGoMHSVr9GWi4YKZMv44dt2UfgXECvocwdN23GQKm4l" },
+        { label: "Village of Anmore — 2026 election nominated candidates list", url: "https://anmore.com/elections" },
+      ],
+    },
+  },
+  {
+    name: "Nylah Froese",
+    office: "Councillor",
+    initials: "NF",
+    profilePath: "/Nylah/",
+    publicProfile: {
+      compiledAt: "September 28, 2026",
+      background: [],
+      priorities: [],
+      noSubstantiveInformation: "No substantive public profile information was found in the Facebook sources reviewed as of September 28, 2026.",
+      sources: [
+        { label: "Village of Anmore — 2026 election nominated candidates list", url: "https://anmore.com/elections" },
+      ],
+    },
+  },
+  {
+    name: "Georgia Lyons",
+    office: "Councillor",
+    initials: "GL",
+    profilePath: "/Georgia/",
+    publicProfile: {
+      compiledAt: "September 28, 2026",
+      background: [
+        "Announced her candidacy in the Anmore Conversations Facebook group on September 21, 2026, sharing her campaign Facebook page.",
+        "Said she is grateful to step forward and share her ideas, and plans to connect with residents and hear what matters to them.",
+      ],
+      priorities: [],
+      sources: [
+        { label: "Anmore Conversations — candidacy announcement (September 21, 2026)", url: "https://facebook.com/groups/AnmoreConversations/permalink/2233329337236497/" },
+        { label: "Georgia Lyons campaign Facebook page", url: "https://www.facebook.com/profile.php?id=61594542686151" },
+        { label: "Village of Anmore — 2026 election nominated candidates list", url: "https://anmore.com/elections" },
+      ],
+    },
+  },
+  {
+    name: "Neil Lyons",
+    office: "Councillor",
+    initials: "NL",
+    profilePath: "/Neil/",
+    publicProfile: {
+      compiledAt: "September 28, 2026",
+      background: [],
+      priorities: [],
+      noSubstantiveInformation: "No substantive public profile information was found in the Facebook sources reviewed as of September 28, 2026.",
+      sources: [
+        { label: "Village of Anmore — 2026 election nominated candidates list", url: "https://anmore.com/elections" },
+      ],
+    },
+  },
+  {
+    name: "Wade Parrish",
+    office: "Councillor",
+    initials: "WP",
+    profilePath: "/Wade/",
+    publicProfile: {
+      compiledAt: "September 28, 2026",
+      background: [
+        "Community volunteer since 1995, including work on tennis courts, trails, bridges, snow plowing, and garbage removal.",
+        "Describes his approach as teamwork, common sense, communication, outside-the-box thinking, kindness, and humour.",
+      ],
+      priorities: [
+        "Says he would have opposed Anmore South, would have left the clear-cut as-is except for dead or diseased trees, and wants the Hub budget to include adequate parking, an operational community centre, and blanket insurance.",
+        "Identifies smart Official Community Plan changes that preserve the Anmore lifestyle, proactive storm-water management, and road safety as priorities.",
+        "Wants answers about emergency preparedness and investment in small parks and micro-parks.",
+      ],
+      sources: [
+        { label: "Anmore Alternative News — candidate questionnaire answers (published September 26, 2026)", url: "https://www.facebook.com/anmorealternativenews/posts/pfbid0jpC1MGQVvXVHvCfZTD3dXaccdiBKVy6q39P6oW2FfAtHdES1m4aYMyF3n1xk5Yfql" },
+        { label: "Village of Anmore — 2026 election nominated candidates list", url: "https://anmore.com/elections" },
+      ],
+    },
+  },
+  {
+    name: "Rod Rempel",
+    office: "Councillor",
+    initials: "RR",
+    profilePath: "/Rod/",
+    publicProfile: {
+      compiledAt: "September 28, 2026",
+      background: [
+        "Spent two decades as senior vice-president and chief operating officer of a large international construction company and is now a senior advisor.",
+        "Director-at-large of the Michael Cuccione Childhood Cancer Research Foundation and director of the Anmore Neighbours Community Association.",
+        "Cites construction and development-planning expertise, negotiation, and budget-management skills.",
+      ],
+      priorities: [
+        "Says he would have prioritized updating the Official Community Plan, required major developments to face community-led open houses, and given greater weight to resident feedback.",
+        "Identifies updating the Official Community Plan with strong resident input, openness and respect at council meetings, and a fire and environmental safety strategy as priorities.",
+        "Also emphasizes protecting community culture and improving relations with Belcarra and Port Moody.",
+      ],
+      sources: [
+        { label: "Anmore Alternative News — candidate questionnaire answers (published September 21, 2026)", url: "https://www.facebook.com/anmorealternativenews/posts/pfbid02H9SsDfCHzWM13EazwyqCCqYVhvLSNXNwmAZMGuAveG46VmUxGmkJ6UqPJQL4nuEfl" },
+        { label: "Anmore Conversations — candidacy announcement (September 20, 2026)", url: "https://facebook.com/groups/AnmoreConversations/permalink/2232492970653467/" },
+        { label: "Rod Rempel campaign Facebook page", url: "https://www.facebook.com/profile.php?id=61594378655209" },
+        { label: "Village of Anmore — 2026 election nominated candidates list", url: "https://anmore.com/elections" },
+      ],
+    },
+  },
+  {
+    name: "Carl Schmidt",
+    office: "Councillor",
+    initials: "CS",
+    profilePath: "/Carl/",
+    publicProfile: {
+      compiledAt: "September 28, 2026",
+      background: [],
+      priorities: [],
+      noSubstantiveInformation: "No substantive public profile information was found in the Facebook sources reviewed as of September 28, 2026.",
+      sources: [
+        { label: "Village of Anmore — 2026 election nominated candidates list", url: "https://anmore.com/elections" },
+      ],
+    },
+  },
   {
     name: "Kim Trowbridge",
     office: "Councillor",
     initials: "KT",
     officialNote: "Incumbent",
+    profilePath: "/Kim/",
+    publicProfile: {
+      compiledAt: "September 28, 2026",
+      background: [],
+      priorities: [],
+      noSubstantiveInformation: "No substantive public profile information was found in the Facebook sources reviewed as of September 28, 2026.",
+      sources: [
+        { label: "Village of Anmore — 2026 election nominated candidates list", url: "https://anmore.com/elections" },
+      ],
+    },
     publicService: [
       "Current Village of Anmore councillor",
       "Chair, Parks and Recreation Committee",

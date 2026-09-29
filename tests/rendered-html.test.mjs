@@ -220,6 +220,58 @@ test("publishes Paul Weverink's exact full profile at /Paul and in comparisons",
   assert.match(sitemap, /https:\/\/anmore\.me\/Paul\//);
 });
 
+test("stages nine clearly labelled public-source council profiles without questionnaire answers", async () => {
+  const profiles = [
+    ["Carl Schmidt", "Carl"],
+    ["Georgia Lyons", "Georgia"],
+    ["Harriette Chang", "Harriette"],
+    ["Kim Trowbridge", "Kim"],
+    ["Neil Lyons", "Neil"],
+    ["Nylah Froese", "Nylah"],
+    ["Rod Rempel", "Rod"],
+    ["Wade Parrish", "Wade"],
+    ["Will Crocker", "Will"],
+  ];
+  const [data, profile, guide, vite, sitemap] = await Promise.all([
+    readFile(new URL("app/data.ts", root), "utf8"),
+    readFile(new URL("app/public-candidate-profile.tsx", root), "utf8"),
+    readFile(new URL("app/voter-guide.tsx", root), "utf8"),
+    readFile(new URL("hostinger/vite.config.ts", root), "utf8"),
+    readFile(new URL("public/sitemap.xml", root), "utf8"),
+  ]);
+
+  assert.match(profile, /Independent public-source summary/);
+  assert.match(profile, /compiled from Facebook and other public sources/i);
+  assert.match(profile, /not candidate-supplied or candidate-approved/i);
+  assert.match(profile, /Compiled \{publicProfile\.compiledAt\}/);
+  assert.match(profile, /No questionnaire response provided/);
+  assert.match(profile, /publicProfile\.sources\.map/);
+  assert.match(guide, /Public-source profile compiled from Facebook and other public sources — not candidate-supplied/);
+  assert.match(data, /spent the last 20-plus years working in facilities management/i);
+  assert.match(data, /served the last 13 years with the Sasamat Volunteer Fire Department/i);
+  assert.match(data, /Reviewing, updating, and following the Official Community Plan/i);
+  assert.doesNotMatch(data, /retired after 37 years as a BC Ferries captain/i);
+  assert.doesNotMatch(data, /Former UBC varsity rower/i);
+
+  for (const [name, route] of profiles) {
+    const candidateBlock = data.slice(data.indexOf(`name: "${name}"`), data.indexOf("},", data.indexOf(`name: "${name}"`)) + 2);
+    assert.match(candidateBlock, new RegExp(`profilePath:\\s*"/${route}/"`));
+    assert.match(candidateBlock, /publicProfile:/);
+    assert.doesNotMatch(candidateBlock, /answers:/);
+
+    const [page, hostingerHtml] = await Promise.all([
+      readFile(new URL(`app/${route}/page.tsx`, root), "utf8"),
+      readFile(new URL(`hostinger/${route}/index.html`, root), "utf8"),
+    ]);
+    assert.match(page, /robots:\s*\{\s*index:\s*false,\s*follow:\s*false/);
+    assert.match(page, new RegExp(`https://anmore\\.me/${route}/`));
+    assert.match(hostingerHtml, /name="robots" content="noindex, nofollow"/);
+    assert.match(hostingerHtml, new RegExp(`canonical" href="https://anmore\\.me/${route}/"`));
+    assert.match(vite, new RegExp(`${route.toLowerCase()}: resolve\\(__dirname, "${route}\\/index\\.html"\\)`));
+    assert.doesNotMatch(sitemap, new RegExp(`https://anmore\\.me/${route}/`));
+  }
+});
+
 test("ships accessible navigation, discovery metadata, and hardened hosting headers", async () => {
   const [guide, candidate, legal, css, homeHtml, candidateHtml, legalHtml, htaccess, robots, sitemap, packageJson] = await Promise.all([
     readFile(new URL("app/voter-guide.tsx", root), "utf8"),
