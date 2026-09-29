@@ -29,7 +29,7 @@ export function PublicCandidateProfile({ candidateName }: { candidateName: strin
 
         <div className="public-profile-notice" role="note">
           <div className="shell">
-            <strong>Staging-only source excerpts.</strong> Text below is quoted directly from linked Facebook and public sources. It is not an Anmore Votes interpretation.
+            <strong>Staging-only original sources.</strong> Complete public posts are displayed directly from Facebook where embedding is available. Anmore Votes has not summarized or rewritten them.
           </div>
         </div>
 
@@ -38,7 +38,7 @@ export function PublicCandidateProfile({ candidateName }: { candidateName: strin
             <span>{candidate.initials}</span>
           </div>
           <div className="profile-intro">
-            <p className="eyebrow">Direct text from public sources</p>
+            <p className="eyebrow">Full original public posts</p>
             <p className="office">Candidate for {candidate.office}</p>
             <h1>{candidate.name}</h1>
             {candidate.officialNote && <span className="status-badge">{candidate.officialNote}</span>}
@@ -48,22 +48,35 @@ export function PublicCandidateProfile({ candidateName }: { candidateName: strin
         </section>
 
         <section className="public-profile-sources shell" aria-labelledby="sources-heading">
-          <p className="eyebrow">Verbatim public text</p>
-          <h2 id="sources-heading">Direct excerpts and source articles</h2>
-          {publicProfile.excerpts.length > 0 ? (
-            <div className="public-excerpt-list">
-              {publicProfile.excerpts.map((excerpt) => (
-                <article className="public-excerpt" key={`${excerpt.sourceUrl}-${excerpt.heading}`}>
-                  <h3>{excerpt.heading}</h3>
-                  <blockquote>“{excerpt.text}”</blockquote>
-                  <a href={excerpt.sourceUrl} target="_blank" rel="noreferrer">Read source article: {excerpt.sourceLabel} ↗</a>
+          <p className="eyebrow">Original source material</p>
+          <h2 id="sources-heading">Complete posts, questions, and answers</h2>
+          {publicProfile.posts.length > 0 ? (
+            <div className="public-post-list">
+              {publicProfile.posts.map((post) => (
+                <article className="public-post" key={post.url}>
+                  <h3>{post.label}</h3>
+                  {post.embedded && (
+                    <iframe
+                      className="facebook-post"
+                      src={`https://www.facebook.com/plugins/post.php?href=${encodeURIComponent(post.url)}&show_text=true&width=500`}
+                      title={`${candidate.name} — complete Facebook post`}
+                      width="500"
+                      height="780"
+                      scrolling="yes"
+                      frameBorder="0"
+                      allowFullScreen
+                      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                    />
+                  )}
+                  {!post.embedded && <p>This Facebook group post cannot be embedded publicly.</p>}
+                  <p><a href={post.url} target="_blank" rel="noreferrer">View original post on Facebook ↗</a></p>
                 </article>
               ))}
             </div>
           ) : (
             <p className="public-profile-empty">{publicProfile.noSubstantiveInformation}</p>
           )}
-          <p>Compilation date: {publicProfile.compiledAt}. Excerpts preserve the source wording; follow each link for the complete article or post.</p>
+          <p>Compilation date: {publicProfile.compiledAt}. Facebook supplies the embedded content; use “See more” inside a post to reveal its complete questions and answers.</p>
         </section>
 
         <section className="profile-answers" aria-labelledby="answers-heading">

@@ -240,20 +240,19 @@ test("stages nine clearly labelled public-source council profiles without questi
     readFile(new URL("public/sitemap.xml", root), "utf8"),
   ]);
 
-  assert.match(profile, /Direct text from public sources/);
-  assert.match(profile, /<blockquote/);
-  assert.match(profile, /Read source article/);
+  assert.match(profile, /Full original public posts/);
+  assert.match(profile, /facebook\.com\/plugins\/post\.php/);
+  assert.match(profile, /View original post on Facebook/);
   assert.match(profile, /No questionnaire response provided/);
-  assert.match(profile, /publicProfile\.excerpts\.map/);
-  assert.match(guide, /Direct Facebook and public-source excerpts — linked word-for-word/);
-  assert.match(data, /I have proudly served the last 13 years with our Sasamat Volunteer Fire Department\./);
-  assert.match(data, /Reviewing, updating and following, our Official Community Plan \(OCP\)\./);
-  assert.match(data, /I will bring teamwork, common sense, communication, outside the box thinking, kindness, and a sprinkle of humor to Anmore Council/);
-  assert.match(data, /Update the Official Community Plan with strong resident input\./);
-  assert.match(data, /I’m excited to announce that I’m running for Anmore Council!/);
-  assert.doesNotMatch(data, /Identifies community voice/);
-  assert.doesNotMatch(data, /Prioritizes effective management/);
-  assert.doesNotMatch(data, /Cites construction and development-planning expertise/);
+  assert.match(profile, /publicProfile\.posts\.map/);
+  assert.doesNotMatch(profile, /<blockquote/);
+  assert.match(guide, /Full original Facebook posts — including the questions and answers/);
+  assert.match(data, /pfbid07Eg5Z1HVaNUuZAKerHHaacUemA7BBL3sQvpNed54T572ytzj9JNG1fSzipkiTfGdl/);
+  assert.match(data, /pfbid02ow99TUsDmRSgUtzjkCsHBnZGoMHSVr9GWi4YKZMv44dt2UfgXECvocwdN23GQKm4l/);
+  assert.match(data, /pfbid0jpC1MGQVvXVHvCfZTD3dXaccdiBKVy6q39P6oW2FfAtHdES1m4aYMyF3n1xk5Yfql/);
+  assert.match(data, /pfbid02H9SsDfCHzWM13EazwyqCCqYVhvLSNXNwmAZMGuAveG46VmUxGmkJ6UqPJQL4nuEfl/);
+  assert.doesNotMatch(data, /I have proudly served the last 13 years/);
+  assert.doesNotMatch(data, /I will bring teamwork, common sense/);
 
   for (const [name, route] of profiles) {
     const candidateBlock = data.slice(data.indexOf(`name: "${name}"`), data.indexOf("},", data.indexOf(`name: "${name}"`)) + 2);

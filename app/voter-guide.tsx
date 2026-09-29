@@ -96,7 +96,7 @@ export function VoterGuide() {
                     <p className="awaiting">Awaiting a voluntary candidate biography.</p>
                   )}
                   {candidate.publicProfile ? (
-                    <a className="profile-link public-profile-link" href={candidate.profilePath}>Direct Facebook and public-source excerpts — linked word-for-word →</a>
+                    <a className="profile-link public-profile-link" href={candidate.profilePath}>Full original Facebook posts — including the questions and answers →</a>
                   ) : candidate.profilePath ? (
                     <a className="profile-link" href={candidate.profilePath}>View full profile →</a>
                   ) : null}

@@ -280,11 +280,11 @@ footer { background: var(--forest-deep); color: white; padding: 40px 0; }
 .public-profile-sources li { margin-bottom: 12px; }
 .public-profile-sources a { color: var(--forest); font-weight: 700; }
 .public-profile-sources > p:last-child { max-width: 900px; color: var(--muted); font-size: 14px; }
-.public-excerpt-list { display: grid; gap: 18px; margin: 34px 0; }
-.public-excerpt { padding: 26px; background: var(--white); border-left: 4px solid var(--gold); }
-.public-excerpt h3 { margin-bottom: 12px; font-size: 18px; }
-.public-excerpt blockquote { margin: 0 0 16px; color: #34483e; font-size: 18px; line-height: 1.7; }
-.public-excerpt a { font-size: 13px; }
+.public-post-list { display: grid; gap: 28px; margin: 34px 0; }
+.public-post { padding: 26px; background: var(--white); border-left: 4px solid var(--gold); }
+.public-post h3 { margin-bottom: 18px; font-size: 18px; }
+.public-post p { margin-bottom: 0; }
+.facebook-post { display: block; width: min(100%, 500px); max-width: 100%; border: 0; background: white; }
 .public-profile-link { line-height: 1.45; }
 
 /* Candidate response */

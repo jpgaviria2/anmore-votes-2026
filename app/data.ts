@@ -13,11 +13,10 @@ export type Candidate = {
   website?: string;
   publicProfile?: {
     compiledAt: string;
-    excerpts: {
-      heading: string;
-      text: string;
-      sourceLabel: string;
-      sourceUrl: string;
+    posts: {
+      label: string;
+      url: string;
+      embedded: boolean;
     }[];
     noSubstantiveInformation?: string;
   };
@@ -42,9 +41,8 @@ export const candidates: Candidate[] = [
     profilePath: "/Harriette/",
     publicProfile: {
       compiledAt: "September 29, 2026",
-      excerpts: [
-        { heading: "Residence", text: "Having lived in Anmore for nearly 20 years", sourceLabel: "Anmore Alternative News — candidate questionnaire", sourceUrl: "https://www.facebook.com/anmorealternativenews/posts/pfbid07Eg5Z1HVaNUuZAKerHHaacUemA7BBL3sQvpNed54T572ytzj9JNG1fSzipkiTfGdl" },
-        { heading: "About Harriette", text: "I care deeply about Anmore and the people who live here.", sourceLabel: "Anmore Alternative News — candidate questionnaire", sourceUrl: "https://www.facebook.com/anmorealternativenews/posts/pfbid07Eg5Z1HVaNUuZAKerHHaacUemA7BBL3sQvpNed54T572ytzj9JNG1fSzipkiTfGdl" },
+      posts: [
+        { label: "Anmore Alternative News — complete candidate questionnaire post", url: "https://www.facebook.com/anmorealternativenews/posts/pfbid07Eg5Z1HVaNUuZAKerHHaacUemA7BBL3sQvpNed54T572ytzj9JNG1fSzipkiTfGdl", embedded: true },
       ],
     },
   },
@@ -55,9 +53,8 @@ export const candidates: Candidate[] = [
     profilePath: "/Will/",
     publicProfile: {
       compiledAt: "September 29, 2026",
-      excerpts: [
-        { heading: "Community service", text: "I have proudly served the last 13 years with our Sasamat Volunteer Fire Department.", sourceLabel: "Anmore Alternative News — candidate questionnaire", sourceUrl: "https://www.facebook.com/anmorealternativenews/posts/pfbid02ow99TUsDmRSgUtzjkCsHBnZGoMHSVr9GWi4YKZMv44dt2UfgXECvocwdN23GQKm4l" },
-        { heading: "Priority #1", text: "Reviewing, updating and following, our Official Community Plan (OCP).", sourceLabel: "Anmore Alternative News — candidate questionnaire", sourceUrl: "https://www.facebook.com/anmorealternativenews/posts/pfbid02ow99TUsDmRSgUtzjkCsHBnZGoMHSVr9GWi4YKZMv44dt2UfgXECvocwdN23GQKm4l" },
+      posts: [
+        { label: "Anmore Alternative News — complete candidate questionnaire post", url: "https://www.facebook.com/anmorealternativenews/posts/pfbid02ow99TUsDmRSgUtzjkCsHBnZGoMHSVr9GWi4YKZMv44dt2UfgXECvocwdN23GQKm4l", embedded: true },
       ],
     },
   },
@@ -68,7 +65,7 @@ export const candidates: Candidate[] = [
     profilePath: "/Nylah/",
     publicProfile: {
       compiledAt: "September 29, 2026",
-      excerpts: [],
+      posts: [],
       noSubstantiveInformation: "No substantive public profile information was found in the Facebook sources reviewed as of September 29, 2026.",
     },
   },
@@ -79,9 +76,8 @@ export const candidates: Candidate[] = [
     profilePath: "/Georgia/",
     publicProfile: {
       compiledAt: "September 29, 2026",
-      excerpts: [
-        { heading: "Candidacy announcement", text: "I’m excited to announce that I’m running for Anmore Council!", sourceLabel: "Anmore Conversations — candidacy announcement", sourceUrl: "https://facebook.com/groups/AnmoreConversations/permalink/2233329337236497/" },
-        { heading: "Candidacy announcement", text: "hearing what matters most to all", sourceLabel: "Anmore Conversations — candidacy announcement", sourceUrl: "https://facebook.com/groups/AnmoreConversations/permalink/2233329337236497/" },
+      posts: [
+        { label: "Anmore Conversations — complete candidacy announcement", url: "https://facebook.com/groups/AnmoreConversations/permalink/2233329337236497/", embedded: false },
       ],
     },
   },
@@ -92,7 +88,7 @@ export const candidates: Candidate[] = [
     profilePath: "/Neil/",
     publicProfile: {
       compiledAt: "September 29, 2026",
-      excerpts: [],
+      posts: [],
       noSubstantiveInformation: "No substantive public profile information was found in the Facebook sources reviewed as of September 29, 2026.",
     },
   },
@@ -103,8 +99,8 @@ export const candidates: Candidate[] = [
     profilePath: "/Wade/",
     publicProfile: {
       compiledAt: "September 29, 2026",
-      excerpts: [
-        { heading: "What will you bring to council?", text: "I will bring teamwork, common sense, communication, outside the box thinking, kindness, and a sprinkle of humor to Anmore Council", sourceLabel: "Anmore Alternative News — candidate questionnaire", sourceUrl: "https://www.facebook.com/anmorealternativenews/posts/pfbid0jpC1MGQVvXVHvCfZTD3dXaccdiBKVy6q39P6oW2FfAtHdES1m4aYMyF3n1xk5Yfql" },
+      posts: [
+        { label: "Anmore Alternative News — complete candidate questionnaire post", url: "https://www.facebook.com/anmorealternativenews/posts/pfbid0jpC1MGQVvXVHvCfZTD3dXaccdiBKVy6q39P6oW2FfAtHdES1m4aYMyF3n1xk5Yfql", embedded: true },
       ],
     },
   },
@@ -115,9 +111,8 @@ export const candidates: Candidate[] = [
     profilePath: "/Rod/",
     publicProfile: {
       compiledAt: "September 29, 2026",
-      excerpts: [
-        { heading: "Priority #1", text: "Update the Official Community Plan with strong resident input.", sourceLabel: "Anmore Alternative News — candidate questionnaire", sourceUrl: "https://www.facebook.com/anmorealternativenews/posts/pfbid02H9SsDfCHzWM13EazwyqCCqYVhvLSNXNwmAZMGuAveG46VmUxGmkJ6UqPJQL4nuEfl" },
-        { heading: "Priority #2", text: "Cultivate an environment of openness and respect at council meetings.", sourceLabel: "Anmore Alternative News — candidate questionnaire", sourceUrl: "https://www.facebook.com/anmorealternativenews/posts/pfbid02H9SsDfCHzWM13EazwyqCCqYVhvLSNXNwmAZMGuAveG46VmUxGmkJ6UqPJQL4nuEfl" },
+      posts: [
+        { label: "Anmore Alternative News — complete candidate questionnaire post", url: "https://www.facebook.com/anmorealternativenews/posts/pfbid02H9SsDfCHzWM13EazwyqCCqYVhvLSNXNwmAZMGuAveG46VmUxGmkJ6UqPJQL4nuEfl", embedded: true },
       ],
     },
   },
@@ -128,7 +123,7 @@ export const candidates: Candidate[] = [
     profilePath: "/Carl/",
     publicProfile: {
       compiledAt: "September 29, 2026",
-      excerpts: [],
+      posts: [],
       noSubstantiveInformation: "No substantive public profile information was found in the Facebook sources reviewed as of September 29, 2026.",
     },
   },
@@ -140,7 +135,7 @@ export const candidates: Candidate[] = [
     profilePath: "/Kim/",
     publicProfile: {
       compiledAt: "September 29, 2026",
-      excerpts: [],
+      posts: [],
       noSubstantiveInformation: "No substantive public profile information was found in the Facebook sources reviewed as of September 29, 2026.",
     },
     publicService: [
