@@ -1,6 +1,6 @@
 # Compliance Register
 
-Last reviewed: September 20, 2026.
+Last reviewed: October 6, 2026.
 
 This operational register supports the neutral Anmore Votes 2026 project. It is not legal advice or an Elections BC determination.
 
@@ -30,6 +30,7 @@ Anmore Votes 2026 will never use or accept paid placement, commercial promotion,
 | 2026-09-20 | Owner direction on neutrality and candidate approval | Published policy and consent workflow | Paid promotion is permanently prohibited; all candidate-supplied material requires candidate agreement | Editor |
 | 2026-09-20 | Candidate comparison and invitations | Site and email templates | Equal questions, alphabetical order, no ranking, individual invitations | Editor |
 | 2026-09-20 | Personal information practices | B.C. PIPA, including sections 4–11, 23–24, 34–35 | Publish privacy contact, minimize collection, require consent, retain decision records where required | Privacy Officer |
+| 2026-10-06 | Public-source candidate profile refresh | Verified public Facebook questionnaires and campaign pages; production release `aed9241` | Added Carl Schmidt, Kim Trowbridge, and Neil Lyons public-source profiles; refreshed Georgia Lyons; retained neutral labels, `noindex`, sitemap exclusion, and Paul Weverink’s candidate-supplied profile unchanged | Editor |
 
 ## Costs, services, contributions, and coordination log
 
