@@ -173,7 +173,7 @@ export function VoterGuide() {
       </section>
 
       <footer>
-        <div className="shell footer-inner"><div className="brand"><span className="brand-mark">A</span><span>Anmore Votes <b>2026</b></span></div><p>Built for an informed community. Last verified September 26, 2026.</p><div className="footer-links"><a href="/legal/">Policies</a><a href="mailto:election@anmore.me">Contact</a><a href="#top">Back to top ↑</a></div></div>
+        <div className="shell footer-inner"><div className="brand"><span className="brand-mark">A</span><span>Anmore Votes <b>2026</b></span></div><p>Built for an informed community. Last verified October 6, 2026.</p><div className="footer-links"><a href="/legal/">Policies</a><a href="mailto:election@anmore.me">Contact</a><a href="#top">Back to top ↑</a></div></div>
       </footer>
     </main>
     </>

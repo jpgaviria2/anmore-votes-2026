@@ -16,7 +16,7 @@ test("contains the complete neutral voter guide", async () => {
   assert.match(guide, /No questionnaire response published yet/);
   assert.match(guide, /Sole candidate — no questionnaire requested/);
   assert.match(guide, /alphabetically by last name within each office/);
-  assert.match(guide, /Last verified September 26, 2026\./);
+  assert.match(guide, /Last verified October 6, 2026\./);
   assert.match(guide, /sort\(alphabeticalByLastName\)/);
   assert.match(data, /How will you support community recreation in Anmore, including Spirit Park development/);
   assert.doesNotMatch(guide, /priority-question|Featured question for every council candidate/);
@@ -220,18 +220,18 @@ test("publishes Paul Weverink's exact full profile at /Paul and in comparisons",
   assert.match(sitemap, /https:\/\/anmore\.me\/Paul\//);
 });
 
-test("stages five public-source council profiles and omits four empty profiles", async () => {
+test("stages eight current public-source council profiles and omits the empty profile", async () => {
   const profiles = [
+    ["Carl Schmidt", "Carl"],
     ["Georgia Lyons", "Georgia"],
     ["Harriette Chang", "Harriette"],
+    ["Kim Trowbridge", "Kim"],
+    ["Neil Lyons", "Neil"],
     ["Rod Rempel", "Rod"],
     ["Wade Parrish", "Wade"],
     ["Will Crocker", "Will"],
   ];
   const unavailableProfiles = [
-    ["Carl Schmidt", "Carl"],
-    ["Kim Trowbridge", "Kim"],
-    ["Neil Lyons", "Neil"],
     ["Nylah Froese", "Nylah"],
   ];
   const [data, profile, guide, vite, sitemap] = await Promise.all([
@@ -253,6 +253,16 @@ test("stages five public-source council profiles and omits four empty profiles",
   assert.match(data, /pfbid02ow99TUsDmRSgUtzjkCsHBnZGoMHSVr9GWi4YKZMv44dt2UfgXECvocwdN23GQKm4l/);
   assert.match(data, /pfbid0jpC1MGQVvXVHvCfZTD3dXaccdiBKVy6q39P6oW2FfAtHdES1m4aYMyF3n1xk5Yfql/);
   assert.match(data, /pfbid02H9SsDfCHzWM13EazwyqCCqYVhvLSNXNwmAZMGuAveG46VmUxGmkJ6UqPJQL4nuEfl/);
+  assert.match(data, /pfbid02GQXkh8Lmhb6FFafLx8QpNfTJooEB1Lq5wXt4rZETgHfNj3ktNub1BBLqdyG5KZGXl/);
+  assert.match(data, /pfbid02zmRy5nFf52JmdJrXPHdBQoKzmwbZ8ymfb5t1TCPPDziMXgdGZy3Vm4xdxvfFzeoDl/);
+  assert.match(data, /pfbid02sRWci99WbGWQx4x3YaSidgrL1oACEaG6huLN2kjDDUqLvLQUbW6kMWBxJ7GQQk4Pl/);
+  assert.match(data, /pfbid02m2CPB53n8jexLRM3WQ29dv8gqJtnaY3LbARsTsPDWbjQLY6cjTX7x5k6omgAA9DHl/);
+  assert.match(data, /profile\.php\?id=61594542686151/);
+  assert.match(data, /permalink\/2238876813348416/);
+  assert.match(data, /profile\.php\?id=61594378655209/);
+  assert.doesNotMatch(data, /permalink\/2244870039415760|permalink\/2241389779763786/);
+  assert.match(profile, /Additional public links/);
+  assert.match(profile, /publicProfile\.additionalLinks/);
 
   for (const [name, route] of profiles) {
     const candidateBlock = data.slice(data.indexOf(`name: "${name}"`), data.indexOf("},", data.indexOf(`name: "${name}"`)) + 2);
@@ -310,6 +320,7 @@ test("ships accessible navigation, discovery metadata, and hardened hosting head
     assert.match(html, /property="og:image"/);
   }
   assert.match(htaccess, /Content-Security-Policy/);
+  assert.match(htaccess, /frame-src https:\/\/www\.facebook\.com/);
   assert.match(htaccess, /frame-ancestors 'none'/);
   assert.match(htaccess, /Strict-Transport-Security/);
   assert.match(htaccess, /Cross-Origin-Opener-Policy/);
@@ -317,5 +328,6 @@ test("ships accessible navigation, discovery metadata, and hardened hosting head
   assert.match(robots, /Sitemap: https:\/\/anmore\.me\/sitemap\.xml/);
   assert.match(sitemap, /https:\/\/anmore\.me\/candidate-response\//);
   assert.match(sitemap, /https:\/\/anmore\.me\/legal\//);
+  assert.match(sitemap, /<loc>https:\/\/anmore\.me\/<\/loc>\s*<lastmod>2026-10-06<\/lastmod>/);
   assert.match(JSON.parse(packageJson).scripts["build:hostinger"], /chmod -R a\+rX hostinger-dist/);
 });

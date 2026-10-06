@@ -17,6 +17,7 @@ export type Candidate = {
     sourceLabel: string;
     sourceUrl: string;
     embeddable: boolean;
+    additionalLinks?: { label: string; url: string }[];
   };
 };
 
@@ -38,7 +39,7 @@ export const candidates: Candidate[] = [
     initials: "HC",
     profilePath: "/Harriette/",
     publicProfile: {
-      compiledAt: "September 29, 2026",
+      compiledAt: "October 6, 2026",
       sourceLabel: "Anmore Alternative News — candidate questionnaire post",
       sourceUrl: "https://www.facebook.com/anmorealternativenews/posts/pfbid07Eg5Z1HVaNUuZAKerHHaacUemA7BBL3sQvpNed54T572ytzj9JNG1fSzipkiTfGdl",
       embeddable: true,
@@ -50,7 +51,7 @@ export const candidates: Candidate[] = [
     initials: "WC",
     profilePath: "/Will/",
     publicProfile: {
-      compiledAt: "September 29, 2026",
+      compiledAt: "October 6, 2026",
       sourceLabel: "Anmore Alternative News — candidate questionnaire post",
       sourceUrl: "https://www.facebook.com/anmorealternativenews/posts/pfbid02ow99TUsDmRSgUtzjkCsHBnZGoMHSVr9GWi4YKZMv44dt2UfgXECvocwdN23GQKm4l",
       embeddable: true,
@@ -68,17 +69,29 @@ export const candidates: Candidate[] = [
     initials: "GL",
     profilePath: "/Georgia/",
     publicProfile: {
-      compiledAt: "September 29, 2026",
-      sourceLabel: "Anmore Conversations — candidacy announcement post",
-      sourceUrl: "https://www.facebook.com/groups/AnmoreConversations/posts/2233329337236497/",
-      embeddable: false,
+      compiledAt: "October 6, 2026",
+      sourceLabel: "Anmore Alternative News — candidate questionnaire post",
+      sourceUrl: "https://www.facebook.com/anmorealternativenews/posts/pfbid02GQXkh8Lmhb6FFafLx8QpNfTJooEB1Lq5wXt4rZETgHfNj3ktNub1BBLqdyG5KZGXl",
+      embeddable: true,
+      additionalLinks: [
+        { label: "Georgia Lyons campaign page", url: "https://www.facebook.com/profile.php?id=61594542686151" },
+      ],
     },
   },
   {
     name: "Neil Lyons",
     office: "Councillor",
     initials: "NL",
-    publicInformationUnavailable: true,
+    profilePath: "/Neil/",
+    publicProfile: {
+      compiledAt: "October 6, 2026",
+      sourceLabel: "Anmore Alternative News — candidate questionnaire post",
+      sourceUrl: "https://www.facebook.com/anmorealternativenews/posts/pfbid02zmRy5nFf52JmdJrXPHdBQoKzmwbZ8ymfb5t1TCPPDziMXgdGZy3Vm4xdxvfFzeoDl",
+      embeddable: true,
+      additionalLinks: [
+        { label: "Candidacy announcement in Anmore Conversations", url: "https://www.facebook.com/groups/AnmoreConversations/permalink/2238876813348416/" },
+      ],
+    },
   },
   {
     name: "Wade Parrish",
@@ -86,7 +99,7 @@ export const candidates: Candidate[] = [
     initials: "WP",
     profilePath: "/Wade/",
     publicProfile: {
-      compiledAt: "September 29, 2026",
+      compiledAt: "October 6, 2026",
       sourceLabel: "Anmore Alternative News — candidate questionnaire post",
       sourceUrl: "https://www.facebook.com/anmorealternativenews/posts/pfbid0jpC1MGQVvXVHvCfZTD3dXaccdiBKVy6q39P6oW2FfAtHdES1m4aYMyF3n1xk5Yfql",
       embeddable: true,
@@ -98,24 +111,39 @@ export const candidates: Candidate[] = [
     initials: "RR",
     profilePath: "/Rod/",
     publicProfile: {
-      compiledAt: "September 29, 2026",
+      compiledAt: "October 6, 2026",
       sourceLabel: "Anmore Alternative News — candidate questionnaire post",
       sourceUrl: "https://www.facebook.com/anmorealternativenews/posts/pfbid02H9SsDfCHzWM13EazwyqCCqYVhvLSNXNwmAZMGuAveG46VmUxGmkJ6UqPJQL4nuEfl",
       embeddable: true,
+      additionalLinks: [
+        { label: "Rod For Anmore campaign page", url: "https://www.facebook.com/profile.php?id=61594378655209" },
+      ],
     },
   },
   {
     name: "Carl Schmidt",
     office: "Councillor",
     initials: "CS",
-    publicInformationUnavailable: true,
+    profilePath: "/Carl/",
+    publicProfile: {
+      compiledAt: "October 6, 2026",
+      sourceLabel: "Anmore Alternative News — candidate questionnaire post",
+      sourceUrl: "https://www.facebook.com/anmorealternativenews/posts/pfbid02sRWci99WbGWQx4x3YaSidgrL1oACEaG6huLN2kjDDUqLvLQUbW6kMWBxJ7GQQk4Pl",
+      embeddable: true,
+    },
   },
   {
     name: "Kim Trowbridge",
     office: "Councillor",
     initials: "KT",
     officialNote: "Incumbent",
-    publicInformationUnavailable: true,
+    profilePath: "/Kim/",
+    publicProfile: {
+      compiledAt: "October 6, 2026",
+      sourceLabel: "Anmore Alternative News — candidate questionnaire post",
+      sourceUrl: "https://www.facebook.com/anmorealternativenews/posts/pfbid02m2CPB53n8jexLRM3WQ29dv8gqJtnaY3LbARsTsPDWbjQLY6cjTX7x5k6omgAA9DHl",
+      embeddable: true,
+    },
     publicService: [
       "Current Village of Anmore councillor",
       "Chair, Parks and Recreation Committee",

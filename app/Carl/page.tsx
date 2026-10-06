@@ -1,0 +1,19 @@
+import type { Metadata } from "next";
+import { PublicCandidateProfile } from "../public-candidate-profile";
+
+export const metadata: Metadata = {
+  title: "Carl Schmidt | Public-source profile | Anmore Votes 2026",
+  description: "Public Facebook profile information for Carl Schmidt. Not candidate-supplied to Anmore Votes.",
+  alternates: { canonical: "https://anmore.me/Carl/" },
+  robots: { index: false, follow: false, nocache: true },
+  openGraph: {
+    title: "Carl Schmidt | Public-source profile | Anmore Votes 2026",
+    description: "Public Facebook post embedded or linked; not candidate-supplied or candidate-approved.",
+    url: "https://anmore.me/Carl/",
+    images: ["https://anmore.me/og.png"],
+  },
+};
+
+export default function CarlPage() {
+  return <PublicCandidateProfile candidateName="Carl Schmidt" />;
+}

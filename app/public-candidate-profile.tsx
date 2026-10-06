@@ -66,6 +66,16 @@ export function PublicCandidateProfile({ candidateName }: { candidateName: strin
             <p className="public-profile-empty">Facebook does not permit this public group post to be embedded.</p>
           )}
           <p><a href={publicProfile.sourceUrl} target="_blank" rel="noreferrer">View the original public Facebook post ↗</a></p>
+          {publicProfile.additionalLinks?.length ? (
+            <div className="public-profile-additional-links">
+              <h3>Additional public links</h3>
+              <ul>
+                {publicProfile.additionalLinks.map((link) => (
+                  <li key={link.url}><a href={link.url} target="_blank" rel="noreferrer">{link.label} ↗</a></li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
           <p>Source reviewed {publicProfile.compiledAt}. Public statements are not treated as answers to the Anmore Votes questionnaire.</p>
           <a className="button secondary profile-back" href="/#candidates">Back to candidates</a>
         </section>
