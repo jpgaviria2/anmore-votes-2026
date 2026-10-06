@@ -142,6 +142,21 @@ h3 { letter-spacing: -.025em; }
 .ballot-rule { margin: 26px 0; border-top: 2px dashed var(--line); }
 .ballot-card > p:not(.mono-label) { margin-bottom: 8px; color: #44534c; }
 .ballot-card > a { display: inline-block; margin-top: 20px; font-size: 13px; font-weight: 700; color: var(--forest); }
+.event-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 440px);
+  gap: 70px;
+  align-items: center;
+  margin-bottom: 100px;
+  padding: 46px;
+  background: var(--white);
+  border-top: 6px solid var(--gold);
+  box-shadow: 0 24px 70px rgba(24,44,34,.1);
+}
+.event-copy h2 { max-width: 630px; }
+.event-date { color: var(--forest); font-size: 22px; font-weight: 780; }
+.event-stream-status { color: var(--muted); }
+.event-flyer { display: block; width: 100%; height: auto; max-height: 680px; object-fit: contain; }
 .principles { border-top: 1px solid var(--line); padding: 84px 0 110px; display: grid; grid-template-columns: .8fr 1.2fr; gap: 80px; }
 .principle-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 .principle-grid article { border-left: 1px solid var(--line); padding-left: 20px; }
@@ -322,7 +337,8 @@ footer { background: var(--forest-deep); color: white; padding: 40px 0; }
   nav { width: 100%; gap: 20px; overflow-x: auto; padding: 12px 0 3px; border-top: 1px solid var(--line); white-space: nowrap; scrollbar-width: thin; }
   .hero { grid-template-columns: 1fr; gap: 45px; padding-block: 60px; }
   .ballot-card { max-width: 560px; transform: none; }
-  .principles, .ask-section, .about, .voting, .section-heading, .comparison-intro, .profile-hero, .profile-background { grid-template-columns: 1fr; gap: 36px; }
+  .event-feature, .principles, .ask-section, .about, .voting, .section-heading, .comparison-intro, .profile-hero, .profile-background { grid-template-columns: 1fr; gap: 36px; }
+  .event-flyer { max-width: 440px; justify-self: center; }
   .profile-background .eyebrow, .profile-background h2, .profile-background .profile-copy { grid-column: 1; grid-row: auto; }
   .profile-portrait-wrap { max-width: 380px; }
   .principle-grid { grid-template-columns: 1fr 1fr 1fr; }
@@ -337,6 +353,7 @@ footer { background: var(--forest-deep); color: white; padding: 40px 0; }
   .election-strip { flex-direction: column; gap: 0; align-items: center; font-size: 11px; }
   .site-header { min-height: 70px; }
   .hero { min-height: auto; }
+  .event-feature { width: min(100% - 28px, 1180px); margin-bottom: 74px; padding: 24px; }
   h1 { font-size: 50px; }
   h2 { font-size: 36px; }
   .principle-grid, .candidate-grid, .question-list, .date-cards, .field-row, .comparison-controls, .comparison-grid { grid-template-columns: 1fr; }

@@ -293,6 +293,26 @@ test("stages eight current public-source council profiles and omits the empty pr
   }
 });
 
+test("stages the October 6 all-candidates meeting while awaiting the direct livestream URL", async () => {
+  const [guide, css] = await Promise.all([
+    readFile(new URL("app/voter-guide.tsx", root), "utf8"),
+    readFile(new URL("app/globals.css", root), "utf8"),
+  ]);
+
+  await access(new URL("public/events/anmore-all-candidates-meeting-2026.jpg", root));
+  assert.match(guide, /All Candidates Meeting/);
+  assert.match(guide, /October 6, 2026/);
+  assert.match(guide, /6:30–9:15 p\.m\./);
+  assert.match(guide, /Doors open at 6:00 p\.m\./);
+  assert.match(guide, /Anmore Elementary School gym/);
+  assert.match(guide, /\/events\/anmore-all-candidates-meeting-2026\.jpg/);
+  assert.match(guide, /https:\/\/www\.youtube\.com\/@anmoretimes3258\/live/);
+  assert.match(guide, /A direct livestream player will be added when the scheduled broadcast URL is published\./);
+  assert.doesNotMatch(guide, /youtube\.com\/embed|live_stream\?channel=/);
+  assert.match(css, /\.event-feature/);
+  assert.match(css, /\.event-flyer/);
+});
+
 test("ships accessible navigation, discovery metadata, and hardened hosting headers", async () => {
   const [guide, candidate, legal, css, homeHtml, candidateHtml, legalHtml, htaccess, robots, sitemap, packageJson] = await Promise.all([
     readFile(new URL("app/voter-guide.tsx", root), "utf8"),
