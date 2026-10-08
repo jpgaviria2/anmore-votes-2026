@@ -157,6 +157,8 @@ h3 { letter-spacing: -.025em; }
 .event-date { color: var(--forest); font-size: 22px; font-weight: 780; }
 .event-stream-status { color: var(--muted); }
 .event-flyer { display: block; width: 100%; height: auto; max-height: 680px; object-fit: contain; }
+.event-video { width: 100%; aspect-ratio: 16 / 9; background: var(--forest-deep); }
+.event-video iframe { display: block; width: 100%; height: 100%; border: 0; }
 .principles { border-top: 1px solid var(--line); padding: 84px 0 110px; display: grid; grid-template-columns: .8fr 1.2fr; gap: 80px; }
 .principle-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 .principle-grid article { border-left: 1px solid var(--line); padding-left: 20px; }
@@ -338,7 +340,7 @@ footer { background: var(--forest-deep); color: white; padding: 40px 0; }
   .hero { grid-template-columns: 1fr; gap: 45px; padding-block: 60px; }
   .ballot-card { max-width: 560px; transform: none; }
   .event-feature, .principles, .ask-section, .about, .voting, .section-heading, .comparison-intro, .profile-hero, .profile-background { grid-template-columns: 1fr; gap: 36px; }
-  .event-flyer { max-width: 440px; justify-self: center; }
+  .event-flyer, .event-video { max-width: 560px; justify-self: center; }
   .profile-background .eyebrow, .profile-background h2, .profile-background .profile-copy { grid-column: 1; grid-row: auto; }
   .profile-portrait-wrap { max-width: 380px; }
   .principle-grid { grid-template-columns: 1fr 1fr 1fr; }

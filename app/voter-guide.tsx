@@ -63,22 +63,22 @@ export function VoterGuide() {
 
       <section className="event-feature shell" aria-labelledby="event-title">
         <div className="event-copy">
-          <p className="eyebrow">Community event</p>
+          <p className="eyebrow">Community recording</p>
           <h2 id="event-title">All Candidates Meeting</h2>
-          <p className="event-date">October 6, 2026 · 6:30–9:15 p.m.</p>
-          <p>Doors open at 6:00 p.m. at the Anmore Elementary School gym. Everyone is welcome.</p>
-          <p className="event-stream-status">A direct livestream player will be added when the scheduled broadcast URL is published.</p>
-          <a className="button secondary" href="https://www.youtube.com/@anmoretimes3258/live" target="_blank" rel="noreferrer">Anmore Times YouTube channel ↗</a>
+          <p className="event-date">Recorded October 6, 2026</p>
+          <p>Watch the Anmore Village All Candidates Meeting recording from Anmore Times.</p>
+          <a className="button secondary" href="https://www.youtube.com/watch?v=ZF5eDgnSUy8" target="_blank" rel="noreferrer">Watch on YouTube ↗</a>
         </div>
-        {/* The same static markup is built for Hostinger, so Next Image is not used here. */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          className="event-flyer"
-          src="/events/anmore-all-candidates-meeting-2026.jpg"
-          alt="Anmore Village All Candidates Meeting flyer: October 6, 2026, 6:30 to 9:15 p.m., doors open at 6 p.m., Anmore Elementary School gym, everyone welcome"
-          width="953"
-          height="1280"
-        />
+        <div className="event-video">
+          <iframe
+            src="https://www.youtube.com/embed/ZF5eDgnSUy8"
+            title="Anmore Village All Candidates Meeting 2026 recording"
+            loading="lazy"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          />
+        </div>
       </section>
 
       <section className="principles shell" aria-labelledby="principles-title">

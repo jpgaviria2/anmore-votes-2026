@@ -293,24 +293,24 @@ test("stages eight current public-source council profiles and omits the empty pr
   }
 });
 
-test("stages the October 6 all-candidates meeting while awaiting the direct livestream URL", async () => {
-  const [guide, css] = await Promise.all([
+test("presents the October 6 all-candidates meeting recording", async () => {
+  const [guide, css, htaccess] = await Promise.all([
     readFile(new URL("app/voter-guide.tsx", root), "utf8"),
     readFile(new URL("app/globals.css", root), "utf8"),
+    readFile(new URL("hostinger/public/.htaccess", root), "utf8"),
   ]);
 
-  await access(new URL("public/events/anmore-all-candidates-meeting-2026.jpg", root));
   assert.match(guide, /All Candidates Meeting/);
-  assert.match(guide, /October 6, 2026/);
-  assert.match(guide, /6:30–9:15 p\.m\./);
-  assert.match(guide, /Doors open at 6:00 p\.m\./);
-  assert.match(guide, /Anmore Elementary School gym/);
-  assert.match(guide, /\/events\/anmore-all-candidates-meeting-2026\.jpg/);
-  assert.match(guide, /https:\/\/www\.youtube\.com\/@anmoretimes3258\/live/);
-  assert.match(guide, /A direct livestream player will be added when the scheduled broadcast URL is published\./);
-  assert.doesNotMatch(guide, /youtube\.com\/embed|live_stream\?channel=/);
-  assert.match(css, /\.event-feature/);
-  assert.match(css, /\.event-flyer/);
+  assert.match(guide, /Recorded October 6, 2026/);
+  assert.match(guide, /Watch the Anmore Village All Candidates Meeting recording/);
+  assert.match(guide, /https:\/\/www\.youtube\.com\/embed\/ZF5eDgnSUy8/);
+  assert.match(guide, /title="Anmore Village All Candidates Meeting 2026 recording"/);
+  assert.match(guide, /https:\/\/www\.youtube\.com\/watch\?v=ZF5eDgnSUy8/);
+  assert.match(guide, /Watch on YouTube ↗/);
+  assert.doesNotMatch(guide, /livestream player will be added|Doors open|Everyone is welcome/);
+  assert.match(css, /\.event-video/);
+  assert.match(css, /aspect-ratio:\s*16\s*\/\s*9/);
+  assert.match(htaccess, /frame-src https:\/\/www\.facebook\.com https:\/\/www\.youtube\.com/);
 });
 
 test("ships accessible navigation, discovery metadata, and hardened hosting headers", async () => {
@@ -340,7 +340,7 @@ test("ships accessible navigation, discovery metadata, and hardened hosting head
     assert.match(html, /property="og:image"/);
   }
   assert.match(htaccess, /Content-Security-Policy/);
-  assert.match(htaccess, /frame-src https:\/\/www\.facebook\.com/);
+  assert.match(htaccess, /frame-src https:\/\/www\.facebook\.com https:\/\/www\.youtube\.com/);
   assert.match(htaccess, /frame-ancestors 'none'/);
   assert.match(htaccess, /Strict-Transport-Security/);
   assert.match(htaccess, /Cross-Origin-Opener-Policy/);
