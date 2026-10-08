@@ -1,0 +1,2244 @@
+{
+  "event": {
+    "title": "Anmore Village All Candidates Meeting",
+    "date": "2026-10-06",
+    "recordingUrl": "https://www.youtube.com/watch?v=ZF5eDgnSUy8",
+    "sourceLabel": "Anmore Times YouTube recording"
+  },
+  "transcription": {
+    "label": "Verbatim transcript from the October 6 recording",
+    "method": "Machine-assisted transcription reviewed against the recording. Punctuation and confirmed proper nouns were normalized; unclear audio remains explicitly marked. Street numbers spoken by audience questioners were replaced with an explicit omission marker for privacy.",
+    "published": "2026-10-08"
+  },
+  "questions": [
+    {
+      "id": "Q01",
+      "topic": "Campaign funding connected to the Pinnacle Ridge development",
+      "questioner": "Ken Newick",
+      "range": {
+        "start": "00:31:41.000",
+        "end": "00:33:35.000"
+      },
+      "questionTurns": [
+        {
+          "speaker": "Ken Newick",
+          "role": "questioner",
+          "text": "Good evening. It's Ken Newick here from [street number omitted] Lansing Crescent. My question is directed to Mayor Richardson and all the candidates on the table tonight. One of the most significant issues that you're going to be dealing with fairly soon—the successful candidates—is going to be the hillside development of Pinnacle. And my question is a very simple answer. Which, if any, of the candidates has received campaign funding from anybody associated with the development on Pinnacle Ridge?",
+          "range": {
+            "start": "00:31:41.620",
+            "end": "00:32:15.480"
+          }
+        }
+      ],
+      "relatedTurns": [],
+      "responses": [
+        {
+          "speaker": "Doug Richardson",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "00:32:47.000",
+            "end": "00:32:55.040"
+          },
+          "turns": [
+            {
+              "speaker": "Doug Richardson",
+              "role": "candidate",
+              "text": "No. I haven't received funding from anyone. I've put no money into my campaign."
+            }
+          ]
+        },
+        {
+          "speaker": "Wade Parrish",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "00:32:57.260",
+            "end": "00:33:00.580"
+          },
+          "turns": [
+            {
+              "speaker": "Wade Parrish",
+              "role": "candidate",
+              "text": "Completely self-funded. No outside financing so far."
+            }
+          ]
+        },
+        {
+          "speaker": "Paul Weverink",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "00:33:01.580",
+            "end": "00:33:04.400"
+          },
+          "turns": [
+            {
+              "speaker": "Paul Weverink",
+              "role": "candidate",
+              "text": "I have not received any funding from Pinnacle Ridge."
+            }
+          ]
+        },
+        {
+          "speaker": "Will Crocker",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "00:33:06.040",
+            "end": "00:33:07.000"
+          },
+          "turns": [
+            {
+              "speaker": "Will Crocker",
+              "role": "candidate",
+              "text": "Nor have I."
+            }
+          ]
+        },
+        {
+          "speaker": "Carl Schmidt",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "00:33:08.000",
+            "end": "00:33:09.820"
+          },
+          "turns": [
+            {
+              "speaker": "Carl Schmidt",
+              "role": "candidate",
+              "text": "No funding from Pinnacle Ridge."
+            }
+          ]
+        },
+        {
+          "speaker": "Rod Rempel",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "00:33:10.040",
+            "end": "00:33:11.840"
+          },
+          "turns": [
+            {
+              "speaker": "Rod Rempel",
+              "role": "candidate",
+              "text": "I'm funding my own campaign."
+            }
+          ]
+        },
+        {
+          "speaker": "Harriette Chang",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "00:33:13.460",
+            "end": "00:33:20.640"
+          },
+          "turns": [
+            {
+              "speaker": "Harriette Chang",
+              "role": "candidate",
+              "text": "No funding from Pinnacle Ridge. [unclear] from Remy, but that's it."
+            }
+          ]
+        },
+        {
+          "speaker": "Neil Lyons",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "00:33:22.920",
+            "end": "00:33:26.140"
+          },
+          "turns": [
+            {
+              "speaker": "Neil Lyons",
+              "role": "candidate",
+              "text": "No funding from Pinnacle Ridge. Self-funding my campaign."
+            }
+          ]
+        },
+        {
+          "speaker": "Georgia Lyons",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "00:33:27.420",
+            "end": "00:33:33.160"
+          },
+          "turns": [
+            {
+              "speaker": "Georgia Lyons",
+              "role": "candidate",
+              "text": "No funding from Pinnacle Ridge. Self-funding and some donations from other areas."
+            }
+          ]
+        }
+      ],
+      "didNotAnswer": [],
+      "uncertainties": [
+        "Question: The questioner's surname and street name are heard as “Newick” and “Lansing”; their spellings are not independently confirmed. The short phrase at 00:32:07 is consistent with “Which, if any, of the candidates,” although both ASR passes partially dropped “if.”",
+        "Wade Parrish: A very low-level lead-in before “completely” is not clear enough to quote; one ASR pass proposed “I,” and another proposed “I have.”",
+        "Harriette Chang: The words between the two sentences are indistinct. Multiple ASR passes variously proposed “I have received some funding” and “I have seen it given to me.” Only the clearly audible ending “from Remy, but that's it” is quoted; the spelling “Remy” is unconfirmed."
+      ]
+    },
+    {
+      "id": "Q02",
+      "topic": "Municipal support, distribution, and council submissions for the Anmore Times",
+      "questioner": "Nancy Maloney",
+      "range": {
+        "start": "00:33:42.000",
+        "end": "00:42:37.000"
+      },
+      "questionTurns": [
+        {
+          "speaker": "Nancy Maloney",
+          "role": "questioner",
+          "text": "Thank you so much, Steve. Am I loud enough? Nancy Maloney. I'm a resident of Old Anmore, [street number omitted] East Road, and we've been there since 1995. And like Harriette, we plan to stay there until we're living in extended care somewhere. I'd like to begin by thanking the volunteers from Anmore Times, the whole team, for organizing this event. And I want to add that an independent community newsletter is an essential pillar of democracy, and we're so lucky to have had the Times for many years. My question for everyone: as a councillor, will you support the Times by contributing to production costs by approving a possible grant application, which was previously refused by a recent councillor? Also, will you remove the recent prohibition of distribution of the Anmore Times at the Hub, and also provide written submissions of your council activities and decisions regarding issues of community concern, as historically has been done for many, many years in the past in our community? So this question is for everyone.",
+          "range": {
+            "start": "00:33:42.000",
+            "end": "00:35:03.000"
+          }
+        }
+      ],
+      "relatedTurns": [
+        {
+          "speaker": "Nancy Maloney",
+          "role": "questioner",
+          "text": "Thanks, everybody. Okay, 30 seconds. No more questions. I'm not going to give this opportunity to anybody else. I should have said so at the time. A couple pieces of information. Actually, people probably remember the News and the Now, both of which—the large organizations which owned those papers stopped funding community newspapers. So people who worked for those newspapers founded a new community paper, which is available in many places, most municipal halls. It's called the Freshet. You can pick it up at Shoppers Drug Mart and various places, and at many municipal buildings except for ours. And many municipal buildings are, in fact, providing funding for it. Thank you.",
+          "range": {
+            "start": "00:41:50.000",
+            "end": "00:42:37.000"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "speaker": "Paul Weverink",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "00:35:21.000",
+            "end": "00:36:13.300"
+          },
+          "turns": [
+            {
+              "speaker": "Paul Weverink",
+              "role": "candidate",
+              "text": "I think you know my answer. When the Anmore Times started to get more and more political, we didn't feel it was appropriate to support a politically biased paper. And I think when people vote, they expect neutrality. And the Anmore Times did get a little political. It wasn't just about, hey, there's a lost dog, hey, there's this happening. I would certainly be willing—I would certainly be willing to meet with the Anmore Times team and discuss and come to some sort of arrangement, because I like the fact that a community newspaper is available in the Village Hub, but it has to be fair to all residents and has to represent all residents. That's my answer."
+            }
+          ]
+        },
+        {
+          "speaker": "Will Crocker",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "00:36:18.980",
+            "end": "00:37:21.140"
+          },
+          "turns": [
+            {
+              "speaker": "Will Crocker",
+              "role": "candidate",
+              "text": "Nancy, yes, I would support a possible grant for the Anmore Times. As a long-time resident, I do understand and have read some past submissions that were maybe fairly heated or fairly personalized, and [inaudible]. But I think the Anmore Times in the past has done a good job of editing anything out that shouldn't be in there. And yes, I could see having the Anmore Times being distributed locally, if that was at the Anmore Hub or in the vicinity of the Hub. I don't see an issue with that. It's a public position. I think there's also—working for a municipality, you have to be aware that everything you do is open to freedom of information anyways. And that's just the world we're living in. So thank you."
+            }
+          ]
+        },
+        {
+          "speaker": "Carl Schmidt",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "00:37:28.140",
+            "end": "00:38:09.940"
+          },
+          "turns": [
+            {
+              "speaker": "Carl Schmidt",
+              "role": "candidate",
+              "text": "Yeah, no worries. So thank you for the question, Nancy. I did a little bit of research on this and just some fact-finding, and there's some reasonable questions, I think, around the extent to which municipal funds should be used to fund an individual news outlet. And so Coquitlam, I don't believe, does that. I don't believe any of our local municipalities do. That said, I'm absolutely supportive of finding ways that we can support an important independent voice. We just need to do it in a way that's completely above board. And then, as far as distribution, I don't personally have an issue with having the Anmore Times in the Hub. I think that would be very convenient. So that's my position."
+            }
+          ]
+        },
+        {
+          "speaker": "Rod Rempel",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "00:38:27.700",
+            "end": "00:39:16.780"
+          },
+          "turns": [
+            {
+              "speaker": "Rod Rempel",
+              "role": "candidate",
+              "text": "I agree that supporting our Anmore Times is very important. But, you know, as Paul was saying, if the Anmore Times does, in fact, have political views that are potentially directed towards any individual or whatever, I suspect that's going to be a problem. But knowing what I do about the Anmore Times, and having read the Anmore Times as much as I have, I cannot see any reason why we would not offer funding for it, and I certainly can't see why we wouldn't be distributing it within the Hub. Also, I completely agree with offering up any decisions that I've made, if I were to be elected in council, and to offer up my positions openly."
+            }
+          ]
+        },
+        {
+          "speaker": "Harriette Chang",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "00:39:20.100",
+            "end": "00:40:07.840"
+          },
+          "turns": [
+            {
+              "speaker": "Harriette Chang",
+              "role": "candidate",
+              "text": "Okay, so I read the Anmore Times frequently. I really enjoy it. I really enjoy how I feel like it unites our community and builds community connectedness. In terms of paying for it, I think we'd have to do a budget review. I don't know enough about that, so I can't say yes. In that role, I really think that putting it in the Hub—I don't see any reason why not. Again, I would love for it to be available, and there's been times that I've gone there looking for it, and it's not there, and I want a copy. So personally, I would love to see that. Maybe there needs to be somebody looking over it, making sure it's not getting too political, but I see no reason why we can't get it out there again. So, yeah, thank you."
+            }
+          ]
+        },
+        {
+          "speaker": "Neil Lyons",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "00:40:10.520",
+            "end": "00:40:43.600"
+          },
+          "turns": [
+            {
+              "speaker": "Neil Lyons",
+              "role": "candidate",
+              "text": "I would support the Anmore Times. I think that local papers are really important to our democracy. And I don't really understand when Paul says that they're politically slanted. I mean, are not—letters to the editor are often politically slanted? It's up to the reader to sift through that, and if they feel the paper's getting too politically slanted in one direction, they don't have to read it. That's my opinion."
+            }
+          ]
+        },
+        {
+          "speaker": "Georgia Lyons",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "00:40:46.480",
+            "end": "00:40:55.840"
+          },
+          "turns": [
+            {
+              "speaker": "Georgia Lyons",
+              "role": "candidate",
+              "text": "I support both your questions because I'm really for community engagement, and I think that's a huge part. Yeah, overall, I support you."
+            }
+          ]
+        },
+        {
+          "speaker": "Wade Parrish",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "00:41:08.440",
+            "end": "00:41:44.640"
+          },
+          "turns": [
+            {
+              "speaker": "Wade Parrish",
+              "role": "candidate",
+              "text": "Quite simply, I love the Anmore Times. I've read pretty much every issue, and I've contributed to some issues. It is a reflection of how the village feels, and sometimes people don't like to hear how the village feels. I don't know if that's being biased or not, but I think we have to keep it alive. Funding, yes, and I am a true believer that it's a shame that it's not on the counter of the Hub."
+            }
+          ]
+        }
+      ],
+      "didNotAnswer": [],
+      "uncertainties": []
+    },
+    {
+      "id": "Q03",
+      "topic": "How candidates react when someone tries to change a strongly held view",
+      "questioner": "Micheline Mary",
+      "range": {
+        "start": "00:42:43.000",
+        "end": "00:45:39.000"
+      },
+      "questionTurns": [
+        {
+          "speaker": "Micheline Mary",
+          "role": "questioner",
+          "text": "Good evening, everybody. My name is Micheline Mary. I love your speech. It is beautiful. [unclear] So along the way, what happens if someone is trying to change your mind?",
+          "range": {
+            "start": "00:42:43.000",
+            "end": "00:43:04.000"
+          }
+        },
+        {
+          "speaker": "Micheline Mary",
+          "role": "questioner",
+          "text": "I'll give you an example. [unclear] That's the way I am. But I won't call her a liar.",
+          "range": {
+            "start": "00:43:06.000",
+            "end": "00:43:23.000"
+          }
+        },
+        {
+          "speaker": "Micheline Mary",
+          "role": "questioner",
+          "text": "So all I need is one word from each one of you. If someone tries to change your mind about something you believe, what would be the word you're gonna do? [unclear] Okay, that's it.",
+          "range": {
+            "start": "00:43:23.000",
+            "end": "00:43:43.000"
+          }
+        },
+        {
+          "speaker": "Steve Barron / unidentified candidate",
+          "role": "moderator",
+          "text": "So, first person. One word? What would— If somebody disagrees. Can you clarify the question again?",
+          "range": {
+            "start": "00:43:47.000",
+            "end": "00:43:58.000"
+          }
+        },
+        {
+          "speaker": "Micheline Mary",
+          "role": "questioner",
+          "text": "Yes. Because you read such a good speech and you believe what you wrote, what you write, and if someone tries to change your mind, to say, no, you have to go another way, not your way, because you believe in it, what are you going to do? I'm curious.",
+          "range": {
+            "start": "00:43:58.000",
+            "end": "00:44:20.780"
+          }
+        }
+      ],
+      "relatedTurns": [],
+      "responses": [
+        {
+          "speaker": "Will Crocker",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "00:44:21.000",
+            "end": "00:44:23.500"
+          },
+          "turns": [],
+          "note": "Participation and sequence are supported by the established rotation and video, but the short answer is too faint/overlapped to quote reliably."
+        },
+        {
+          "speaker": "Carl Schmidt",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "00:44:23.500",
+            "end": "00:44:28.300"
+          },
+          "turns": [],
+          "note": "Participation and sequence are supported by the established rotation and video, but no candidate wording is consistently recoverable across targeted ASR passes."
+        },
+        {
+          "speaker": "Rod Rempel",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "00:44:28.300",
+            "end": "00:44:49.300"
+          },
+          "turns": [
+            {
+              "speaker": "Steve Barron",
+              "role": "moderator",
+              "text": "Rod."
+            },
+            {
+              "speaker": "Rod Rempel",
+              "role": "candidate",
+              "text": "I think in certain cases you—"
+            },
+            {
+              "speaker": "Steve Barron / overlapping voices",
+              "role": "moderator",
+              "text": "One word. One word."
+            },
+            {
+              "speaker": "Rod Rempel",
+              "role": "candidate",
+              "text": "Yes, it's possible to change."
+            }
+          ],
+          "note": "The room echo produces repeated ASR renderings of the final phrase; only one clearly supportable occurrence is retained."
+        },
+        {
+          "speaker": "Harriette Chang",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "00:44:49.300",
+            "end": "00:45:01.840"
+          },
+          "turns": [
+            {
+              "speaker": "Harriette Chang",
+              "role": "candidate",
+              "text": "I'm debating two words. I'm thinking non-judgmental, mental flexibility, but—sorry. I'll pass."
+            }
+          ]
+        },
+        {
+          "speaker": "Neil Lyons",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "00:45:02.180",
+            "end": "00:45:05.580"
+          },
+          "turns": [
+            {
+              "speaker": "Neil Lyons",
+              "role": "candidate",
+              "text": "Open-minded. I know that's two."
+            }
+          ]
+        },
+        {
+          "speaker": "Georgia Lyons",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "00:45:10.220",
+            "end": "00:45:15.580"
+          },
+          "turns": [
+            {
+              "speaker": "Georgia Lyons",
+              "role": "candidate",
+              "text": "Well, I was going to say open-minded too, so that was like—"
+            }
+          ]
+        },
+        {
+          "speaker": "Wade Parrish",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "00:45:24.760",
+            "end": "00:45:26.860"
+          },
+          "turns": [
+            {
+              "speaker": "Wade Parrish",
+              "role": "candidate",
+              "text": "I would say open-minded."
+            }
+          ]
+        },
+        {
+          "speaker": "Paul Weverink",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "00:45:29.200",
+            "end": "00:45:35.940"
+          },
+          "turns": [
+            {
+              "speaker": "Steve Barron",
+              "role": "moderator",
+              "text": "Paul, did you say that again?"
+            },
+            {
+              "speaker": "Paul Weverink",
+              "role": "candidate",
+              "text": "I haven't spoken yet."
+            },
+            {
+              "speaker": "Steve Barron",
+              "role": "moderator",
+              "text": "Sorry."
+            },
+            {
+              "speaker": "Paul Weverink",
+              "role": "candidate",
+              "text": "Two words: contemplate and consider."
+            }
+          ]
+        }
+      ],
+      "didNotAnswer": [],
+      "uncertainties": [
+        "00:42:43.000–00:42:55.000: Questioner name",
+        "00:42:55.000–00:43:21.000: Question example",
+        "00:44:21.000–00:44:23.500: Will Crocker answer wording",
+        "00:44:23.500–00:44:28.300: Carl Schmidt answer wording",
+        "00:44:28.300–00:44:49.300: Rod Rempel overlap and echo"
+      ]
+    },
+    {
+      "id": "Q04",
+      "topic": "Connection between Bill 44 and Anmore's procedure bylaw limiting public input",
+      "questioner": "Leslie Hannigan",
+      "range": {
+        "start": "00:45:53.000",
+        "end": "00:49:00.000"
+      },
+      "questionTurns": [
+        {
+          "speaker": "Leslie Hannigan",
+          "role": "questioner",
+          "text": "It's Leslie Hannigan. This is for Paul. When you were talking in your little introductory speech about that bylaw that was developed because of Bill 44, and I've never connected Bill 44 to that bylaw, and that's what I still don't catch: how that bylaw was connected to shut us down. Because Bill 44, when I looked at that, it didn't have anything to do with that.",
+          "range": {
+            "start": "00:45:53.000",
+            "end": "00:46:23.000"
+          }
+        }
+      ],
+      "relatedTurns": [
+        {
+          "speaker": "Leslie Hannigan",
+          "role": "questioner",
+          "text": "But it was kind of a decision of the council to [unclear], because not every community has that same...",
+          "range": {
+            "start": "00:48:05.000",
+            "end": "00:48:11.000"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "speaker": "Paul Weverink",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "00:46:22.000",
+            "end": "00:47:55.000"
+          },
+          "turns": [
+            {
+              "speaker": "Paul Weverink",
+              "role": "candidate",
+              "text": "Okay, that's a really good question. I'm glad you asked it. That was never properly answered at a council meeting, and I found it quite frustrating. So what Bill 44 stated was no public hearings if a development matched your OCP. So, of course, there was a public hearing for Anmore South, which was our only opportunity to really hear people. And I can get into that too, but I don't want to give you a long answer. What the bill said is you had to consider incorporating in your bylaws rules around what could be considered public input or something. You couldn't do things that mimicked a public hearing. So the Village—and it actually said in the legislation that, you know, you should consult your Village lawyers, which I always found troubling. So our lawyer advised us to put a part of our procedure bylaw that limited public input around development. It really hurt us. It divided this village. It was a disaster. And I was the one that put it on the table when we were going through the hillside, because I didn't want to go through that again, that I said we should just challenge this. This is challenging—this part of the legislation is challenging the Charter of Rights and Freedoms and free speech. And I never thought the government would come back at us, and they haven't. So we do allow that again. It's been taken out of our procedure bylaw, and I wish it had been taken out earlier. Does that answer your question?"
+            }
+          ]
+        },
+        {
+          "speaker": "Paul Weverink",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "00:47:55.000",
+            "end": "00:48:05.000"
+          },
+          "turns": [
+            {
+              "speaker": "Paul Weverink",
+              "role": "candidate",
+              "text": "So it was based on advice of our lawyers to create our procedure bylaw, and it was before everything. It happened—I can't remember exactly when it happened—a year or two ago, two, three years ago maybe."
+            }
+          ]
+        },
+        {
+          "speaker": "Paul Weverink",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "00:48:11.000",
+            "end": "00:48:58.000"
+          },
+          "turns": [
+            {
+              "speaker": "Paul Weverink",
+              "role": "candidate",
+              "text": "Yeah, based on advice. And, you know, being on council for 12 years, you do have to listen to legal advice, and you do have to listen to staff, and it does get discussed. And, yeah, we voted on it. We made a decision. I don't remember if it was three to two or unanimous, but it made sense at the time, and we didn't—people didn't understand exactly how Bill 44 was going to affect everything. It just came out. It forced us to take basement suites, and it gives you an idea of what, you know, the provincial government has as far as control. So, in hindsight, you know, we agreed unanimously that that should change. So, lesson learned. And I own it. I was part of that council. I'm not going to lie. I made the decision, and it hurt me, and it hurt our council."
+            }
+          ]
+        }
+      ],
+      "didNotAnswer": [],
+      "uncertainties": [
+        "questioner.name: The surname is best heard as Hannigan, but its exact spelling is not independently confirmed.",
+        "questioner_followup.text: The words after 'decision of the council to' are obscured and vary materially across targeted ASR passes."
+      ]
+    },
+    {
+      "id": "Q05",
+      "topic": "Safeguards to protect the new OCP vision from later major amendments, with Pinnacle Ridge as the example",
+      "questioner": "Ramey",
+      "range": {
+        "start": "00:49:11.000",
+        "end": "00:58:12.000"
+      },
+      "questionTurns": [
+        {
+          "speaker": "Ramey",
+          "role": "questioner",
+          "text": "Ramey. I live on Ravenswood. This is probably—I mean, anyone can answer this, but I'm directing it somewhat to Paul, just because of what we've gone through recently, the hillside. Residents will invest considerable time in establishing a new OCP. What safeguards will you support to protect the community vision from subsequent major amendments, such as what happened on the hillside? Before supporting substantial changes to density or rural character, will you commit to renewed community-wide consultation, published impact assessments, and transparent measure of resident support?",
+          "range": {
+            "start": "00:49:11.000",
+            "end": "00:50:04.000"
+          }
+        }
+      ],
+      "relatedTurns": [
+        {
+          "speaker": "Dr. Steve Barron",
+          "role": "moderator",
+          "text": "Anybody else?"
+        },
+        {
+          "speaker": "Dr. Steve Barron",
+          "role": "moderator",
+          "text": "Anybody else have any comments?"
+        },
+        {
+          "speaker": "Ramey",
+          "role": "questioner",
+          "text": "Okay, I just want to comment on that while it's in my mind. I don't think that when you participated in 2013 that your vision at that time is what we have today. And I know the majority of people who participated in it don't have the vision that it is today.",
+          "range": {
+            "start": "00:51:12.000",
+            "end": "00:51:35.000"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "speaker": "Paul Weverink",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "00:50:04.000",
+            "end": "00:51:12.000"
+          },
+          "turns": [
+            {
+              "speaker": "Paul Weverink",
+              "role": "candidate",
+              "text": "Okay, so we do have to do an OCP process, a full OCP, and it's a big, long process. I've never gone through one. I was elected to council in 2014, and I think ours was approved in 2013. The hillside was not amended to allow the hillside. That's false. There was some language that was inconsistent around density in units per acre and lots per acre. The density is actually lower on the hillside than what's allowed on the valley floor, which, in an infill case with a carriage house and a basement suite, is six units per acre. The hillside is 4.4, with retained green space similar to some of our CDs. So yes, the OCP is a very public process, and it's an opportunity for people to get involved. There's no legislation around that, as far as I'm aware. I remember participating in the OCP process in 2013, and it is a very public process, and it'll be up to council to decide on a final document. And there's prescriptive measures as to how you go about an OCP process, and we'll follow those guidelines."
+            }
+          ]
+        },
+        {
+          "speaker": "Neil Lyons",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "00:51:35.000",
+            "end": "00:52:01.000"
+          },
+          "turns": [
+            {
+              "speaker": "Neil Lyons",
+              "role": "candidate",
+              "text": "Yeah, I'll speak to that. My view on Pinnacle Ridge is that it wasn't the intent of the hillside description within the OCP for that kind of density. I really don't believe that reflects—I think that was interpreted wrongly. And if at all possible, if I was elected, I would like to take another look at that."
+            }
+          ]
+        },
+        {
+          "speaker": "Harriette Chang",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "00:52:05.000",
+            "end": "00:53:33.380"
+          },
+          "turns": [
+            {
+              "speaker": "Harriette Chang",
+              "role": "candidate",
+              "text": "So I just want to talk just briefly about the Pinnacle development—Ridge development. I find it fascinating. I did meet with Tony to discuss it, Tony Bruni. There's a lot of questions and concerns about this. When I did my door-to-door knocking, I met a lot of people who have a lot of concerns. I hope I'm not speaking out of turn. I'm just thinking about Pinnacle. So the grade is 17%. That's what I learned last night. And that is pretty steep. There are a lot of concerns. So we're talking about the fire, getting fire trucks up there, water drainage, runoff, erosion control, a lot of things. The zoning, as we know, was changed. So it is [unclear] CD. It's gone to CD. The zoning's happened. It supports the development that's going to happen. So I think the goal here—and I'm just thinking about future—is for transparency about future. So, updating the OCP to make it really clear about what we want as a community to address future developments. So I would like to look forward, I'd like to learn from this, I would like to remind residents, me included, to attend council meetings and get involved in the community so that we can be more informed and have a say, and more of a greater say, in future developments. So thank you."
+            }
+          ]
+        },
+        {
+          "speaker": "Carl Schmidt",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "00:53:37.220",
+            "end": "00:54:16.960"
+          },
+          "turns": [
+            {
+              "speaker": "Carl Schmidt",
+              "role": "candidate",
+              "text": "Just one—one quick comment. Uh, I've studied the 2014 OCP and all of the amendments quite a bit, and I think one of the lessons learned and the key takeaways is that the original 2014 OCP allowed a fair bit of room for interpretation. And I think the takeaway there is that a future OCP needs to be a little bit more specific about what we mean by certain words. And that's what I would be promoting, is to be very, very clear about what that vision looks like, so that future councils don't misinterpret maybe what that original vision was."
+            }
+          ]
+        },
+        {
+          "speaker": "Rod Rempel",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "00:54:16.960",
+            "end": "00:54:55.720"
+          },
+          "turns": [
+            {
+              "speaker": "Rod Rempel",
+              "role": "candidate",
+              "text": "One of the things that Harriette mentioned too that's really important is the fact that we can't fall asleep as a community. We need to be at these meetings. We need to hear about things, and we need to be informed. It's difficult to sit here now, at this point in time, when we know that this particular [unclear] is already—it's already through. This council will not have an ability to have an effect on that. But we did have some time, and we basically did not do our due diligence. So that's something that we as a community have to step up and do, and we as a council as well."
+            }
+          ]
+        },
+        {
+          "speaker": "Wade Parrish",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "00:55:00.600",
+            "end": "00:56:51.660"
+          },
+          "turns": [
+            {
+              "speaker": "Wade Parrish",
+              "role": "candidate",
+              "text": "It is true that Pinnacle Ridge has been passed, and I guess it's going forward. I have issues with drainage. I know they're doing the ditch work right now, making it wider, deeper. With every development, groundwater is affected. When it comes to rainwater going into pipes, it's harder, faster, dirtier. We have to think about Mossom Creek. We have to think about Schoolhouse Creek. The fish fry that are there can get choked out by simple rocks going down in the water. It affects their gills. So one of the things I've thought about is just how much water is going to come down. We've got to think of ways to control that stormwater. So, another point I wanted to make is cluster housing. That is in our OCP. It is very much left to interpretation. When I was informed about what it was, I said, 'Well, what is the definition of cluster housing?' And it was a shrug. It's kind of— So I guess cluster housing is townhouses. So that's what passed. And that's a concern. I think the OCP has to be more clear. It has to reduce council interpretation. And so, in the future, that development in Anmore is more controlled and more guided by what we want."
+            }
+          ]
+        },
+        {
+          "speaker": "Will Crocker",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "00:56:51.660",
+            "end": "00:58:12.000"
+          },
+          "turns": [
+            {
+              "speaker": "Will Crocker",
+              "role": "candidate",
+              "text": "As [unclear] mentioned, that has been zoned, so that change has happened. But we do have to take a look at working, obviously, with the developers there, and some of the team is actually here tonight, so they're participating. They're part of the community. When we look at, in the zone, there will be some chance for some bylaws to be set. As council, we do need to take a look at what's the impact of cluster housing, what type of materials are used in the building, what are the acceptable road grades. So those are certain things that council would still consider. Impact on fire services. We all had an opportunity to meet with Chief Jay Sharpe yesterday. And, you know, we were talking about building sizes and heights and where they're built, whether they're on a steep slope, could potentially impact the type of equipment that the fire department needs to fight those fires. So there are quite a few larger decisions to be made, and I think that's what upcoming council has to look at, and the community has to be aware of, and I think we need to learn from that. Thank you, everyone."
+            }
+          ]
+        }
+      ],
+      "didNotAnswer": [
+        "Georgia Lyons"
+      ],
+      "uncertainties": [
+        "questioner.name: The first name is best heard as 'Ramey'; exact spelling and any surname are not confirmed by the recording.",
+        "responses[2].text: Harriette Chang's opening self-correction after 'Pinnacle development' is best heard as 'Ridge development,' but the transition is slightly blurred.",
+        "responses[2].text: The word immediately before 'CD' in the zoning sentence remains unresolved across targeted passes.",
+        "responses[4].text: The noun in 'this particular [unclear] is already—it's already through' remains unresolved; ASR variants do not support choosing one without guessing.",
+        "responses[6].text: The name or word before 'mentioned' at the start of Will Crocker's response remains unresolved."
+      ]
+    },
+    {
+      "id": "Q06",
+      "topic": "How candidates who opposed Anmore South/Icona would listen neutrally to the whole community if the proposal returns",
+      "questioner": "Lisa Johnston",
+      "range": {
+        "start": "00:58:45.000",
+        "end": "01:11:30.000"
+      },
+      "questionTurns": [
+        {
+          "speaker": "Lisa Johnston",
+          "role": "questioner",
+          "text": "Lisa Johnston, 21-year Anmore resident. I got to know many of you as friends through Icona and Anmore South. We didn't know each other beforehand. I'm a loud voice. There's a lot of loud voices in this room, 200 people-ish, probably over 2,000 residents in Anmore. Since Anmore South, I have had many residents talk to me on various reasons: seniors, 30-year-olds, youngsters. They didn't feel heard, like many of us. They wanted an opportunity to pursue it further, maybe smaller homes, not apartments, but maybe other opportunities. So how do all of you, given that you were in the same room with me at the public hearing—I can confidently say you probably had the same opinion as myself with regards to Anmore South—if Anmore South comes back, how do you take off that hat that we all wore together? And if you're now a resident representing Anmore as a whole, how do you sit and take opinions of over 2,000 people, not just the loud 200 in the room? Does that make sense? Thank you.",
+          "range": {
+            "start": "00:58:45.000",
+            "end": "01:00:08.000"
+          }
+        }
+      ],
+      "relatedTurns": [
+        {
+          "speaker": "Lisa Johnston",
+          "role": "questioner",
+          "text": "It's not really how do you hear, because we hear, and I do believe that all of you are very willing to listen. You've all gone through a struggle, and you all know what it feels like to not be heard. So you are going to hear, but how do you, in your heart, hear with neutrality, when you came from a position—",
+          "range": {
+            "start": "01:01:00.000",
+            "end": "01:01:25.000"
+          }
+        },
+        {
+          "speaker": "Harriette Chang",
+          "role": "candidate",
+          "text": "So, being unbiased.",
+          "range": {
+            "start": "01:01:00.000",
+            "end": "01:01:25.000"
+          }
+        },
+        {
+          "speaker": "Lisa Johnston",
+          "role": "questioner",
+          "text": "So, being unbiased.",
+          "range": {
+            "start": "01:01:00.000",
+            "end": "01:01:25.000"
+          }
+        },
+        {
+          "speaker": "Harriette Chang",
+          "role": "candidate",
+          "text": "Okay, so the question is to be unbiased and to be able to move forward.",
+          "range": {
+            "start": "01:01:00.000",
+            "end": "01:01:25.000"
+          }
+        },
+        {
+          "speaker": "Lisa Johnston",
+          "role": "questioner",
+          "text": "That's hard.",
+          "range": {
+            "start": "01:01:00.000",
+            "end": "01:01:25.000"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "speaker": "Harriette Chang",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:00:24.000",
+            "end": "01:01:00.000"
+          },
+          "turns": [
+            {
+              "speaker": "Harriette Chang",
+              "role": "candidate",
+              "text": "Great, great question, Lisa. I think that that guidance really needs to come from the OCP. I would love to really talk to people and find out what they want, what they want that development to look like. I mean, right now we know it's zoned for one acre. That's—I mean, they could do that tomorrow. They probably wouldn't sell very much because it would cost a lot, but that's what they could do. So I guess our big question is, what do people want? So I think your question was, how do we hear? So I would—I'm just so excited about—oh, sorry, go ahead."
+            }
+          ]
+        },
+        {
+          "speaker": "Harriette Chang",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:01:25.000",
+            "end": "01:02:50.000"
+          },
+          "turns": [
+            {
+              "speaker": "Harriette Chang",
+              "role": "candidate",
+              "text": "Yeah, I think that's a really, really hard question, and it's a really good exercise, mental exercise. And I think we're going to have to really consciously step back and really look at what people are saying and report it. And I think we're going to need some factual information. I think we're going to—I'm going to, as a counsellor, a school counsellor for 30-plus years, there was many times that I dealt with people and they were saying things I didn't always agree with. And so listening and understanding and really exercising my mental flexibility to understand where they're coming from really helped me to understand a different side of you. And I think that that would be something I would absolutely be utilizing. So my counselling skill set will go there, and to put myself—and just use my empathetic understanding. And I think that's what I would do as an individual. I just try and put myself in their shoes. What do they need? And I think about my own kids as well. They're in their 20s. They're looking for homes very soon. I've got one daughter looking for one right now. They can't afford, obviously, to buy here. They're looking at Burke Mountain, or she is. Maybe if there was something available that was built, maybe she'd prefer to be here. So I have to put myself in those shoes and have those conversations and really think about where they're coming from too. So it would be a great exercise for mental flexibility. Thank you."
+            }
+          ]
+        },
+        {
+          "speaker": "Neil Lyons",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:02:56.000",
+            "end": "01:04:02.700"
+          },
+          "turns": [
+            {
+              "speaker": "Neil Lyons",
+              "role": "candidate",
+              "text": "That is a good question, no doubt about it. Let's reflect on what happened at the Anmore South/Icona process. It was really a very insincere process which didn't allow anybody to speak. I mean, hence we had this uprising of residents who eventually scared away the developer. It was a wonderful conclusion, in my view. But if we're going to have—but I think what we've got to remember, we have to have a sincere consultation. If you have a predetermined result—and many, many towns and cities do this, that their councils work this way—they have the dog-and-pony show. We all show up. We all give our, our feelings. We pour out our feelings, but they've already decided what they're going to do. And that's what happened with this council. They knew what—they would have passed that if the developer hadn't left town."
+            }
+          ]
+        },
+        {
+          "speaker": "Georgia Lyons",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:04:07.400",
+            "end": "01:04:33.900"
+          },
+          "turns": [
+            {
+              "speaker": "Georgia Lyons",
+              "role": "candidate",
+              "text": "Okay, so I was not for Anmore South, and now that you bring that up, it's very interesting, because I think you have to look at the facts as a councillor, and you have to put yourself in other people's shoes so you can see everyone. I, I think for me that's going to be a learning experience and it's going to be a learning curve. But I think I can do it. I honestly think I can. So, yeah."
+            }
+          ]
+        },
+        {
+          "speaker": "Wade Parrish",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:04:44.300",
+            "end": "01:05:37.800"
+          },
+          "turns": [
+            {
+              "speaker": "Wade Parrish",
+              "role": "candidate",
+              "text": "When it comes to things that I don't agree with, apparently there's all sorts of rules that I don't understand yet, learning them as I go. If you go into the situation where you agree to disagree or compromise, not everybody in Anmore is going to be happy with whatever happens down there. But I'm hoping that with some of the decisions that are made in the next year, that we can kind of control and take back control of what happens there. It's not going to be for everybody. Some people will disagree, but I'm hoping that Anmore can come up with a happy medium."
+            }
+          ]
+        },
+        {
+          "speaker": "Carl Schmidt",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:05:46.600",
+            "end": "01:06:26.900"
+          },
+          "turns": [
+            {
+              "speaker": "Carl Schmidt",
+              "role": "candidate",
+              "text": "Thanks, Steve. That was a fantastic question, and I think there's lots we can say about how we can each individually try our best to listen openly. At my previous company, though, we went one step further, and we actually trained our staff, because it's not easy, and it's counterintuitive, and it takes practice. And I think it's up to us as leaders to equip the people who are involved in this process with the skills that they need to do a great job. And so I think there's an opportunity here, perhaps for council and village staff. Maybe this is an opportunity for some professional development and just to fill out some of those skills."
+            }
+          ]
+        },
+        {
+          "speaker": "Rod Rempel",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:06:30.700",
+            "end": "01:07:10.800"
+          },
+          "turns": [
+            {
+              "speaker": "Rod Rempel",
+              "role": "candidate",
+              "text": "Well, I think this is exactly the reason why we need an official community plan. It's discussions like this and questions about what should be happening with our community and with parts of our areas. These are things that need to be set on paper, and we need to, as a community, make sure that that's clear, concise. I'm in the development business and construction business myself. I understand what we need to do, and it has to be something very concise and clear so that there aren't any unclarities, like what we're talking about now, personal opinions, concerns, that sort of thing."
+            }
+          ]
+        },
+        {
+          "speaker": "Will Crocker",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:07:22.000",
+            "end": "01:09:16.900"
+          },
+          "turns": [
+            {
+              "speaker": "Will Crocker",
+              "role": "candidate",
+              "text": "Yeah, because I thought the previous OCP process, the last time Anmore did do an OCP review, [unclear]. I just thought that process actually helped. It brought the community together. They were able to determine themes of what the community wanted at the time. So I love that process. I liked that process, and that set the table. And then you had some consensus of what everyone wanted. And then, so I think that goes a long way to setting, okay, what does the community want for that? So a different process all around. The other piece that—a couple other things is, you know, you're always looking for—I work with teams of people making decisions around buildings and grounds all the time. And a lot of times you have to, you have to learn, what would you do differently? And I think that's an opportunity going forward. The other thing I noticed is, kind of the—I know there were a lot of technical assessments, there were a lot of reports and things like that. And, you know, I've had, in the past, had to write position papers for requesting funding from BC Ministry of Finance. And what I was surprised at is the position was often, the engineer recommended this or the study recommended that, and there was no pushback on that. And one of the things I'm used to seeing is, well, you know, you have that decision to make. What if you do nothing? Like, what if you don't make that change? What's the minimum change that you would make? And then what's the impact if you make the preferred or the recommended position by the engineer or the professional? And I just didn't see that in Anmore. A lot of times I found that there was information put forward by the hired professionals, and that's what was rolling. So definitely, you know, what could you do differently there? But lots of lessons learned."
+            }
+          ]
+        },
+        {
+          "speaker": "Paul Weverink",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:09:19.600",
+            "end": "01:11:30.700"
+          },
+          "turns": [
+            {
+              "speaker": "Paul Weverink",
+              "role": "candidate",
+              "text": "Okay, this could be a very long answer. I think I spoke to, you know, our procedure bylaw and the fact that we were faced with litigation from a community group, which really stifled us and didn't allow us to talk, which really, what ended up happening with Anmore South is more and more people became against it. So I disagree with my colleague, Mr. Lyons, that we were going to vote for it. I don't know if I could have gone through that public hearing, which I was waiting to hear from people, and vote for it. It was not popular. It was clear. As far as the process, yeah, I'd like to see some changes, which is one of the reasons why I put the change to our procedure bylaw on the table. I wouldn't be sitting here today running again if that procedure bylaw was still in place. I can't go through that again. As far as Anmore South, I can't remember the actual language in the OCP. Mayor Richardson probably knows it verbatim because he's smarter than me. But it was originally a developer-led process. And if you guys don't know what a special study area is, it was an area of Anmore that was put in our OCP a long time ago because it was 150 acres. Council at the time thought, look, we can't just have our standard one-acre zoning. We really have to open this up to some different ideas, which was the whole idea. The process ended up becoming village-led. It was less about—and it may have appeared to be a developer-led process—but it was actually the application for the OCP amendment. We're not talking zoning. Zoning would have happened after. Zoning could have taken apartments out. It could have moved things around. It was just the OCP application. So people need to understand that zoning and OCP are two completely different things. OCP is guiding. Zoning is actual what's allowed. And then you go into the subdivision process, which is staff. So we have a unique opportunity. We've been through Anmore South. It was a disaster. I would do it different. People would do it different. And we will do it different. And we now have the opportunity to maybe put some language as to what the community would like to see in Anmore South."
+            }
+          ]
+        }
+      ],
+      "didNotAnswer": [],
+      "uncertainties": [
+        "question.text: The clause transcribed as 'Since Anmore South' is phonetically unstable in the ASR ('Since then, more so' in multiple passes), but the selected wording best fits the audio and context.",
+        "responses[0].text: The phrase transcribed as 'my counselling skill set will go there' is contextually strong but not cleanly resolved by either targeted ASR pass.",
+        "responses[5].text: The phrase transcribed as 'set on paper' is slightly muffled; targeted passes alternated among close phonetic readings.",
+        "responses[6].text: A short phrase after 'the last time Anmore did do an OCP review' could not be resolved consistently and is marked [unclear]."
+      ]
+    },
+    {
+      "id": "Q07",
+      "topic": "Whether Anmore South planning belongs inside the OCP review or in a separate neighbourhood plan, and each candidate's personal vision",
+      "questioner": "Anne-Marie Field",
+      "range": {
+        "start": "01:11:45.000",
+        "end": "01:24:23.000"
+      },
+      "questionTurns": [
+        {
+          "speaker": "Anne-Marie Field",
+          "role": "questioner",
+          "text": "Hi, Anne-Marie Field from Leggett Drive. I'll just mention I was on council for six years, and I was actually on the council that passed the last OCP in 2014. At the time, the way we handled the uncertain future of the Ioco lands—we called it the Ioco lands; we didn't call it Anmore South—but the way we handled it within the OCP was that we said that we wouldn't deal with it in the OCP at the time. We would undertake a neighbourhood community—I'm calling it a neighbourhood planning process—where you deal with that piece of land outside of the OCP, and it is a special study area, so it made sense to deal with it separately. As I think we've still all said, it became a developer-led process, which I think most people would agree wasn't ideal for a bunch of reasons. It sounds to me, from what I'm hearing at the table here tonight, is that most of you would move forward with a community-led process. I guess I want to ask two questions that are kind of related. One is, would you, if you were elected to council, want to see the Anmore lands treated—or planning done through the community? Sorry. Would you like to see it folded into the OCP planning process, which is quite lengthy and comprehensive, or would you want to treat it separately as a neighbourhood plan? And secondly—and this one is a little bit more specific to each of you individually—and recognize that all of you are open to hearing from the community, and that you'll do, I think, what you hear from the community. But individually, do you have your own vision for what you'd like to see in that area? So it's a two-parter, I guess. Do you want to see the planning process as part of the OCP review or the separate neighbourhood planning process? And what's your personal view for those lands? Thank you.",
+          "range": {
+            "start": "01:11:45.000",
+            "end": "01:13:34.000"
+          }
+        }
+      ],
+      "relatedTurns": [],
+      "responses": [
+        {
+          "speaker": "Neil Lyons",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:13:42.000",
+            "end": "01:15:26.740"
+          },
+          "turns": [
+            {
+              "speaker": "Neil Lyons",
+              "role": "candidate",
+              "text": "Thank you for your question, Anne-Marie. So, it was a twofold question, wasn't it? I would not want to see it treated separately. I think we should include that in our OCP review and start fresh with Anmore South. I think we came this close to that going urban, and that would be a slippery slope for the rest of Anmore. So I would support taking it out, if at all possible. I think we only need 51 percent of Metro's vote to take it back out of a special designation like that. And I—but, you know, I do recognize the fact that property owners have rights. And at this time, I mean, I couldn't come back and say we're going to build one-acre lots up there. And there may be some opportunity lost to get more green space retained and look at other things we could do with that property. I would support some CD zoning up there. I would, you know, like I say, you know, we have to recognize they have rights, and they're property owners, just like there are a lot of long-term residents here in Anmore who have property. And they're going to be—I mean, they've come to me and told me that they are interested in possibly developing it. And we're going to have to listen to what they have and hopefully work on something that really is truly reflective of our community."
+            }
+          ]
+        },
+        {
+          "speaker": "Georgia Lyons",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:15:28.740",
+            "end": "01:15:51.740"
+          },
+          "turns": [
+            {
+              "speaker": "Georgia Lyons",
+              "role": "candidate",
+              "text": "Hi. So for the first question, I honestly need more time to think about that, but I will reach out and talk to you personally. I also agreed with my dad about the second question, is that it should be reflective of what Anmore wants, and Anmore as a community. And, yeah, overall that's what I think."
+            }
+          ]
+        },
+        {
+          "speaker": "Wade Parrish",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:15:51.740",
+            "end": "01:17:47.680"
+          },
+          "turns": [
+            {
+              "speaker": "Wade Parrish",
+              "role": "candidate",
+              "text": "I think we could do a combination of both. Think a public process, looking at the Anmore South lands, talking about it, asking questions, a public review, see what happens there. Then it goes to the OCP. Then it's covered by the OCP. And I think the OCP is the key thing, the key restrictor to development. It also just lets people know what we want in the future. So it creates limitations, but it also should be able to create new development, new ideas, and that, I think, has to be explored. So, as for my vision of the lands, I would like to see one-acre parcels. We know that half-acre parcels work. We know that shared septic fields work with multiple small houses, and I could see a development going in there that is a combination of all three. I see no reason why it has to be one way or another, but that's my vision anyways."
+            }
+          ]
+        },
+        {
+          "speaker": "Paul Weverink",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:17:51.460",
+            "end": "01:18:53.060"
+          },
+          "turns": [
+            {
+              "speaker": "Paul Weverink",
+              "role": "candidate",
+              "text": "Another long answer. Just so everybody realizes, regardless of OCP designation—urban this, rural that—it is zoned one-acre lots. So we do have to consider that. We can create a vision for Anmore South, and, you know, hopefully the owners consider it. My vision was to have a small commercial component, because even if we develop Anmore South at our current density, considering all the other undeveloped land in Anmore, we could get up to four thousand, five thousand people organically, and I think we need a small commercial component. People complain about traffic. Well, sometimes I go up and down Ioco Road three times in a day just to go for basic, basic services. So I'd love to see—you know, we're a community already, we're twenty-seven hundred people—that we may need some commercial services. I would like that. I don't know how you do that in a rural environment, on septics. It'd be difficult. But it's clear to me that nobody wants it to go urban, so that is going to limit our density. And I do believe in incorporating it into the OCP process and maybe even really removing it as a separate area. But I hope people realize that it is 150 acres, and we get one shot to do it right. So that's my answer."
+            }
+          ]
+        },
+        {
+          "speaker": "Will Crocker",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:18:59.700",
+            "end": "01:19:42.080"
+          },
+          "turns": [
+            {
+              "speaker": "Will Crocker",
+              "role": "candidate",
+              "text": "I'm in favour of a community-led process. I would support a neighbourhood plan just for the Ioco lands. I do not have a preconceived vision for what the land should be. I'd be open to seeing what residents of Anmore want for that area. And I think it's been mentioned by the other candidates that, you know, Anmore already has some things that are working in terms of half-acre lots. Septic systems are working. So I think, with some of the options we have on the table, I think some good things can happen."
+            }
+          ]
+        },
+        {
+          "speaker": "Carl Schmidt",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:19:43.480",
+            "end": "01:20:48.720"
+          },
+          "turns": [
+            {
+              "speaker": "Carl Schmidt",
+              "role": "candidate",
+              "text": "Thanks, Stephen. Thanks, Anne-Marie, for the question. So, just to make sure that I'm answering it, your first question was, should we fold Anmore South into an overall process, or should it be separate? And I believe it's part of Anmore, and that it has to be considered holistically. And so I wouldn't be in support of doing it separately. I'd want to run a process that included all of Anmore, including Anmore South. In terms of my vision for Anmore South, I do want to retain—and I said this at the outset—we are semi-rural, and I want to see that retained. And for me, personally, that doesn't involve six-storey apartment buildings. Now, to Lisa's point earlier about listening, I've since talked to some folks who actually really love that concept. And so, while that's not my dream for that space, I truly, truly want to make space for folks who do have that as something that they want to see. We need to hear that. If folks have that as something that they hold dear, I want to hear that, and I want to hear other voices as well. So that's—I hope that answers your question."
+            }
+          ]
+        },
+        {
+          "speaker": "Rod Rempel",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:20:53.220",
+            "end": "01:21:42.000"
+          },
+          "turns": [
+            {
+              "speaker": "Rod Rempel",
+              "role": "candidate",
+              "text": "Yeah, I agree with the fact that it should be—I feel it should be a committee-led decision. I think that the group that—like your group—that determined that it should be a special study zone, they put some thought into it. And so I think we need to study that and understand why those decisions were made, and see if that still makes sense or not. As far as my vision, I also feel that, you know, I may have a vision for it, but it's really up to our community. And I think it should be a committee-led thing. We should put some sort of project together and decide if there's anything that we can do. However, it is owned by an owner, and we will have to sell him on that dream as well. So that's my view."
+            }
+          ]
+        },
+        {
+          "speaker": "Harriette Chang",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:21:42.820",
+            "end": "01:23:21.660"
+          },
+          "turns": [
+            {
+              "speaker": "Harriette Chang",
+              "role": "candidate",
+              "text": "Okay, so for the first part, would you want to—okay, [unclear]. I agree with what Neil said. I really liked your response, and I would take it out of—I'd get rid of the special study area. I would want to have that in the OCP review. And the reason for that is I was reading about special study areas, and I would hate for that to be—or I'd be really sad for it to be developed. And it could be more easily. It could change from the rural designation to even urban more easily. My understanding is it's 51 percent vote for Metro Van, and I may have this wrong because I'm just such a newbie trying to learn so much in a pretty short period. But if it's in our OCP and it's not in a special study, it would be 66 percent. So we would have more control over it, and I like that. So I like the thought that people would have more say, and I really want me—I want my role to be listening, representing, and delivering. So, listening to the people, I think it would give us more control, if that's what you wanted. So I would like for it to be not a special study area anymore. And the second part, the vision, I would love to see some green space. And I know that we've got some creeks in that area, and they can't be developed close by, so maybe we could have some green space that we could all enjoy in some capacity. I don't know what that would look like. Thank you."
+            }
+          ]
+        },
+        {
+          "speaker": "Wade Parrish",
+          "role": "candidate",
+          "kind": "follow-up",
+          "range": {
+            "start": "01:23:23.660",
+            "end": "01:24:23.560"
+          },
+          "turns": [
+            {
+              "speaker": "Wade Parrish",
+              "role": "candidate",
+              "text": "May I add something? I kind of read off what I thought Anmore's vision would be for that area. I also have a vision that it should just remain a park. It should be free space. That's what I would like. But I know that's probably not going to happen. But Schoolhouse Creek, that is in that area, is a—is a gem that no trespassing signs has disguised as private land for so many years. Schoolhouse Creek is an active creek that breeds all sorts of fish, and I know that area is a playground for many deer and bear that we cherish. Developing that area, it's all gone. There's no going back. So that's my vision."
+            }
+          ]
+        }
+      ],
+      "didNotAnswer": [],
+      "uncertainties": [
+        "01:21:43.000–01:21:55.000: The opening false start after 'Okay' remains indistinct across the primary and targeted second-pass ASR."
+      ]
+    },
+    {
+      "id": "Q08",
+      "topic": "Cycling infrastructure and sustainable transportation",
+      "questioner": "[unclear: Lynn Skatcher]",
+      "range": {
+        "start": "01:24:29.000",
+        "end": "01:34:49.000"
+      },
+      "questionTurns": [
+        {
+          "speaker": "[unclear: Lynn Skatcher]",
+          "role": "questioner",
+          "text": "Hi, and thank you for the opportunity to speak. My name is [unclear: Lynn Skatcher]. I use they/them pronouns, and I live on Ma Murray Lane. I have a question for each candidate. A lot of the issues that many people in Anmore have concerns about, from a worsened wildfire and drought season to protection of our forest and river ecosystems, are connected to climate change. One way we can limit our impact on the environment is by promoting cycling and other forms of more sustainable transit as an alternative to driving. Now, compared to other communities, Anmore has not invested in cycling infrastructure, including a lack of bike racks at the new Village Hub. What is your position on increasing the cycling infrastructure to match that in neighbouring communities like Port Moody, and what can you commit to doing to achieve this?",
+          "range": {
+            "start": "01:24:29.000",
+            "end": "01:25:18.000"
+          }
+        }
+      ],
+      "relatedTurns": [],
+      "responses": [
+        {
+          "speaker": "Georgia Lyons",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:25:24.000",
+            "end": "01:25:41.000"
+          },
+          "turns": [
+            {
+              "speaker": "Georgia Lyons",
+              "role": "candidate",
+              "text": "I'm all for it. I think that's a good opportunity for people to save the environment. I don't think I can commit to anything just yet, but I do think it's such a good idea, and I would be all for it."
+            }
+          ]
+        },
+        {
+          "speaker": "Wade Parrish",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:25:43.000",
+            "end": "01:26:35.000"
+          },
+          "turns": [
+            {
+              "speaker": "Wade Parrish",
+              "role": "candidate",
+              "text": "Yeah, the bikes are always a great way to transport yourself. I don't know if there's anything that we can do immediately there. Roads are so wide. I do notice one of the biggest problems in Anmore is the link between Sunnyside and First Avenue. I've seen many cyclists coming up there or going down, that it's very unsafe. It's almost unsafe for anybody walking it. So sidewalks, bike lanes, yeah, I think it's things in the future that we really have to address."
+            }
+          ]
+        },
+        {
+          "speaker": "Paul Weverink",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:26:41.000",
+            "end": "01:28:51.000"
+          },
+          "turns": [
+            {
+              "speaker": "Paul Weverink",
+              "role": "candidate",
+              "text": "Yeah, absolutely. I support bike lanes as the Environment Committee Chair, and certainly a continuation of what we're doing on Sunnyside. Pretty soon almost all of Sunnyside, where it's developed, is going to be done, and that's a multi-use path which you can ride your bike on. I didn't know—are you saying there's no bike rack at the—how, Lynn?"
+            },
+            {
+              "speaker": "Questioner",
+              "role": "questioner",
+              "text": "The new Village Hall."
+            },
+            {
+              "speaker": "Paul Weverink",
+              "role": "candidate",
+              "text": "Okay, I'm going to bring that up with somebody, because there should be."
+            },
+            {
+              "speaker": "Questioner",
+              "role": "questioner",
+              "text": "Yeah, I have to park my bike on the stairway rails."
+            },
+            {
+              "speaker": "Paul Weverink",
+              "role": "candidate",
+              "text": "Okay, okay, good to know. And then you were talking about climate change and trees, and okay, so we have the Riparian Regulations Act, which preserves green space around riparian areas. The trees in Anmore are going to be a big discussion because the safety, fire safety, and trees conflict. I'm going to be very blunt about that. We have to have some honest conversations around trees. When you have a dead and dying forest, that is a safety hazard, and it's not—some of the decisions we may have to make may not be popular. So as far as the contribution to climate change, this is kind of what I was talking about earlier, possibly having a little commercial centre. You know, saving trees in Anmore will certainly do their part to sequester CO2 and stuff like that, but I think we're doing more damage with our cars driving everywhere. So if we can have some basic services as we get up to three thousand, four thousand people in the next ten, twenty years, that'll probably do more to deal with climate change. And regarding our transit, transit is actually pretty good. I had to take transit for about six months for a while due to a health concern. It was pretty good. I wasn't going to sell my car or anything, but for young people, it's pretty good. TransLink is very good at serving this community with transit. It's not efficient for them; I'm sure they lose money. And TransLink is actually funding seventy-five percent of that multi-use path, which is great, so we're not on the hook for all of it. So yeah, great question."
+            }
+          ]
+        },
+        {
+          "speaker": "Will Crocker",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:29:00.000",
+            "end": "01:30:46.000"
+          },
+          "turns": [
+            {
+              "speaker": "Will Crocker",
+              "role": "candidate",
+              "text": "Thanks, Lynn. Yes, I run a lot of trails around Anmore, in the mountains and hills, and I do support cycling and cycling infrastructure. I think some of the challenges for Anmore are we have very narrow roads, we don't have things well marked, and we've got multi-use pathways, and now we've got pedestrians competing with cyclists and motorized scooters and all sorts of things. So I think we need to take a look at that. Definitely would support bike racks at the Village Hub. I think that would probably be the lowest-cost initiative to move ahead with. But I'm always amazed when I travel places like Ireland, or even the Rockies around town, and the roads are narrower than the roads in Anmore, and they have cyclists going through those areas. So, you know, the question is, how come you go on a cycling trip around Ireland where the road's about as wide as this table, and Anmore, you know, you've got hard curbs, you know, there's a lot of things. The other thing too, if you walk around the trails in Anmore, you'll notice that, you know, there is a lot of mountain bikers that use the trails. There's a lot of hikers that use the trails, and we need to take a look at how to keep those trails restored. I know that's not all Anmore lands, but again, it comes down to communicating, working with groups within the community that want to support the use of the bikes. So I think there's a lot of discussion to be had there, but if you can do it in other parts of the world, why can't we promote people cycling in Anmore? Thank you."
+            }
+          ]
+        },
+        {
+          "speaker": "Carl Schmidt",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:30:48.000",
+            "end": "01:31:24.000"
+          },
+          "turns": [
+            {
+              "speaker": "Carl Schmidt",
+              "role": "candidate",
+              "text": "Thanks for that. Awesome question. Yeah, I have a vested interest. My son takes a bike every day to work, and so I'll just expose my bias right here. I'm very interested in seeing bike safety and everything through the village. But I think I'd be most interested in, you know, I don't know what you need. I don't know some of the limitations that are out there. I'd love to see a working group where we can just put together, like, how can we better support what's needed, what works within the narrow roads that we have? And then a bike rack is an embarrassing oversight. We should just have one."
+            }
+          ]
+        },
+        {
+          "speaker": "Rod Rempel",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:31:28.000",
+            "end": "01:32:23.000"
+          },
+          "turns": [
+            {
+              "speaker": "Rod Rempel",
+              "role": "candidate",
+              "text": "I think it's pretty obvious that everyone on council is definitely a supporter of bike transportation. And interestingly, one of the newspapers had talked to me about it, and I had mentioned that Sunnyside Road not having a bike path on it was, you know, fairly unreasonable. It's incredibly unsafe. So it's going to come down to budgetary issues. So, you know, this will be something that council will have to work with and have to decide: is it a priority or not? And I think in the past, clearly, you know, bike lanes have not been a real priority here. But, you know, going forward, I think it sounds like this council, every one of our members here, is very much in favour of doing that, so you may have hit a real [unclear: gold mine/gold line] here."
+            }
+          ]
+        },
+        {
+          "speaker": "Harriette Chang",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:32:24.000",
+            "end": "01:33:32.000"
+          },
+          "turns": [
+            {
+              "speaker": "Harriette Chang",
+              "role": "candidate",
+              "text": "I love your question, and it just makes sense. So I did a degree in my past, before I was a school counsellor, in environmental geography, and you're speaking my language. I was also a tree planter. I planted over one hundred thousand trees all over British Columbia. So I really care about the environment, and I get very nervous about the wildfires. I've spoken about it publicly, and I experienced being on an EvacAlert, as you guys heard earlier. So I love that you brought this up. Honestly, when I think about riding my bike down Sunnyside to First Avenue, it terrifies me, so I'm not going to do that. I actually witnessed a car accident there as well. It's just terrifying to me, so I won't do that. But I love the idea of trying to figure out ways in which we can make a safe network of cyclists, or places to be able to ride our bikes. And if there was, I would. I actually would. And I want to get one of those motorized ones because I'm getting really old, so I can't keep up to people like you. So we would have to do a budget analysis. There's definitely a lot of interest here. What else can I add? I love your idea. Yeah. Thank you for bringing it up."
+            }
+          ]
+        },
+        {
+          "speaker": "Neil Lyons",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:33:35.000",
+            "end": "01:34:49.000"
+          },
+          "turns": [
+            {
+              "speaker": "Neil Lyons",
+              "role": "candidate",
+              "text": "Well, putting aside my bias as a cyclist, I think that the—I tend to agree with Will—that our semi-rural community, rural infrastructure doesn't really support, you know, safe cycling. And so we'd have to work on that first. As far as your question on climate change and retaining trees and whatnot, I disagree with Paul. I don't think it [unclear: does/doesn't] make sense. When you remove trees, you're not helping climate control. So we have to figure out how we're going to balance that. I understand what he's saying, but I do disagree with that. I see too much indiscriminate tree removal in our town, or in our village, and it concerns me. And wherever possible, I support retaining trees, especially—I think we could do more around creeks and other nature habitat. I think that we should encourage that."
+            }
+          ]
+        }
+      ],
+      "didNotAnswer": [],
+      "uncertainties": [
+        "questioner.name: Lynn Skatcher",
+        "Rod Rempel: gold mine/gold line",
+        "Neil Lyons: does/doesn't"
+      ]
+    },
+    {
+      "id": "Q09",
+      "topic": "Engaging youth and young adult voters in village issues",
+      "questioner": "Sunny Field-Cropper",
+      "range": {
+        "start": "01:35:03.000",
+        "end": "01:44:02.100"
+      },
+      "questionTurns": [
+        {
+          "speaker": "Sunny Field-Cropper",
+          "role": "questioner",
+          "text": "Hi, my name is Sunny Field-Cropper, and I'm from Margetts Grove. I'm born here, I'm 20 years old, and I don't see a lot of people my age here. And when I talk to many people who I know, my age, who live here, they have no idea. They don't even know what OCP means. They haven't heard that much stuff. They just don't know what's going on. So, I don't know, I don't expect you to really have an answer to this, but do you know how you would engage, like, youth or the voting youth, and bring them into this conversation and keep them up to date?",
+          "range": {
+            "start": "01:35:03.000",
+            "end": "01:35:43.800"
+          }
+        }
+      ],
+      "relatedTurns": [
+        {
+          "speaker": "Dr. Steve Barron",
+          "role": "moderator",
+          "text": "Yeah, that's for everybody."
+        },
+        {
+          "speaker": "Dr. Steve Barron",
+          "role": "moderator",
+          "text": "Okay, let's start with Wade."
+        }
+      ],
+      "responses": [
+        {
+          "speaker": "Wade Parrish",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:35:50.400",
+            "end": "01:36:24.900"
+          },
+          "turns": [
+            {
+              "speaker": "Wade Parrish",
+              "role": "candidate",
+              "text": "Well, I think the Anmore Hub, being as utilized as it is, could actually host youth programs after school to, you know, special interests like that. I think we need to get the youth involved. The only way we can do it is to get them together. And we do have the facility to do that now, and I think we can try to make that happen."
+            }
+          ]
+        },
+        {
+          "speaker": "Paul Weverink",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:36:31.900",
+            "end": "01:36:53.900"
+          },
+          "turns": [
+            {
+              "speaker": "Paul Weverink",
+              "role": "candidate",
+              "text": "Interesting question. What I've learned in my 12 years of council is you can't force involvement. Youth has to be interested. But I agree with Wade: if we have interested youth and they want a special venue to share ideas, I would be totally supportive of that. Totally, totally be supportive of having it in the Anmore Hub."
+            }
+          ]
+        },
+        {
+          "speaker": "Will Crocker",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:36:57.900",
+            "end": "01:38:14.420"
+          },
+          "turns": [
+            {
+              "speaker": "Will Crocker",
+              "role": "candidate",
+              "text": "Good question. [unclear] my daughter. I think, you know, Anmore in the past, we've always had the Anmore Youth Group, which [unclear] your siblings, and so it might be helpful to target towards 20-somethings as well as a youth group that way. But of course, as Paul said, it's only as good as people will come in and participate. But I think it starts with actually recognizing that that's an issue, and then finding some ways to get, you know, make people aware, young people aware, that there's some things that they can participate in. And I think the other thing that I'll point out as well, for young people that are in the audience or have, you know, young people that live with them at home, is participating in things like the Sasamat Volunteer Fire Department. Applying for that is actually a really good way to learn about your community, work with some good people, and learn some amazing skills. So there's lots of advantages to living in Anmore, and, yeah, take advantage of those. Thanks."
+            }
+          ]
+        },
+        {
+          "speaker": "Carl Schmidt",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:38:14.420",
+            "end": "01:38:46.680"
+          },
+          "turns": [
+            {
+              "speaker": "Carl Schmidt",
+              "role": "candidate",
+              "text": "Thanks, and thank you for the question. I'm not afraid to say I don't know how I can best do that, how I can best support youth. So I'll keep my answer brief. I would love to engage and find out what it is, because, yes, I absolutely support diverse voices, especially as we go into an OCP. And you know what? You're not alone, being a young person not knowing what OCP means. A lot of folks I talk to do not know what OCP means. But thank you for the question."
+            }
+          ]
+        },
+        {
+          "speaker": "Rod Rempel",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:38:50.260",
+            "end": "01:39:46.440"
+          },
+          "turns": [
+            {
+              "speaker": "Rod Rempel",
+              "role": "candidate",
+              "text": "Well, once again, I think you've found a group of candidates that all feel that the Hub is an awesome place that should be utilized for youth programs. You know, it just has been completely underutilized. And that was one of the major things that, as I was talking to people on the street, they're very concerned about that. That's a building that we've paid for, and once again, we're not even in it tonight because we're not allowed to be. So that's an interesting adventure. The other issue is maybe, you know, having people like you get involved with, you know, with the community. And we as a council can make it somehow more interesting for you, maybe through social media or some other issues. I'm not really sure. But once again, like Carl, I don't think I really know. I don't have an answer, but I do think that opening up the Village Hub would be one great opportunity."
+            }
+          ]
+        },
+        {
+          "speaker": "Harriette Chang",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:39:48.040",
+            "end": "01:41:54.920"
+          },
+          "turns": [
+            {
+              "speaker": "Harriette Chang",
+              "role": "candidate",
+              "text": "I love your question. So, as you know, I'm a mom, and our daughters are 23 and 26. They did not go to school at Anmore Elementary or middle school. They were on the other side of town in the French immersion program. So they didn't know people here, and they didn't have connections. So we were kind of at a loss, like, what can we do to get our kids connected? So what we did was we encouraged them to volunteer, and it really, really made a big difference. They started to make friends and connections in Anmore that were really positive. So they got to know they had a bit of a role, they felt important, they had a purpose. So I would absolutely encourage volunteering. I love what other people here said. I also would encourage groups, and there's actually other committees, like the Community Engagement, Culture, Inclusion Committee, Environment Committee, Finance Committee, Parks and Rec Committee, Public Safety Committee. So there's committees that you could absolutely join and be a part of. And I think that it can be a little bit intimidating at first to just jump into something like that, but I think there's ways that you can. And I think that if I were elected, I would want to try and make it more inclusive and figure out ways to get anybody to come in and be involved. So I'm speaking from an educator lens because I've worked with students for over 30 years, and I love that you're up here speaking because I don't think I would be brave enough at your age. So way to go. I think she needs a round of applause. Thank you. So thank you for speaking on behalf of your group, because you really mean a lot to them, I just know. And again, the Hub use for youth programs, I think, is a fantastic idea. It's very underutilized, as we keep hearing. But there are a lot of opportunities out there. We just have to find them. And I'm thinking of about five in my mind right now. So, if you're still around, I can share them with you. Thank you."
+            }
+          ]
+        },
+        {
+          "speaker": "Neil Lyons",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:41:56.000",
+            "end": "01:42:35.780"
+          },
+          "turns": [
+            {
+              "speaker": "Neil Lyons",
+              "role": "candidate",
+              "text": "Thank you for your question, Miss Cropper. That's a real tough one. And I can see you're a chip off the old block here. So I've had a little time to think on that. And I would— I think it's important to— the youth of Anmore is the future of Anmore. I'm wrestling with the question, but if I'm lucky enough to get elected, I would like you to come to me, and I'd like to talk to you, and do some brainstorming. Thank you."
+            }
+          ],
+          "note": "The baseline ASR collapsed most of this response into repeated 'Neil?' tokens. Targeted re-transcription of the isolated source interval recovered the response consistently. The two em dashes preserve audible false starts rather than silently rewriting them."
+        },
+        {
+          "speaker": "Georgia Lyons",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:42:37.780",
+            "end": "01:44:02.100"
+          },
+          "turns": [
+            {
+              "speaker": "Georgia Lyons",
+              "role": "candidate",
+              "text": "Okay. So this is an interesting question, because a couple of months ago, when the election was coming up, and I was like, do I run or do I not run? And I was like, I think the youth of Anmore needs someone— [audience member: Yes.] —to run. Because honestly, I didn't know a lot. I still don't know a lot, but I'm working on it, and I'm learning very, very hard, and I'm trying my best. And I think that me being on council, I can represent a whole bunch of people, and not just the youth but also the young adults. And I see potential where, like, we can all brainstorm together, we can come up with ideas. Because you can talk about all these committees, which is great, but I think that you should focus on the young adults and them growing up into this community, and make a group just for them. Because I think that we have the youth committee, and then we have all these other committees, but nothing for, like, the in-between. And I think [unclear] something exactly for that, because we are the future. And I see all these people, and then they're like, 'Oh, I'm not going to vote because I need to be told who to vote for.' And I'm like, 'No, no, no. You need to do your own research.' And that's what I feel like, and that's why I'm running. Thank you."
+            }
+          ]
+        }
+      ],
+      "didNotAnswer": [],
+      "uncertainties": [
+        "questioner.name: Spoken name is best heard as 'Sunny Field-Cropper'; exact spelling is not independently visible or confirmed.",
+        "question.text: The neighbourhood is best heard and contextually interpreted as 'Margetts Grove'; the audio does not establish exact spelling.",
+        "responses[2].text: The short phrase between 'Good question' and 'my daughter' remains unresolved.",
+        "responses[2].text: The verb or phrase immediately before 'your siblings' remains unresolved.",
+        "responses[6].text: Neil Lyons's response was recovered from damaged baseline ASR. The main wording is stable across targeted passes, but the punctuation of his false starts is editorial.",
+        "responses[7].text: The phrase before 'something exactly for that' alternates between plausible ASR readings and remains unresolved."
+      ]
+    },
+    {
+      "id": "Q10",
+      "topic": "Making the underused Village Hub accessible and welcoming for community use",
+      "questioner": "Bridget Crocker",
+      "range": {
+        "start": "01:44:16.000",
+        "end": "01:53:37.000"
+      },
+      "questionTurns": [
+        {
+          "speaker": "Bridget Crocker",
+          "role": "questioner",
+          "text": "Hi, I'm Bridget Crocker. I'm [unclear]. Well, I'm actually a new twin. And I actually had a question that speaks to a comment that Rod made earlier. It's a question for everyone. I think the community finds it frustrating that the Village Hub is really underutilized. So, it also costs a lot to build, so it's a little bit frustrating. So if you could, and if you will, how would you change the Hub to be a space that the community can use and is welcome to?",
+          "range": {
+            "start": "01:44:16.000",
+            "end": "01:44:49.000"
+          }
+        }
+      ],
+      "relatedTurns": [
+        {
+          "speaker": "Dr. Steve Barron",
+          "role": "moderator",
+          "text": "Okay, let's start with Paul."
+        }
+      ],
+      "responses": [
+        {
+          "speaker": "Paul Weverink",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:44:54.000",
+            "end": "01:46:33.000"
+          },
+          "turns": [
+            {
+              "speaker": "Paul Weverink",
+              "role": "candidate",
+              "text": "Okay, so there was some growing pains with the Hub. There was some resistance from staff due to staffing issues. There was staff that needed to be hired to accommodate some of the programs, and there hadn't been a real discussion on actual structured recreation programs in Anmore. That can all come with this new council. I think it—people see it empty, but it doesn't necessarily mean that it's empty because people aren't allowed to use it. There are groups that approach us, and they are able to use it. They're scheduled. There's things on weekends. But council was very supportive of that. You're right. We built that Hub for $8.5 million, and it needs to be used. It is built for the future, too. As far as it not being used for this particular event, apparently that's not common practice in municipalities, and there was resistance from staff. And I honestly don't know if it would have even been big enough, because we could have had more people. So I've always been a supporter of—I mean, I think you can go on YouTube and look at council meetings where staff—council has been very supportive and pushed staff, like, when is this going to happen? What's, what's the plan? So I think we're to the point where we need a proper recreation committee, a citizens committee, and maybe some youth, some voting youth would be great to have on that committee. And we continue to explore this. We were, we were so happy to get it out of the ground and get it built. You know, it does need to evolve more, for sure."
+            }
+          ]
+        },
+        {
+          "speaker": "Will Crocker",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:46:40.000",
+            "end": "01:47:59.000"
+          },
+          "turns": [
+            {
+              "speaker": "Will Crocker",
+              "role": "candidate",
+              "text": "Excellent question, Bridget. I think I just—I'll talk a little bit about my experience working at UBC, BCIT, and [unclear]. All those campuses have space that is rented out, and the challenge they have on the operating side is, as Paul mentioned, is you have to fund staff to be available. You have to make sure that the building is cleaned after it's used, washrooms are serviced. You have to carry a certain amount of insurance. So it comes down to operating costs, and then determining, does Anmore actually have that in the operating budget, yes or no? If they don't, does the decision need to be that you have to lose something to, to fund operation of that, or do you need to find a new revenue source? So change an operating cost over to using, you know, the Hub and staffing it, increase in taxes. That's, that's really where the dollars come in. We are a small community, so that, that certainly impacts the decision. But I think there's also, you know, taking a look at talking to the community, and I think already the community's had some good ideas about utilizing the Hub, and so I'd like to, like to see that going forward. So thank you. Thanks for your question."
+            }
+          ]
+        },
+        {
+          "speaker": "Carl Schmidt",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:47:59.000",
+            "end": "01:48:31.000"
+          },
+          "turns": [
+            {
+              "speaker": "Carl Schmidt",
+              "role": "candidate",
+              "text": "Yeah, it's an awesome question. The things I've heard is that insurance costs are high, and to that extent, I think with all of these operating costs, insurance costs, we have to realize that there's going to be a transition period until we do increase utilization, and we have to fund that. We have to find ways, whether that's out of budget, whether that's community grants, but absolutely we need to, we need to get the Hub to really be a center for our community. So thanks for raising the issue."
+            }
+          ]
+        },
+        {
+          "speaker": "Rod Rempel",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:48:40.000",
+            "end": "01:49:31.000"
+          },
+          "turns": [
+            {
+              "speaker": "Rod Rempel",
+              "role": "candidate",
+              "text": "Yeah, I'm really glad you raised that issue again, because it was a big discussion with everybody that I've talked to. I'm pretty sure it's going to come down to a budgeting issue. We're going to have to spend some money to, to make some changes to the Hub. There's going to have to be issues dealt with through staff, and I think staffing will probably be, you know, something that this council will be talking about a lot in the future. But I'm very excited to see you and your sister here, and, you know, the youth are actually interested. So keep it up, and keep putting pressure on council. That's what you have to do, just like all these people here are doing. You need to put pressure on council to make changes. I think one of the microphones is programmed to shut down when somebody says spend money."
+            }
+          ]
+        },
+        {
+          "speaker": "Harriette Chang",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:49:39.000",
+            "end": "01:51:15.000"
+          },
+          "turns": [
+            {
+              "speaker": "Harriette Chang",
+              "role": "candidate",
+              "text": "Okay, so I applaud you for being up here too, because you're the same age as your twin, obviously. Way to go. Awesome. Congratulations. Okay, I love your question. And yeah, a very common theme again here: we have to explore the insurance costs, and there are costs associated with doing something that's utilizing the Hub more. But we have to figure that out. This is important. [unclear] taxpayers, and we put money into this. Why aren't we using it? It doesn't make sense. I think it would be fantastic, and it would be a great way to build that community connectedness that we all are voicing that is important to us. I was reading a really interesting article about how people who are no longer working—I'm one of those people; I stopped working last year—who brought their expertises in, said, okay, well, I'm good with computers. I can problem-solve with computers. Another person said, I do yoga. Another person said, I play guitar badly, but I still play guitar, and it's fun. So they brought all these expertise things in, and then they took turns using a space, and people could sign up and come and join in. And it was all done for volunteers. It was all done free. It was all free, other than the—obviously, there'd be some insurance costs associated with that. But I just thought, what a beautiful idea. I mean, the overhead would not be—we wouldn't be paying for anybody if it's all based on volunteer. But I'm just thinking of an idea that we could use in conjunction with other ideas that we discussed and shared. But there's so much we could do. There's so much potential. We just have to do it. So I'm really pleased that you brought it up. Thank you."
+            }
+          ]
+        },
+        {
+          "speaker": "Neil Lyons",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:51:16.000",
+            "end": "01:52:03.000"
+          },
+          "turns": [
+            {
+              "speaker": "Neil Lyons",
+              "role": "candidate",
+              "text": "Another tough question from the Crocker family. So I'm going to say that I don't—definitely the Hub is underused. I don't understand why we're in the school tonight. I don't know why we're not in the Hub. But, you know, I'm not on council, and I don't have those answers. I can't answer those questions. But I do feel your frustration, and I think a lot of people here do. We built that with taxpayer money, and it should be available to anybody who is a resident of Anmore who is wanting to use it for a positive reason. Thank you."
+            }
+          ]
+        },
+        {
+          "speaker": "Georgia Lyons",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:52:06.000",
+            "end": "01:52:51.000"
+          },
+          "turns": [
+            {
+              "speaker": "Georgia Lyons",
+              "role": "candidate",
+              "text": "Another interesting question. Kind of ties into the previous question, because I feel like the Hub could be used for a lot of, like, useful activities. It's interesting because I myself went to a yoga class, and instead of it being in the Hub, it was outside near the park to the left of it. And I was like, why? Why is this happening? Because it was too much for her to pay to have it. So I realized that I'm like, there needs to be something. Like, we need to fix this. Like, the community Hub is something that should be the center of our community, and it's not working. So I think that's something that we need to fix."
+            }
+          ]
+        },
+        {
+          "speaker": "Wade Parrish",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:52:51.000",
+            "end": "01:53:37.000"
+          },
+          "turns": [
+            {
+              "speaker": "Wade Parrish",
+              "role": "candidate",
+              "text": "Well, everybody that I've talked to, they've had issues with access and insurance. There must be some way to explore a blanket insurance policy. The Hub's probably paying some major insurance rates right now. What's a couple of more dollars to make it so that any event, any group that uses the Hub is automatically insured? They just pay the one fee. They don't have to hunt down an insurance company to insure it for one day. Streamline it, take out the red tape, and make it more accessible."
+            }
+          ]
+        }
+      ],
+      "didNotAnswer": [],
+      "uncertainties": [
+        "question.text: The short self-description after Bridget Crocker's name is phonetically unstable across all targeted ASR passes and is marked [unclear].",
+        "responses[1].text: The third institution named after UBC and BCIT sounds like 'BCC' or 'VCC', but the recording does not support publication-level certainty.",
+        "responses[4].text: The beginning of the taxpayer sentence is clipped or poorly articulated and is marked [unclear]; the remainder is stable."
+      ]
+    },
+    {
+      "id": "Q11",
+      "topic": "Weekend and evening scheduling for bylaw enforcement",
+      "questioner": "Susan Yuckel",
+      "range": {
+        "start": "01:53:46.000",
+        "end": "02:01:54.000"
+      },
+      "questionTurns": [
+        {
+          "speaker": "Susan Yuckel",
+          "role": "questioner",
+          "text": "Hi, I'm Susan Yuckel, Elford Drive. I just want to know, if you are on council, would you guys think about changing the days of work for the bylaw officer? Because I don't understand why he doesn't work weekends, because you hear chainsaws going on Sundays, work on Sundays. If where I live, I'm right outside the lake, there's people parking, it doesn't matter because there's no one around to ticket. I think he could make his money, his wage, giving out some tickets.",
+          "range": {
+            "start": "01:53:46.000",
+            "end": "01:54:22.000"
+          }
+        }
+      ],
+      "relatedTurns": [
+        {
+          "speaker": "Dr. Steve Barron",
+          "role": "moderator",
+          "text": "Okay, we'll start with William."
+        }
+      ],
+      "responses": [
+        {
+          "speaker": "Will Crocker",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:54:39.000",
+            "end": "01:55:46.000"
+          },
+          "turns": [
+            {
+              "speaker": "Will Crocker",
+              "role": "candidate",
+              "text": "Hi, Sue. Again, good question. And I've seen similar issues working on large campuses where they have, for example, large groups. In our case, I mean, we have people come to the lake, especially on particular sunny days on the weekends. And yes, again, it comes right down to operational issues and direction. I think in terms of people that have filled the role of bylaw officer, we have to understand that they are getting direction from a manager. But again, we do need to take a look at that. I do see the point that we do need bylaw officers, you know, working on certain weekends. The other thing that, if you've lived in Anmore long enough, is when the weather says it's going to snow, you expect the snowplow to come out. And on a weekend in the summer, when it's 30 degrees, everybody's coming to Sasamat Lake and Buntzen Lake. I know they have the reservation system, but you still get lots of people driving up here, going up to the end cul-de-sacs, looking for a hiking spot or a bike lane. So it's just a reality of living in this area, and we need to get ahead of that problem."
+            }
+          ]
+        },
+        {
+          "speaker": "Carl Schmidt",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:55:48.000",
+            "end": "01:56:46.000"
+          },
+          "turns": [
+            {
+              "speaker": "Carl Schmidt",
+              "role": "candidate",
+              "text": "Yeah, thanks. The only information I have on the bylaw officer's hours is that Paul just whispered to me that he does work on the weekends. Obviously, you know, we need to look at what the schedule is and how we can staff more flexible hours. It's, I don't think, just as easy as saying, hey, here's your new schedule. That said, I see the same problem where, hey, there's things going on on the weekends, and we don't necessarily always see, you know, maybe the level of enforcement that we want. But yeah, I'd love to hear. Are you actively seeing things that just aren't being handled on the weekends?"
+            },
+            {
+              "speaker": "Susan Yuckel",
+              "role": "questioner",
+              "text": "It has been, like, if cars are parked on our street, if we call the tow truck company, they won't come out to tow them unless they're ticketed. So then you have to call the non-emergency RCMP, and then you never know if they're going to come out."
+            },
+            {
+              "speaker": "Carl Schmidt",
+              "role": "candidate",
+              "text": "Yeah, fair."
+            }
+          ]
+        },
+        {
+          "speaker": "Rod Rempel",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:56:52.000",
+            "end": "01:57:35.000"
+          },
+          "turns": [
+            {
+              "speaker": "Rod Rempel",
+              "role": "candidate",
+              "text": "It's interesting, because I just heard Paul say that he works on the weekends as well. I've never seen him. I've never seen that car leave the Village parking lot on the weekend. Isn't that interesting? It seems very counterintuitive that on weekends we wouldn't have a bylaw officer ticketing cars for illegal parking and that sort of thing. I have to say, all I can say is I need to research this more. I would need to see what the staffing issue is. And again, it'll come down to budgeting probably, you know, like every other thing that I've answered so far. But, you know, we'll have to look at it. And I'm sorry, I wish I could answer it, but I really don't have that answer."
+            }
+          ]
+        },
+        {
+          "speaker": "Harriette Chang",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:57:37.000",
+            "end": "01:58:21.000"
+          },
+          "turns": [
+            {
+              "speaker": "Harriette Chang",
+              "role": "candidate",
+              "text": "Yeah, so I'm not going to pretend that I would know what to do, because I don't. I'm just learning. I'm a newbie here. And I really like what Rod just said. So I would definitely want to do some research and figure it out and talk to people and find out. I think there needs to be a budget analysis as well to see. But I don't have answers. It totally makes sense. Like, why don't we? And I'm in an area too where people park where I don't think they're meant to always. So yeah, I have some frustrations around that. So I would want to explore a bit more. I would want to do some research and find out answers before I jumped in and did anything. Thank you."
+            }
+          ]
+        },
+        {
+          "speaker": "Neil Lyons",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:58:25.000",
+            "end": "01:59:05.000"
+          },
+          "turns": [
+            {
+              "speaker": "Neil Lyons",
+              "role": "candidate",
+              "text": "Yeah, again, I don't have the answers for you neither. I'm assuming there might be some budgeting problems, you know, making sure we have full coverage with a bylaw officer. But definitely you would think that we would have him here on the weekends. I think that's when he would get to see the most activity. And maybe there's an opportunity to switch his schedule around a little bit if it warrants it. But again, I don't, you know, I don't have all the answers on that. Paul would know more than anybody here on this panel."
+            }
+          ]
+        },
+        {
+          "speaker": "Georgia Lyons",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:59:09.000",
+            "end": "01:59:32.000"
+          },
+          "turns": [
+            {
+              "speaker": "Georgia Lyons",
+              "role": "candidate",
+              "text": "I also don't have the answers, but this is an important topic because me and my mom talk about this a lot, like a lot. And I understand the frustration that comes from it. And maybe we can work on something like maybe biweekly or some kind of compromise, you know. But definitely something that I would look into and learn from that."
+            }
+          ]
+        },
+        {
+          "speaker": "Wade Parrish",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "01:59:34.000",
+            "end": "02:00:32.000"
+          },
+          "turns": [
+            {
+              "speaker": "Wade Parrish",
+              "role": "candidate",
+              "text": "Well, coming from a person that actually works shift work, I see no reason why they can't work in a few evenings or weekends. As to what their directives are, what their contract is, I don't know either. But I have to think that going forward that there has to be a solution. It is an ongoing problem. Every sunny day that the reservation system isn't in effect, it's still serious gridlock. It poses public safety risks with fire rescue. The whole access to the park could be gridlocked right up to, I've seen it pretty much, the East Road. And that was this year. So, um, so yeah, it has to be addressed. And I feel for you, and I experience your pain."
+            }
+          ]
+        },
+        {
+          "speaker": "Paul Weverink",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "02:00:37.000",
+            "end": "02:01:54.000"
+          },
+          "turns": [
+            {
+              "speaker": "Paul Weverink",
+              "role": "candidate",
+              "text": "Okay, so the short answer is, it's like the Village Hub and access and insurance and staffing. It's resources. So we have a bylaw officer. A lot of the bylaws, people don't realize, are construction sites. You have to go from site to site. There's parking issues, there's garbage issues. We also need a bylaw officer Thursday nights and Friday nights because people are concerned about bears. The reason I said, you're right, you're wrong, Susan. You're right, there isn't a lot of coverage on the weekends. But I know recently—"
+            },
+            {
+              "speaker": "Susan Yuckel",
+              "role": "questioner",
+              "text": "So we have to pay overtime for them to come out to ticket?"
+            },
+            {
+              "speaker": "Paul Weverink",
+              "role": "candidate",
+              "text": "Well, no, because they've actually massaged the shifts so that the bylaw officer is starting to do some day shifts on the weekend. So, but it does boil down to resources. We could use two bylaw officers, no question. We could have one full-time on the weekend in the summer. You know, a staff position, you know, fully loaded with benefits is $80,000 to $100,000 in some cases. So it will be up to the next council to approve a budget for that. And, you know, we can't direct the bylaw officer. We could just say, you know, we're council. We hear from people in the Village that this is a problem. What are you going to do with it? And that is our role, and we continue to do that. It is a constant problem. So I empathize."
+            }
+          ]
+        }
+      ],
+      "didNotAnswer": [],
+      "uncertainties": [
+        "questioner.name: The name is best heard as Susan Yuckel, but the exact surname spelling is not independently confirmed."
+      ]
+    },
+    {
+      "id": "Q12",
+      "topic": "Funding and completing a bear hazard assessment during the first council year",
+      "questioner": "Tara Self",
+      "range": {
+        "start": "02:02:01.000",
+        "end": "02:13:53.000"
+      },
+      "questionTurns": [
+        {
+          "speaker": "Tara Self",
+          "role": "questioner",
+          "text": "Hello, my name is Tara Self, and I'm a resident of Countryside Village. If the moderator is okay with it, I'd like to put in a plug for advance voting, which is tomorrow, and it is going to be at the Hub. So, starting at 8 a.m. tomorrow, there's advance voting opportunities. But my question is around bears, and Paul, and why you just mentioned bears as part of your answer. So, I understand council this year started contemplating the idea of having a bear hazard assessment done. Many of us are very fond of our furry friends, but we're continuing to see conflict in our community year after year. We're seeing bears being trapped and destroyed because of that conflict. I would say, from my perspective, Anmore is the weakest link in the Tri-Cities in terms of our attractant management, our Bear Smart bylaws. We don't have Bear Smart community status. We haven't done a bear hazard assessment. So I want to know, as council members, are you willing to fund and back up doing a bear hazard assessment within your first year of the council? There may be grant opportunities to fund that. There might not be, and we might need to use budget money. So where do you stand on that issue? Thank you.",
+          "range": {
+            "start": "02:02:01.000",
+            "end": "02:03:18.000"
+          }
+        }
+      ],
+      "relatedTurns": [
+        {
+          "speaker": "Dr. Steve Barron",
+          "role": "moderator",
+          "text": "Carl?"
+        }
+      ],
+      "responses": [
+        {
+          "speaker": "Carl Schmidt",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "02:03:22.000",
+            "end": "02:04:00.000"
+          },
+          "turns": [
+            {
+              "speaker": "Carl Schmidt",
+              "role": "candidate",
+              "text": "Thanks, Steve. That's a great question, and I agree. We love our bears. Nothing but good encounters, honestly, with our bears. But we understand that that's not the case everywhere in the village. And so, fully supportive, obviously budget-willing, to do such a thing. And yeah, because it does start with education. I think in most cases, it's just folks becoming aware of the little things that we can do. So fully supportive, you know, budget-permitting, of course."
+            }
+          ]
+        },
+        {
+          "speaker": "Rod Rempel",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "02:04:04.000",
+            "end": "02:05:09.000"
+          },
+          "turns": [
+            {
+              "speaker": "Rod Rempel",
+              "role": "candidate",
+              "text": "Yeah, I agree. I'm fully supportive of that, and I have a bear that continues to come through my yard. I've actually taken my gate out now and a fence panel so that he can just go directly through it. But, you know, one of the things that we've talked about in the past is, you know, Belcarra has a garbage retention area, and I don't know if it would be popular with our village, you know, if we were to have an actual area where we bring our wet waste and our garbage to, and we actually staff one person there to do it. I personally would be in favour of it, probably, but I don't know that the rest of the village would be. But I know it would resolve 50 percent of the problem in my neighbourhood. But yeah, I would be 100 percent in agreement with doing any type of research that we can do and program to educate ourselves on what we can do to protect our bears and our community. Oh, and there's a lot of vehicles in our neighbourhood that would be happy about it too."
+            }
+          ]
+        },
+        {
+          "speaker": "Harriette Chang",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "02:05:13.000",
+            "end": "02:07:05.000"
+          },
+          "turns": [
+            {
+              "speaker": "Harriette Chang",
+              "role": "candidate",
+              "text": "I'm so pleased you brought up this topic. So, as you know, I have an environmental background. I've met with members of the Tri-Cities Bear Aware [unclear] group, as an educator as well, and that was really important for me to take that information and share it with my students. I'm also an avid hiker, and I've had encounters with wildlife, including bears. I was actually—I'm going to stand up and stretch because I'm getting tired. I was actually hiking on a trail by myself, about an hour away from up in the mountain, and I encountered a mama bear with a cub. And she was coming towards me, and she was making these little angry sounds and moving towards me. And I came around a corner, and I just saw her, and I thought, oh. And I thought some colourful things, which I'm not going to say. And I had my hiking poles with me, and I thought, okay, well, I don't have time to grab my bear banger or bear spray, which I had in my pack. It was right there. So I held my, my poles up in the air, and I just kind of started banging them with each other, and every time I banged, I said, go. Anyway, so I share that story because it really resonated with me. We need to really be aware and cognizant. There's bears right there. This is their world. This is their territory. We live on a creek, and it's Schoolhouse Creek North, and it's bear corridors. So we get bears all the time, and I love them. We have names for them. They're all different. They're so cute. Um, so we learned about a lot of things we can do, when I was talking to people, like putting waste in the right places, not putting it out too early. As you know, we know all these stories. We know about what happens to cars. I saw a car a few days ago that had been completely demolished by a bear inside. So I absolutely support this. We need to get it out there more. We need to get more communication, more awareness, more Bear Aware [unclear], so we understand what to do in the case of a bear. So I applaud you for bringing this up. You're speaking my language and my heart, so thank you."
+            }
+          ]
+        },
+        {
+          "speaker": "Neil Lyons",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "02:07:06.000",
+            "end": "02:08:28.000"
+          },
+          "turns": [
+            {
+              "speaker": "Neil Lyons",
+              "role": "candidate",
+              "text": "I think that's an excellent idea. I really do. I'm not so sure what that would cost. Do you know yourself how cost—would that be cost-prohibitive in any way, or would it be reasonable?"
+            },
+            {
+              "speaker": "Tara Self",
+              "role": "questioner",
+              "text": "I don't have up-to-date costs, but I work for a neighbouring municipality that's conducted a bear hazard assessment, and it does involve retaining a consultant to look throughout the community at various hazards, whether that's fruit trees or waste management. It's something you can often get grants for, so I think that would be a wise approach, is pursuing grants and perhaps topping off with dollars from the village."
+            },
+            {
+              "speaker": "Neil Lyons",
+              "role": "candidate",
+              "text": "May I ask which city or village or town that you knew this was conducted with? This has happened?"
+            },
+            {
+              "speaker": "Tara Self",
+              "role": "questioner",
+              "text": "[unclear overlap] Yeah, I work for the City of Coquitlam, but many other communities have completed theirs."
+            },
+            {
+              "speaker": "Neil Lyons",
+              "role": "candidate",
+              "text": "Well, I only ask that question because maybe we could tag with one of these other towns that have done this assessment and get an idea of what it would cost and get a full understanding of what we would get ourselves into. Thank you."
+            }
+          ]
+        },
+        {
+          "speaker": "Georgia Lyons",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "02:08:32.000",
+            "end": "02:08:53.000"
+          },
+          "turns": [
+            {
+              "speaker": "Georgia Lyons",
+              "role": "candidate",
+              "text": "Personally, I would try so hard because I think it's important. I think it's also important that we have, like, bear awareness workshops and, like, maybe focus on, like, just bringing awareness to everyone, because there's so much that you can know about this. And I feel like, even for me, I need to, like, have more education on it."
+            }
+          ]
+        },
+        {
+          "speaker": "Wade Parrish",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "02:08:56.000",
+            "end": "02:10:51.000"
+          },
+          "turns": [
+            {
+              "speaker": "Wade Parrish",
+              "role": "candidate",
+              "text": "Well, our bylaw officer could ticket people that are putting out their trash the night before. The bears are getting smarter. I've been in the neighbourhood for about 30 years now. Gone are the days where you could go out the door and yell or hit them with the air horn. They're just staring at you, and it's frightening. And I think it was about five years ago where I phoned the conservation officer, and I said, this bear is different. This bear—I've never had a problem with a bear before—this bear stared me down, and I thought I was in trouble. So they are getting smarter. We have to be proactive in the way we deal with them. I've noticed a big change in garbage collection times. There could be garbage that has been put out at 7 a.m. and picked up at 7 a.m. Right now, our garbage used to be picked up at 7 a.m. Now it's not picked up until 1 p.m. or 3 p.m. So we've got garbage sitting out all day, and it is an open treat. We could have a.m., p.m. rotating days. They wouldn't be able to keep up to our schedule. One side of Anmore, garbage out in the morning; the other side of Anmore, garbage out in the afternoon. I don't know, outside-the-box thinking, but we have to be proactive. As for the assessment, I truly would support that. Anything Bear Aware, anything being to, to save a bear's life, it matters."
+            }
+          ]
+        },
+        {
+          "speaker": "Paul Weverink",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "02:10:56.000",
+            "end": "02:12:00.000"
+          },
+          "turns": [
+            {
+              "speaker": "Paul Weverink",
+              "role": "candidate",
+              "text": "Good question. So, as the Environment Committee chair, one of the passions of my Environment Committee is Bear Aware. And we did have the Bear Aware coordinator come and meet with us and review what we're doing in the village. And given the size of our village, we actually are doing fairly well. One of the big things is bylaw enforcement. And there are huge challenges around putting garbage out and getting it collected at the right time, as Wade just mentioned. One of the problems is people go to work, and you tell them, okay, your pickup is 11, you put it out between 10 and 11. It just doesn't work. I'm going to talk a little bit about what Rod just said about Belcarra. They do have a compound, and I've heard that it's very successful. So that is worth looking into. But it really, it boils down to people's [unclear] and continuing education, which the village is doing more and more. As far as becoming a Bear Smart community, it's something the Environment Committee supported and council supported."
+            }
+          ]
+        },
+        {
+          "speaker": "Will Crocker",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "02:12:08.000",
+            "end": "02:13:53.000"
+          },
+          "turns": [
+            {
+              "speaker": "Will Crocker",
+              "role": "candidate",
+              "text": "Yes, I've also had a few encounters with bears in my years living in Anmore, and they are just amazingly beautiful animals. And so anything to keep bears alive in the community, I'd be in favour of. But obviously there is [unclear] risk. I'm not familiar specifically with the bear hazard assessment, but I am familiar with having assessments done. Anmore, like, we are a small community, and like a lot of small communities across Canada, as you say, a lot of times it's up to the municipality to actually apply for funding, look for those funding sources. And as we do for, you know, a lot of things, looking for grants to repair roads, and I think there was grants for the community Hub, but you actually have to actively apply for those things, and that's, that's part of actively having operations that are involved in that. So, so I definitely do support the bear hazard assessment. Again, it would come down to the cost and if we could afford that. But in the near term, obviously, you know, Anmore is near Belcarra, Coquitlam, Port Moody. We're in the same mountain range, and we have similar problems. So I'd be interested to know if our staff, you know, have shared best practices and are staying on top of those. And then there's always advocacy to the community and continuous education, which, which unfortunately falls to all of us. You know, talk with your neighbours, and as pointed out, you know, if we could have earlier garbage collection, that certainly would help alleviate having the garbage cans out, you know, sitting around for most of the day before they're picked up. So some, some challenges there that we have to keep working on."
+            }
+          ]
+        }
+      ],
+      "didNotAnswer": [],
+      "uncertainties": [
+        "responses[2].text: The word between 'Tri-Cities Bear Aware' and 'group' alternates among committee/community-like readings across ASR passes and is marked [unclear].",
+        "responses[2].text: The short phrase after the second 'Bear Aware' near the end of Harriette Chang's response is phonetically unstable and is marked [unclear].",
+        "responses[3].exchange[2].text: Brief overlapping speech before Tara Self names the City of Coquitlam could not be reliably separated and is marked [unclear overlap].",
+        "responses[6].text: The noun after 'people's' alternates among habits, efforts, benefits, and health in targeted passes and is marked [unclear].",
+        "responses[7].text: The words immediately before 'risk' in Will Crocker's opening contrast are not intelligible enough for publication-level certainty and are marked [unclear]."
+      ]
+    },
+    {
+      "id": "Q13",
+      "topic": "Whether councillors will vote with a clear resident majority opposing a major zoning or OCP change",
+      "questioner": "Michael Tom",
+      "range": {
+        "start": "02:14:06.000",
+        "end": "02:26:34.400"
+      },
+      "questionTurns": [
+        {
+          "speaker": "Michael Tom",
+          "role": "questioner",
+          "text": "Hello, Michael Tom, Anmore resident. I think Anmore is a really special community, and I just wanted to open up with that. And I think per capita engagement rate is second to none, as we can see here tonight, relative to our neighbouring communities. So, with that said, the biggest thing for me in this election is voting for a council that will listen to the people that elected them. I'm still in a bit of awe from what happened in Anmore over the last couple of years. Council's decisions seem to keep landing somewhere else than what I thought was clearly the will of the people. So my question is: if a clear majority of the residents oppose a major zoning or OCP change, will you vote with them, or treat that position as something to be consulted and managed? And can you give a personal example that supports your answer?",
+          "range": {
+            "start": "02:14:06.000",
+            "end": "02:15:01.600"
+          }
+        }
+      ],
+      "relatedTurns": [],
+      "responses": [
+        {
+          "speaker": "Rod Rempel",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "02:15:06.000",
+            "end": "02:16:19.000"
+          },
+          "turns": [
+            {
+              "speaker": "Rod Rempel",
+              "role": "candidate",
+              "text": "Wow, that is an amazing question. I think we all learned something from the Icona example. I stood in this very room leading a group much the size of what is here right now, trying to get people involved and get them interested in what was actually happening. And we created a survey. We did as much as we possibly could to get people involved. So I can say 100 percent that I want to know what people think and what they want from council. It's—it's, my opinion is one, but there's 2,900 other people here that all have an opinion. And I think, you know, gathering as much information as we can, we get the best resource possible. Anmore is a group of incredibly intelligent people. We're one of the highest per capita income areas in Canada, where half of us are business owners or managers or lawyers or doctors, and—and we need to have our voices heard. So yes, I'm 100 percent behind the fact that I want to know what people want, and that's what I want to go for."
+            }
+          ]
+        },
+        {
+          "speaker": "Harriette Chang",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "02:16:25.000",
+            "end": "02:18:24.000"
+          },
+          "turns": [
+            {
+              "speaker": "Harriette Chang",
+              "role": "candidate",
+              "text": "Great question. I think that a really big, if not the reason that I'm sitting here today, is because of what happened. So I have always wanted to find answers and ask questions, and I wasn't allowed to. And it goes against every [unclear] of my being. I am a school teacher, a school counsellor. I always encourage my students to ask questions. I always ask questions. I like to model that to them. And they would ask me questions I couldn't answer, and I'd say, 'That's such a great question, and I have no idea, but I'm going to find out the answer for you.' And then the next day, I would try my best to have done that and share that with them. And they would remind me. They'd say, 'Oh, you said you were going.' I did, and here it is. So I think that it's so critical to be allowed to speak and to be heard and to be honoured and respected and valued. So that's why I'm here. I felt like what happened, we were not cared about. I didn't feel that they cared about what I said or what we said. I didn't feel that they respected our values to keep Anmore rural. We were told that there was a silent majority who wished for the development to be passed. I think that silent majority was really, really silent. I don't know who they were. So when we tried to express our concerns and thoughts, we were shut down and we were not allowed to speak. So, for 30-plus years, I've been listening. As a school counsellor, that's how long I did it. I was a school counsellor, and I would listen to students. And I promise you that I would listen, and I would represent, and I would deliver. That's why I'm sitting here. That is the main sole reason, because I'd like to be a part of a council that does the same. Thank you."
+            }
+          ]
+        },
+        {
+          "speaker": "Neil Lyons",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "02:18:38.000",
+            "end": "02:19:36.000"
+          },
+          "turns": [
+            {
+              "speaker": "Neil Lyons",
+              "role": "candidate",
+              "text": "As far as I'm concerned, if there is a clear majority, I support the majority, even if—even if I feel it's a mistake. That's just the way I feel. It's a no-brainer for me. You made reference to what happened last year, and I think Harriette referenced the fact that they were claiming that there was a silent majority. There was no silent majority. The evidence does not support that there was any kind of silent majority, and that was a false narrative. And it was unfortunate that that came about, and there's nothing more we can do about that. But Icona will be coming back, and we'll get a second chance to get this right this time."
+            }
+          ]
+        },
+        {
+          "speaker": "Georgia Lyons",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "02:19:40.000",
+            "end": "02:20:05.000"
+          },
+          "turns": [
+            {
+              "speaker": "Georgia Lyons",
+              "role": "candidate",
+              "text": "Well, to begin with, I will always listen to the people, point blank. I am studying psychology right now, and I think my goal is always to listen and observe. And I think that's really important when you're on council: listen and observe. You're observing the people that voted for you because they feel like they represent them. So overall, yeah, of course."
+            }
+          ]
+        },
+        {
+          "speaker": "Wade Parrish",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "02:20:11.000",
+            "end": "02:20:58.000"
+          },
+          "turns": [
+            {
+              "speaker": "Wade Parrish",
+              "role": "candidate",
+              "text": "Oh my goodness, I'm going to quote Judge Judy. We're born with two ears and one mouth, so we should listen. Compromise. I'm the first to admit that sometimes I can be a little bit pig-headed in some of my thoughts, but if I talk to people and I find out that there are more supportive facts on their side, I'm going to change my mind. If I feel that way, if the people that I talk to feel that way, I'm going to stick to my guns. But if the majority of people disagree with me, then I think I do have to change my mind and go with the majority."
+            }
+          ]
+        },
+        {
+          "speaker": "Paul Weverink",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "02:21:01.000",
+            "end": "02:22:26.000"
+          },
+          "turns": [
+            {
+              "speaker": "Paul Weverink",
+              "role": "candidate",
+              "text": "Yeah, I've spoken about the legislative process, and we all have to follow that, whatever it is, whether it's our bylaws, whether it's government—government. But yes, what council has to realize is there's many different inputs. If you read the OCP, it talks about financial sustainability, it talks about preserving green space, it talks about clustering. There's all these little things, and a lot of things in the OCP are platitudes. So I think in the case of Anmore South, when we got to the point where there was a public hearing, and there was literally—I don't know how many people were signed up to speak—and we know what they were going to say, we knew what we were going to hear, but we needed to hear it. What I'm worried about is a feeling in the community, an atmosphere in the community, of people being afraid to say really what they want. I mean, it's no different in every other community. When you put in a big development, there's going to be loud opposition. There's always going to be groups forming that oppose. How do we hear the people that are for? So it's very, very hard for a council. I don't know if there was ever a majority. I think that more came from the developer, and I'm glad it became a more village-led process later. But of course you're going to listen to it. Ultimately, if you have the feeling of the village and you know that something is not popular, I don't know what any of us would be doing here voting that through. It would die."
+            }
+          ]
+        },
+        {
+          "speaker": "Will Crocker",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "02:22:31.000",
+            "end": "02:25:11.000"
+          },
+          "turns": [
+            {
+              "speaker": "Will Crocker",
+              "role": "candidate",
+              "text": "I think, to preface my answer, I want to say that one of the reasons I live in Anmore is because I appreciate the rural landscape that we have. You just don't get this in, you know, a lot of places across Canada don't have what we have with the mountains and being close to nature. And, you know, if I wanted to be in an urban setting, I would move to Moody, Coquitlam, Burnaby. You know, I grew up in Langley. Like, you know, and so I think it's important that, being on council, that we recognize what makes Anmore Anmore, makes it unique. And it is worth, you know, I would say fighting for, or actually, you know, putting forward ideas that help protect that. When I look at supporting something like if the majority had an idea on a change that they wanted, I do look at the process. Is the process set up to get those inputs in a manner that people are comfortable speaking? And I think, yeah, at some point we're going to see—well, I could say the 27 years that I've been here, when I first moved here, I would say that the idea of a third-acre, that was a complete non-starter with the residents that I knew where I lived, you know, on Sunnyside Road. And over time, that changed, right? So that had input from the community, and so you do see a place that, you know, a way that that could change. But I think it comes down to how the process is, that you're getting that input on the OCP, you're getting that input from the community. I may get all the details wrong, but I think one of the—something I observed that I didn't really appreciate was, I was at a meeting about Spirit Park, and there was talk about how did the—how did that plan come about? And, you know, one of the inputs was that there was—I don't know if it was [unclear] Day or if it was the Easter egg hunt—it was a community event. And, and, you know, somebody said, well, they actually—people were able to go up and put a piece of paper in a jar on what you thought should happen in the park. And it didn't say if they were from Anmore, it didn't say if they were with, you know, Port Moody. You could just come and put an idea. And I'm like, really? That—you put that as part of the—part of the solution into choosing that. So I think I'd like to see less of that and, and a better process going forward. Thank you."
+            }
+          ]
+        },
+        {
+          "speaker": "Carl Schmidt",
+          "role": "candidate",
+          "kind": "response",
+          "range": {
+            "start": "02:25:13.000",
+            "end": "02:26:34.400"
+          },
+          "turns": [
+            {
+              "speaker": "Carl Schmidt",
+              "role": "candidate",
+              "text": "Wow, thank you. So this is the sharpest question we've had, and I thank you for it because it cuts to the nature of what our democracy is. And it gives us the opportunity to show you the potential of who you might choose as, as your leaders. So I'm going to throw caution to the wind and step into the grey area because I think truth often exists in that in-between space. So I, I don't like answering in absolutes. We've heard a couple of folks say, yes, I would always vote with the majority. I have a hard time saying, yes, I would always unconditionally vote with the majority. What I would say is that if I ever found it necessary to not represent what I clearly saw as the majority view of the population that I represented, I would be crystal clear about why that was the case. And I think that's something that we haven't necessarily had the opportunity to hear as much from everybody on all sides, is some of the why behind some of the decisions that get made. And so we'll see how this turns out in the election, whether this is something that folks kind of embrace as a more nuanced view of what it means. But that's my—that's my answer, and I thank you for your question."
+            }
+          ]
+        }
+      ],
+      "didNotAnswer": [],
+      "uncertainties": [
+        "questioner.name: The self-identification is clearly heard as 'Michael Tom', but the spelling is not independently visible or confirmed.",
+        "responses[1].text: The word in the phrase 'every [unclear] of my being' is repeatedly rendered as 'grade' by the ASR, while the surrounding idiom suggests another possibility; it is marked unclear rather than silently normalized.",
+        "responses[6].text: The community-event name before 'Day' is phonetically unstable across the baseline, large-v3, and enhanced large-v3-turbo passes; only 'Day or ... the Easter egg hunt' is secure."
+      ]
+    }
+  ]
+}

@@ -19,6 +19,7 @@ Operational releases follow [OPERATIONS.md](OPERATIONS.md). Private security and
 ## Public routes
 
 - `/` — ballot, candidates, and question-by-question comparison
+- `/all-candidates-meeting/` — verbatim audience questions and candidate answers from the October 6 meeting recording
 - `/candidate-response/` — verified email participation instructions
 - `/legal/` — election compliance, candidate consent, privacy, corrections, and terms
 

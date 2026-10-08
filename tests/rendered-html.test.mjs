@@ -307,10 +307,69 @@ test("presents the October 6 all-candidates meeting recording", async () => {
   assert.match(guide, /title="Anmore Village All Candidates Meeting 2026 recording"/);
   assert.match(guide, /https:\/\/www\.youtube\.com\/watch\?v=ZF5eDgnSUy8/);
   assert.match(guide, /Watch on YouTube ↗/);
+  assert.match(guide, /Read questions and answers/);
+  assert.match(guide, /\/all-candidates-meeting\//);
   assert.doesNotMatch(guide, /livestream player will be added|Doors open|Everyone is welcome/);
   assert.match(css, /\.event-video/);
   assert.match(css, /aspect-ratio:\s*16\s*\/\s*9/);
   assert.match(htaccess, /frame-src https:\/\/www\.facebook\.com https:\/\/www\.youtube\.com/);
+});
+
+test("publishes all 13 meeting questions as a separate verbatim transcript", async () => {
+  const [rawData, page, route, guide, css, vite, hostingerHtml, sitemap, sources] = await Promise.all([
+    readFile(new URL("app/all-candidates-meeting-data.json", root), "utf8"),
+    readFile(new URL("app/all-candidates-meeting/transcript-page.tsx", root), "utf8"),
+    readFile(new URL("app/all-candidates-meeting/page.tsx", root), "utf8"),
+    readFile(new URL("app/voter-guide.tsx", root), "utf8"),
+    readFile(new URL("app/globals.css", root), "utf8"),
+    readFile(new URL("hostinger/vite.config.ts", root), "utf8"),
+    readFile(new URL("hostinger/all-candidates-meeting/index.html", root), "utf8"),
+    readFile(new URL("public/sitemap.xml", root), "utf8"),
+    readFile(new URL("SOURCES.md", root), "utf8"),
+  ]);
+  const data = JSON.parse(rawData);
+  assert.deepEqual(data.questions.map((question) => question.id), Array.from({ length: 13 }, (_, index) => `Q${String(index + 1).padStart(2, "0")}`));
+  assert.equal(new Set(data.questions.map((question) => question.id)).size, 13);
+  for (const question of data.questions) {
+    assert.ok(question.topic);
+    assert.ok(question.questionTurns.length);
+    assert.ok(question.questionTurns.every((turn) => turn.text && turn.speaker));
+    assert.ok(question.responses.length);
+    assert.ok(question.responses.every((response) => response.speaker && Array.isArray(response.turns)));
+  }
+  assert.equal(data.questions.find((question) => question.id === "Q01").responses.length, 9);
+  assert.equal(data.questions.find((question) => question.id === "Q04").responses.filter((response) => response.speaker === "Paul Weverink").length, 3);
+  assert.deepEqual(data.questions.find((question) => question.id === "Q05").didNotAnswer, ["Georgia Lyons"]);
+  assert.equal(data.questions.find((question) => question.id === "Q07").responses.filter((response) => response.speaker === "Wade Parrish").length, 2);
+  assert.ok(data.questions.find((question) => question.id === "Q08").responses.some((response) => response.turns.length > 1));
+  assert.doesNotMatch(rawData, /120 Lansing Crescent|1724 East Road/);
+  assert.match(rawData, /\[street number omitted\] Lansing Crescent/);
+  assert.match(rawData, /\[street number omitted\] East Road/);
+  const q02 = data.questions.find((question) => question.id === "Q02");
+  const q02TimelineStarts = [
+    ...q02.responses.map((response) => response.range?.start).filter(Boolean),
+    ...q02.relatedTurns.map((turn) => turn.range?.start).filter(Boolean),
+  ].sort();
+  assert.equal(q02TimelineStarts.at(-1), "00:41:50.000");
+  const q06 = data.questions.find((question) => question.id === "Q06");
+  const q06Harriette = q06.responses.filter((response) => response.speaker === "Harriette Chang");
+  assert.equal(q06Harriette.length, 2);
+  assert.equal(q06Harriette[0].range.end, "01:01:00.000");
+  assert.ok(q06.relatedTurns.every((turn) => turn.range.start === "01:01:00.000" && turn.range.end === "01:01:25.000"));
+  assert.equal(q06Harriette[1].range.start, "01:01:25.000");
+  assert.match(page, /\.sort\(\(left, right\) => left\.start\.localeCompare\(right\.start\)\)/);
+  assert.match(page, /showTurnSpeakers = response\.turns\.length > 1/);
+  assert.doesNotMatch(css, /:only-child/);
+  assert.match(page, /Verbatim, source-linked/);
+  assert.match(page, /does not summarize, score, endorse, or correct/);
+  assert.doesNotMatch(page, /Candidate supplied · Identity verified/);
+  assert.match(guide, /Read questions and answers/);
+  assert.match(route, /canonical: "https:\/\/anmore\.me\/all-candidates-meeting\/"/);
+  assert.match(css, /\.meeting-question/);
+  assert.match(vite, /meeting: resolve\(__dirname, "all-candidates-meeting\/index\.html"\)/);
+  assert.match(hostingerHtml, /canonical" href="https:\/\/anmore\.me\/all-candidates-meeting\/"/);
+  assert.match(sitemap, /https:\/\/anmore\.me\/all-candidates-meeting\//);
+  assert.match(sources, /machine-assisted transcription reviewed against the recording/);
 });
 
 test("ships accessible navigation, discovery metadata, and hardened hosting headers", async () => {

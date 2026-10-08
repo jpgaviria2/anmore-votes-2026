@@ -13,6 +13,7 @@ export default defineConfig({
       input: {
         home: resolve(__dirname, "index.html"),
         candidate: resolve(__dirname, "candidate-response/index.html"),
+        meeting: resolve(__dirname, "all-candidates-meeting/index.html"),
         legal: resolve(__dirname, "legal/index.html"),
         paul: resolve(__dirname, "Paul/index.html"),
         carl: resolve(__dirname, "Carl/index.html"),

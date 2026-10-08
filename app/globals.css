@@ -159,6 +159,7 @@ h3 { letter-spacing: -.025em; }
 .event-flyer { display: block; width: 100%; height: auto; max-height: 680px; object-fit: contain; }
 .event-video { width: 100%; aspect-ratio: 16 / 9; background: var(--forest-deep); }
 .event-video iframe { display: block; width: 100%; height: 100%; border: 0; }
+.event-actions { display: flex; flex-wrap: wrap; gap: 12px; }
 .principles { border-top: 1px solid var(--line); padding: 84px 0 110px; display: grid; grid-template-columns: .8fr 1.2fr; gap: 80px; }
 .principle-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 .principle-grid article { border-left: 1px solid var(--line); padding-left: 20px; }
@@ -334,12 +335,50 @@ footer { background: var(--forest-deep); color: white; padding: 40px 0; }
 .legal-sources { padding-left: 20px; }
 .legal-sources a { color: var(--forest); font-weight: 700; }
 
+/* All Candidates Meeting transcript */
+.transcript-page { min-height: 100vh; }
+.transcript-hero { padding-block: 76px 96px; }
+.transcript-hero h1 { max-width: 980px; }
+.transcript-hero h1 em { color: var(--moss); font-style: normal; font-weight: 540; }
+.transcript-lede { max-width: 780px; color: #3e5148; font-size: 20px; }
+.transcript-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.transcript-method { display: grid; grid-template-columns: .8fr 1.2fr; gap: 80px; padding-block: 76px; border-top: 1px solid var(--line); }
+.transcript-method > div:last-child { color: var(--muted); font-size: 16px; }
+.transcript-method a { color: var(--forest); font-weight: 700; }
+.transcript-questions { padding-block: 100px; }
+.transcript-question-list { display: grid; gap: 28px; }
+.meeting-question { scroll-margin-top: 20px; background: var(--white); border-top: 6px solid var(--forest); box-shadow: 0 18px 55px rgba(24,44,34,.08); }
+.meeting-question-heading { display: grid; grid-template-columns: 62px minmax(0, 1fr) auto; gap: 20px; align-items: start; padding: 28px 32px; border-bottom: 1px solid var(--line); }
+.meeting-question-heading > span { color: var(--gold); font-family: var(--font-geist-mono), monospace; font-size: 18px; font-weight: 850; }
+.meeting-question-heading > a, .transcript-speaker-row a, .candidate-response-heading a { color: var(--forest); font-size: 12px; font-weight: 750; }
+.meeting-question-topic { margin-bottom: 5px; font-size: 22px; font-weight: 760; line-height: 1.3; }
+.meeting-question-meta { margin: 0; color: var(--muted); font-size: 13px; }
+.meeting-question-body { padding: 32px; }
+.meeting-question-body > section > h3 { margin-bottom: 18px; color: var(--forest); font-size: 24px; }
+.transcript-turn { margin-bottom: 16px; padding-left: 18px; border-left: 3px solid var(--sage); }
+.transcript-turn p { margin: 7px 0 0; white-space: pre-wrap; }
+.transcript-moderator { border-left-color: var(--gold); }
+.transcript-questioner { border-left-color: var(--moss); }
+.transcript-speaker-row, .candidate-response-heading { display: flex; justify-content: space-between; gap: 16px; align-items: baseline; }
+.transcript-speaker-row strong { font-size: 14px; }
+.related-turns { margin-top: 28px; padding: 22px; background: #edf3ec; }
+.related-turns h4 { margin: 0 0 16px; }
+.meeting-responses { margin-top: 42px; }
+.candidate-response { padding: 28px 0 12px; border-top: 1px solid var(--line); }
+.candidate-response-heading h4 { margin: 0 0 18px; font-size: 20px; }
+.candidate-response .transcript-turn { padding-left: 0; border-left: 0; }
+.related-turn-timeline { margin: 24px 0; }
+.transcript-note, .transcript-unavailable, .did-not-answer { color: var(--muted); font-size: 13px; }
+.transcript-uncertainties { margin-top: 26px; padding: 18px 20px; background: #fff4d8; border-left: 4px solid var(--gold); }
+.transcript-uncertainties summary { cursor: pointer; font-weight: 780; }
+.transcript-uncertainties li { margin: 10px 0; color: #594a27; font-size: 13px; }
+
 @media (max-width: 900px) {
   .site-header { height: auto; min-height: 84px; padding-block: 14px; flex-wrap: wrap; gap: 12px 20px; }
   nav { width: 100%; gap: 20px; overflow-x: auto; padding: 12px 0 3px; border-top: 1px solid var(--line); white-space: nowrap; scrollbar-width: thin; }
   .hero { grid-template-columns: 1fr; gap: 45px; padding-block: 60px; }
   .ballot-card { max-width: 560px; transform: none; }
-  .event-feature, .principles, .ask-section, .about, .voting, .section-heading, .comparison-intro, .profile-hero, .profile-background { grid-template-columns: 1fr; gap: 36px; }
+  .event-feature, .principles, .ask-section, .about, .voting, .section-heading, .comparison-intro, .profile-hero, .profile-background, .transcript-method { grid-template-columns: 1fr; gap: 36px; }
   .event-flyer, .event-video { max-width: 560px; justify-self: center; }
   .profile-background .eyebrow, .profile-background h2, .profile-background .profile-copy { grid-column: 1; grid-row: auto; }
   .profile-portrait-wrap { max-width: 380px; }
@@ -374,6 +413,11 @@ footer { background: var(--forest-deep); color: white; padding: 40px 0; }
   .legal-layout { padding-bottom: 70px; }
   .legal-index { grid-template-columns: 1fr; }
   .legal-content section { padding: 24px 20px; }
+  .transcript-hero { padding-block: 52px 68px; }
+  .transcript-questions { padding-block: 72px; }
+  .meeting-question-heading { grid-template-columns: 48px minmax(0, 1fr); padding: 22px 20px; }
+  .meeting-question-heading > a { grid-column: 2; }
+  .meeting-question-body { padding: 24px 20px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

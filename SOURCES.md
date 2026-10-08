@@ -1,6 +1,6 @@
 # Sources
 
-Last verified: September 20, 2026.
+Last verified: October 8, 2026.
 
 ## Election roster and voting information
 
@@ -16,6 +16,11 @@ Last verified: September 20, 2026.
 
 - Official Community Plan update: https://anmore.com/building-development/community-planning/official-community-plan/official-community-plan-update/
 - Council Strategic Plan: https://anmore.com/village-hall/mayor-council/council-strategic-plan/
+
+## All Candidates Meeting transcript
+
+- Anmore Times, Anmore Village All Candidates Meeting recording, October 6, 2026: https://www.youtube.com/watch?v=ZF5eDgnSUy8
+- Transcript method: machine-assisted transcription reviewed against the recording, with punctuation and confidently established proper nouns normalized. Unclear or overlapping audio remains explicitly marked and is accompanied by transcription notes.
 
 ## Election advertising and privacy rules
 

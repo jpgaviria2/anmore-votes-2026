@@ -67,7 +67,10 @@ export function VoterGuide() {
           <h2 id="event-title">All Candidates Meeting</h2>
           <p className="event-date">Recorded October 6, 2026</p>
           <p>Watch the Anmore Village All Candidates Meeting recording from Anmore Times.</p>
-          <a className="button secondary" href="https://www.youtube.com/watch?v=ZF5eDgnSUy8" target="_blank" rel="noreferrer">Watch on YouTube ↗</a>
+          <div className="event-actions">
+            <a className="button primary" href="/all-candidates-meeting/">Read questions and answers</a>
+            <a className="button secondary" href="https://www.youtube.com/watch?v=ZF5eDgnSUy8" target="_blank" rel="noreferrer">Watch on YouTube ↗</a>
+          </div>
         </div>
         <div className="event-video">
           <iframe
