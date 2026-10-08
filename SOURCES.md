@@ -20,6 +20,7 @@ Last verified: October 8, 2026.
 ## All Candidates Meeting transcript
 
 - Anmore Times, Anmore Village All Candidates Meeting recording, October 6, 2026: https://www.youtube.com/watch?v=ZF5eDgnSUy8
+- Transcript scope: formal opening statements, all 13 audience-question exchanges, and the eight recorded council-candidate closing remarks.
 - Transcript method: machine-assisted transcription reviewed against the recording, with punctuation and confidently established proper nouns normalized. Unclear or overlapping audio remains explicitly marked and is accompanied by transcription notes.
 
 ## Election advertising and privacy rules

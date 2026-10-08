@@ -345,7 +345,16 @@ footer { background: var(--forest-deep); color: white; padding: 40px 0; }
 .transcript-method { display: grid; grid-template-columns: .8fr 1.2fr; gap: 80px; padding-block: 76px; border-top: 1px solid var(--line); }
 .transcript-method > div:last-child { color: var(--muted); font-size: 16px; }
 .transcript-method a { color: var(--forest); font-weight: 700; }
-.transcript-questions { padding-block: 100px; }
+.transcript-questions, .meeting-statements-section { padding-block: 100px; }
+.meeting-statement-list { display: grid; gap: 24px; }
+.meeting-statement { scroll-margin-top: 20px; padding: 30px 32px; background: var(--white); border-top: 5px solid var(--moss); box-shadow: 0 14px 42px rgba(24,44,34,.07); }
+.meeting-statement-heading { display: flex; justify-content: space-between; gap: 20px; align-items: start; }
+.meeting-statement-heading h3 { margin: 3px 0 0; font-size: 25px; }
+.meeting-statement-heading > a { flex: 0 0 auto; color: var(--forest); font-size: 12px; font-weight: 750; }
+.meeting-statement-role { margin: 0; color: var(--gold); font-family: var(--font-geist-mono), monospace; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.meeting-statement-delivery { margin: 10px 0 20px; color: var(--muted); font-size: 13px; }
+.meeting-statement-text { margin: 0; line-height: 1.75; white-space: pre-wrap; }
+.statement-uncertainties { margin-top: 22px; }
 .transcript-question-list { display: grid; gap: 28px; }
 .meeting-question { scroll-margin-top: 20px; background: var(--white); border-top: 6px solid var(--forest); box-shadow: 0 18px 55px rgba(24,44,34,.08); }
 .meeting-question-heading { display: grid; grid-template-columns: 62px minmax(0, 1fr) auto; gap: 20px; align-items: start; padding: 28px 32px; border-bottom: 1px solid var(--line); }
@@ -414,7 +423,9 @@ footer { background: var(--forest-deep); color: white; padding: 40px 0; }
   .legal-index { grid-template-columns: 1fr; }
   .legal-content section { padding: 24px 20px; }
   .transcript-hero { padding-block: 52px 68px; }
-  .transcript-questions { padding-block: 72px; }
+  .transcript-questions, .meeting-statements-section { padding-block: 72px; }
+  .meeting-statement { padding: 24px 20px; }
+  .meeting-statement-heading { flex-direction: column; gap: 8px; }
   .meeting-question-heading { grid-template-columns: 48px minmax(0, 1fr); padding: 22px 20px; }
   .meeting-question-heading > a { grid-column: 2; }
   .meeting-question-body { padding: 24px 20px; }

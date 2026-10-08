@@ -5,6 +5,7 @@ import transcript from "../all-candidates-meeting-data.json";
 type MeetingQuestion = (typeof transcript.questions)[number];
 type TranscriptTurn = MeetingQuestion["questionTurns"][number];
 type MeetingResponse = MeetingQuestion["responses"][number];
+type MeetingStatement = (typeof transcript.openingStatements)[number] | (typeof transcript.closingRemarks)[number];
 
 function secondsFromTimestamp(timestamp?: string) {
   if (!timestamp) return 0;
@@ -53,6 +54,28 @@ function Response({ question, response, responseIndex }: { question: MeetingQues
       )) : <p className="transcript-unavailable">No recoverable verbatim response.</p>}
       {response.note ? <p className="transcript-note">Verification note: {response.note}</p> : null}
     </div>
+  );
+}
+
+function StatementCard({ statement }: { statement: MeetingStatement }) {
+  return (
+    <article className="meeting-statement">
+      <div className="meeting-statement-heading">
+        <div>
+          <p className="meeting-statement-role">{statement.role}</p>
+          <h3>{statement.speaker}</h3>
+        </div>
+        <a href={recordingUrl(statement.range.start)} target="_blank" rel="noreferrer">{statement.range.start} ↗</a>
+      </div>
+      <p className="meeting-statement-delivery">{statement.delivery}</p>
+      <p className="meeting-statement-text">{statement.text}</p>
+      {statement.uncertainties.length ? (
+        <details className="transcript-uncertainties statement-uncertainties">
+          <summary>Transcription notes ({statement.uncertainties.length})</summary>
+          <ul>{statement.uncertainties.map((item, index) => <li key={`${statement.speaker}-note-${index}`}>{item.note}</li>)}</ul>
+        </details>
+      ) : null}
+    </article>
   );
 }
 
@@ -141,19 +164,21 @@ export function AllCandidatesMeetingTranscript() {
           </a>
           <nav aria-label="Transcript navigation">
             <a href="/">Voter guide</a>
+            <a href="#opening-statements">Opening statements</a>
             <a href="#questions">Questions</a>
+            <a href="#closing-remarks">Closing remarks</a>
             <a href={transcript.event.recordingUrl} target="_blank" rel="noreferrer">Recording ↗</a>
           </nav>
         </header>
 
         <section className="transcript-hero shell">
           <p className="eyebrow">Community recording transcript</p>
-          <h1>All Candidates Meeting<br /><em>questions and answers</em></h1>
+          <h1>All Candidates Meeting<br /><em>statements, questions, and answers</em></h1>
           <p className="transcript-lede">
-            Thirteen audience questions and the candidates’ answers from the October 6, 2026 Anmore Village All Candidates Meeting.
+            Opening statements, thirteen audience questions and answers, and closing remarks from the October 6, 2026 Anmore Village All Candidates Meeting.
           </p>
           <div className="transcript-actions">
-            <a className="button primary" href="#questions">Read the transcript</a>
+            <a className="button primary" href="#opening-statements">Read the transcript</a>
             <a className="button secondary" href={transcript.event.recordingUrl} target="_blank" rel="noreferrer">Watch the source recording ↗</a>
           </div>
         </section>
@@ -170,13 +195,33 @@ export function AllCandidatesMeetingTranscript() {
           </div>
         </section>
 
+        <section className="meeting-statements-section shell" id="opening-statements" aria-labelledby="opening-statements-title">
+          <div className="section-heading">
+            <div><p className="eyebrow">Formal remarks</p><h2 id="opening-statements-title">Opening statements</h2></div>
+            <p>Council candidates were allotted two minutes. Kim Trowbridge’s written statement was read by the moderator; the acclaimed mayor-elect and school trustee also addressed the meeting.</p>
+          </div>
+          <div className="meeting-statement-list">
+            {transcript.openingStatements.map((statement) => <StatementCard statement={statement} key={`opening-${statement.speaker}`} />)}
+          </div>
+        </section>
+
         <section className="transcript-questions shell" id="questions" aria-labelledby="questions-title">
           <div className="section-heading">
-            <div><p className="eyebrow">13 audience questions</p><h2 id="questions-title">Meeting transcript</h2></div>
+            <div><p className="eyebrow">13 audience questions</p><h2 id="questions-title">Questions and answers</h2></div>
             <p>Responses and follow-ups appear in timestamp order. This page does not summarize, score, endorse, or correct the candidates’ statements.</p>
           </div>
           <div className="transcript-question-list">
             {transcript.questions.map((question) => <QuestionTranscript question={question} key={question.id} />)}
+          </div>
+        </section>
+
+        <section className="meeting-statements-section shell" id="closing-remarks" aria-labelledby="closing-remarks-title">
+          <div className="section-heading">
+            <div><p className="eyebrow">Final minute</p><h2 id="closing-remarks-title">Closing remarks</h2></div>
+            <p>One-minute closing remarks from the eight council candidates who spoke at the end of the recorded meeting.</p>
+          </div>
+          <div className="meeting-statement-list">
+            {transcript.closingRemarks.map((statement) => <StatementCard statement={statement} key={`closing-${statement.speaker}`} />)}
           </div>
         </section>
 

@@ -315,7 +315,7 @@ test("presents the October 6 all-candidates meeting recording", async () => {
   assert.match(htaccess, /frame-src https:\/\/www\.facebook\.com https:\/\/www\.youtube\.com/);
 });
 
-test("publishes all 13 meeting questions as a separate verbatim transcript", async () => {
+test("publishes the complete meeting transcript with statements and all 13 questions", async () => {
   const [rawData, page, route, guide, css, vite, hostingerHtml, sitemap, sources] = await Promise.all([
     readFile(new URL("app/all-candidates-meeting-data.json", root), "utf8"),
     readFile(new URL("app/all-candidates-meeting/transcript-page.tsx", root), "utf8"),
@@ -328,6 +328,26 @@ test("publishes all 13 meeting questions as a separate verbatim transcript", asy
     readFile(new URL("SOURCES.md", root), "utf8"),
   ]);
   const data = JSON.parse(rawData);
+  assert.deepEqual(data.openingStatements.map((statement) => statement.speaker), [
+    "Kim Trowbridge", "Wade Parrish", "Paul Weverink", "Will Crocker", "Carl Schmidt", "Rod Rempel",
+    "Harriette Chang", "Neil Lyons", "Georgia Lyons", "Doug Richardson", "Kerri Palmer Isaak",
+  ]);
+  assert.deepEqual(data.closingRemarks.map((statement) => statement.speaker), [
+    "Harriette Chang", "Neil Lyons", "Georgia Lyons", "Wade Parrish",
+    "Paul Weverink", "Will Crocker", "Carl Schmidt", "Rod Rempel",
+  ]);
+  assert.ok([...data.openingStatements, ...data.closingRemarks].every((statement) => statement.text && statement.range.start && statement.range.end));
+  const statementMarkers = [...data.openingStatements, ...data.closingRemarks].reduce((count, statement) => count + statement.text.split("[unclear]").length - 1, 0);
+  const statementNotes = [...data.openingStatements, ...data.closingRemarks].reduce((count, statement) => count + statement.uncertainties.length, 0);
+  assert.equal(statementMarkers, 5);
+  assert.equal(statementMarkers, statementNotes);
+  assert.match(data.openingStatements[0].delivery, /written statement read aloud by moderator/);
+  for (const statements of [data.openingStatements, data.closingRemarks]) {
+    const starts = statements.map((statement) => statement.range.start);
+    assert.deepEqual(starts, [...starts].sort());
+    assert.ok(statements.every((statement) => statement.range.start < statement.range.end));
+  }
+  assert.match(page, /recordingUrl\(statement\.range\.start\)/);
   assert.deepEqual(data.questions.map((question) => question.id), Array.from({ length: 13 }, (_, index) => `Q${String(index + 1).padStart(2, "0")}`));
   assert.equal(new Set(data.questions.map((question) => question.id)).size, 13);
   for (const question of data.questions) {
@@ -361,6 +381,12 @@ test("publishes all 13 meeting questions as a separate verbatim transcript", asy
   assert.match(page, /showTurnSpeakers = response\.turns\.length > 1/);
   assert.doesNotMatch(css, /:only-child/);
   assert.match(page, /Verbatim, source-linked/);
+  assert.match(page, /Opening statements/);
+  assert.match(page, /Closing remarks/);
+  assert.match(page, /openingStatements\.map/);
+  assert.match(page, /closingRemarks\.map/);
+  assert.match(page, /#opening-statements/);
+  assert.match(page, /#closing-remarks/);
   assert.match(page, /does not summarize, score, endorse, or correct/);
   assert.doesNotMatch(page, /Candidate supplied · Identity verified/);
   assert.match(guide, /Read questions and answers/);
