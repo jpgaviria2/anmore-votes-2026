@@ -31,6 +31,7 @@ export function VoterGuide() {
         <nav aria-label="Main navigation">
           <a href="#candidates">Candidates</a>
           <a href="#questions">Questions</a>
+          <a href="/all-candidates-meeting/">Debate</a>
           <a href="#voting">How to vote</a>
           <a href="#about">About</a>
         </nav>

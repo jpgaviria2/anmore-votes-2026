@@ -1,11 +1,15 @@
+"use client";
+
 /* Shared by the Next/Vinext app and the static Hostinger build, so plain anchors are required. */
 /* eslint-disable @next/next/no-html-link-for-pages */
+import { useState } from "react";
 import transcript from "../all-candidates-meeting-data.json";
 
 type MeetingQuestion = (typeof transcript.questions)[number];
 type TranscriptTurn = MeetingQuestion["questionTurns"][number];
 type MeetingResponse = MeetingQuestion["responses"][number];
 type MeetingStatement = (typeof transcript.openingStatements)[number] | (typeof transcript.closingRemarks)[number];
+type CategoryKey = "opening" | "questions" | "closing";
 
 function secondsFromTimestamp(timestamp?: string) {
   if (!timestamp) return 0;
@@ -19,6 +23,10 @@ function recordingUrl(timestamp?: string) {
   return seconds
     ? `${transcript.event.recordingUrl}&t=${seconds}s`
     : transcript.event.recordingUrl;
+}
+
+function questionLabel(question: MeetingQuestion) {
+  return `Question ${Number(question.id.slice(1))}`;
 }
 
 function Turn({ turn, showSpeaker = true }: { turn: TranscriptTurn; showSpeaker?: boolean }) {
@@ -79,7 +87,20 @@ function StatementCard({ statement }: { statement: MeetingStatement }) {
   );
 }
 
-function QuestionTranscript({ question }: { question: MeetingQuestion }) {
+function CategorySummary({ eyebrow, title, count }: { eyebrow: string; title: string; count: string }) {
+  return (
+    <summary className="transcript-category-summary">
+      <div>
+        <p className="eyebrow">{eyebrow}</p>
+        <h2>{title}</h2>
+      </div>
+      <span className="transcript-category-count">{count}</span>
+      <span className="transcript-category-toggle" aria-hidden="true">+</span>
+    </summary>
+  );
+}
+
+function QuestionTranscript({ question, isOpen, onToggle }: { question: MeetingQuestion; isOpen: boolean; onToggle: (open: boolean) => void }) {
   const untimedRelated = question.relatedTurns.filter((turn) => !turn.range?.start);
   const timeline = [
     ...question.responses.map((response, responseIndex) => ({
@@ -97,20 +118,21 @@ function QuestionTranscript({ question }: { question: MeetingQuestion }) {
   ].sort((left, right) => left.start.localeCompare(right.start));
 
   return (
-    <article className="meeting-question" id={question.id.toLowerCase()}>
-      <div className="meeting-question-heading">
-        <span>{question.id}</span>
+    <details className="meeting-question" id={question.id.toLowerCase()} open={isOpen} onToggle={(event) => onToggle(event.currentTarget.open)}>
+      <summary className="meeting-question-heading">
+        <span>{questionLabel(question)}</span>
         <div>
           <p className="meeting-question-topic">{question.topic}</p>
-          <p className="meeting-question-meta">Asked by {question.questioner}</p>
+          <p className="meeting-question-meta">Audience question</p>
         </div>
-        {question.range?.start ? (
-          <a href={recordingUrl(question.range.start)} target="_blank" rel="noreferrer">Watch from {question.range.start} ↗</a>
-        ) : null}
-      </div>
+        <span className="question-toggle" aria-hidden="true">+</span>
+      </summary>
 
       <div className="meeting-question-body">
-        <section aria-label={`${question.id} question`}>
+        {question.range?.start ? (
+          <p className="question-watch-link"><a href={recordingUrl(question.range.start)} target="_blank" rel="noreferrer">Watch from {question.range.start} ↗</a></p>
+        ) : null}
+        <section aria-label={questionLabel(question)}>
           <h3>Question</h3>
           {question.questionTurns.map((turn, index) => <Turn turn={turn} key={`${question.id}-question-${index}`} />)}
           {untimedRelated.length ? (
@@ -121,7 +143,7 @@ function QuestionTranscript({ question }: { question: MeetingQuestion }) {
           ) : null}
         </section>
 
-        <section className="meeting-responses" aria-label={`${question.id} responses and follow-ups`}>
+        <section className="meeting-responses" aria-label={`${questionLabel(question)} responses and follow-ups`}>
           <h3>Responses and follow-ups</h3>
           {timeline.map((entry) => entry.kind === "response" ? (
             <Response
@@ -148,11 +170,25 @@ function QuestionTranscript({ question }: { question: MeetingQuestion }) {
           </details>
         ) : null}
       </div>
-    </article>
+    </details>
   );
 }
 
 export function AllCandidatesMeetingTranscript() {
+  const [openCategories, setOpenCategories] = useState<Record<CategoryKey, boolean>>({ opening: false, questions: true, closing: false });
+  const [selectedQuestionId, setSelectedQuestionId] = useState<string | null>("Q01");
+
+  const setCategoryOpen = (category: CategoryKey, open: boolean) => {
+    setOpenCategories((current) => current[category] === open ? current : { ...current, [category]: open });
+  };
+
+  const selectQuestion = (questionId: string) => {
+    setSelectedQuestionId(questionId);
+    window.requestAnimationFrame(() => {
+      document.getElementById(questionId.toLowerCase())?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  };
+
   return (
     <>
       <a className="skip-link" href="#main-content">Skip to main content</a>
@@ -178,7 +214,7 @@ export function AllCandidatesMeetingTranscript() {
             Opening statements, thirteen audience questions and answers, and closing remarks from the October 6, 2026 Anmore Village All Candidates Meeting.
           </p>
           <div className="transcript-actions">
-            <a className="button primary" href="#opening-statements">Read the transcript</a>
+            <a className="button primary" href="#questions">Choose a question</a>
             <a className="button secondary" href={transcript.event.recordingUrl} target="_blank" rel="noreferrer">Watch the source recording ↗</a>
           </div>
         </section>
@@ -190,40 +226,62 @@ export function AllCandidatesMeetingTranscript() {
           </div>
           <div>
             <p>{transcript.transcription.method}</p>
-            <p>Questioners identified themselves in the public recording. Street numbers have been replaced with an explicit omission marker; spoken street or neighbourhood names remain for context.</p>
+            <p>Questioner names and identifying address or location details have been omitted from this publication copy for privacy. The archival transcript retains the spoken source.</p>
             <p><strong>Source:</strong> <a href={transcript.event.recordingUrl} target="_blank" rel="noreferrer">{transcript.event.sourceLabel} ↗</a></p>
           </div>
         </section>
 
-        <section className="meeting-statements-section shell" id="opening-statements" aria-labelledby="opening-statements-title">
-          <div className="section-heading">
-            <div><p className="eyebrow">Formal remarks</p><h2 id="opening-statements-title">Opening statements</h2></div>
-            <p>Council candidates were allotted two minutes. Kim Trowbridge’s written statement was read by the moderator; the acclaimed mayor-elect and school trustee also addressed the meeting.</p>
+        <details className="transcript-category shell" id="opening-statements" open={openCategories.opening} onToggle={(event) => setCategoryOpen("opening", event.currentTarget.open)}>
+          <CategorySummary eyebrow="Formal remarks" title="Opening statements" count={`${transcript.openingStatements.length} statements`} />
+          <div className="transcript-category-body">
+            <p className="transcript-category-intro">Council candidates were allotted two minutes. Kim Trowbridge’s written statement was read by the moderator; the acclaimed mayor-elect and school trustee also addressed the meeting.</p>
+            <div className="meeting-statement-list">
+              {transcript.openingStatements.map((statement) => <StatementCard statement={statement} key={`opening-${statement.speaker}`} />)}
+            </div>
           </div>
-          <div className="meeting-statement-list">
-            {transcript.openingStatements.map((statement) => <StatementCard statement={statement} key={`opening-${statement.speaker}`} />)}
-          </div>
-        </section>
+        </details>
 
-        <section className="transcript-questions shell" id="questions" aria-labelledby="questions-title">
-          <div className="section-heading">
-            <div><p className="eyebrow">13 audience questions</p><h2 id="questions-title">Questions and answers</h2></div>
-            <p>Responses and follow-ups appear in timestamp order. This page does not summarize, score, endorse, or correct the candidates’ statements.</p>
+        <details className="transcript-category shell" id="questions" open={openCategories.questions} onToggle={(event) => setCategoryOpen("questions", event.currentTarget.open)}>
+          <CategorySummary eyebrow="Audience discussion" title="Questions and answers" count={`${transcript.questions.length} questions`} />
+          <div className="transcript-category-body">
+            <p className="transcript-category-intro">Pick a question below. Responses and follow-ups appear in timestamp order. This page does not summarize, score, endorse, or correct the candidates’ statements.</p>
+            <nav className="question-picker" aria-label="Choose a meeting question">
+              {transcript.questions.map((question) => (
+                <button
+                  type="button"
+                  className="question-picker-button"
+                  aria-controls={question.id.toLowerCase()}
+                  aria-pressed={selectedQuestionId === question.id}
+                  onClick={() => selectQuestion(question.id)}
+                  key={`picker-${question.id}`}
+                >
+                  <strong>{questionLabel(question)}</strong>
+                  <span>{question.topic}</span>
+                </button>
+              ))}
+            </nav>
+            <div className="transcript-question-list">
+              {transcript.questions.map((question) => (
+                <QuestionTranscript
+                  question={question}
+                  isOpen={selectedQuestionId === question.id}
+                  onToggle={(open) => setSelectedQuestionId(open ? question.id : selectedQuestionId === question.id ? null : selectedQuestionId)}
+                  key={question.id}
+                />
+              ))}
+            </div>
           </div>
-          <div className="transcript-question-list">
-            {transcript.questions.map((question) => <QuestionTranscript question={question} key={question.id} />)}
-          </div>
-        </section>
+        </details>
 
-        <section className="meeting-statements-section shell" id="closing-remarks" aria-labelledby="closing-remarks-title">
-          <div className="section-heading">
-            <div><p className="eyebrow">Final minute</p><h2 id="closing-remarks-title">Closing remarks</h2></div>
-            <p>One-minute closing remarks from the eight council candidates who spoke at the end of the recorded meeting.</p>
+        <details className="transcript-category shell" id="closing-remarks" open={openCategories.closing} onToggle={(event) => setCategoryOpen("closing", event.currentTarget.open)}>
+          <CategorySummary eyebrow="Final minute" title="Closing remarks" count={`${transcript.closingRemarks.length} remarks`} />
+          <div className="transcript-category-body">
+            <p className="transcript-category-intro">One-minute closing remarks from the eight council candidates who spoke at the end of the recorded meeting.</p>
+            <div className="meeting-statement-list">
+              {transcript.closingRemarks.map((statement) => <StatementCard statement={statement} key={`closing-${statement.speaker}`} />)}
+            </div>
           </div>
-          <div className="meeting-statement-list">
-            {transcript.closingRemarks.map((statement) => <StatementCard statement={statement} key={`closing-${statement.speaker}`} />)}
-          </div>
-        </section>
+        </details>
 
         <footer>
           <div className="shell footer-inner">

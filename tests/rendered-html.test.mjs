@@ -308,6 +308,7 @@ test("presents the October 6 all-candidates meeting recording", async () => {
   assert.match(guide, /https:\/\/www\.youtube\.com\/watch\?v=ZF5eDgnSUy8/);
   assert.match(guide, /Watch on YouTube ↗/);
   assert.match(guide, /Read questions and answers/);
+  assert.match(guide, /<a href="\/all-candidates-meeting\/">Debate<\/a>/);
   assert.match(guide, /\/all-candidates-meeting\//);
   assert.doesNotMatch(guide, /livestream player will be added|Doors open|Everyone is welcome/);
   assert.match(css, /\.event-video/);
@@ -362,9 +363,45 @@ test("publishes the complete meeting transcript with statements and all 13 quest
   assert.deepEqual(data.questions.find((question) => question.id === "Q05").didNotAnswer, ["Georgia Lyons"]);
   assert.equal(data.questions.find((question) => question.id === "Q07").responses.filter((response) => response.speaker === "Wade Parrish").length, 2);
   assert.ok(data.questions.find((question) => question.id === "Q08").responses.some((response) => response.turns.length > 1));
-  assert.doesNotMatch(rawData, /120 Lansing Crescent|1724 East Road/);
-  assert.match(rawData, /\[street number omitted\] Lansing Crescent/);
-  assert.match(rawData, /\[street number omitted\] East Road/);
+  assert.deepEqual(data.questions.map((question) => question.questioner), Array.from({ length: 13 }, (_, index) => `Question ${index + 1}`));
+  const questionerNames = [
+    "Ken Newick", "Nancy Maloney", "Micheline Mary", "Leslie Hannigan", "Ramey", "Lisa Johnston",
+    "Anne-Marie Field", "Lynn Skatcher", "Sunny Field-Cropper", "Bridget Crocker", "Susan Yuckel", "Tara Self", "Michael Tom",
+  ];
+  for (const name of questionerNames) assert.doesNotMatch(rawData, new RegExp(name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+  const questionerIdentityTokens = [
+    "Ken", "Newick", "Nancy", "Maloney", "Micheline", "Mary", "Leslie", "Hannigan", "Ramey", "Lisa", "Johnston",
+    "Anne-Marie", "Lynn", "Skatcher", "Field-Cropper", "Cropper", "Bridget", "Susan", "Sue", "Yuckel", "Tara", "Michael Tom",
+  ];
+  for (const token of questionerIdentityTokens) {
+    assert.doesNotMatch(rawData, new RegExp(`(?<![A-Za-z])${token.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}(?![A-Za-z])`, "i"));
+  }
+  const identifyingLocations = {
+    Q01: /Lansing Crescent|street number omitted/,
+    Q02: /Old Anmore|street number omitted/,
+    Q05: /Ravenswood/,
+    Q07: /Leggett Drive/,
+    Q08: /Ma Murray Lane/,
+    Q09: /Margetts Grove/,
+    Q11: /Elford Drive/,
+    Q12: /Countryside Village/,
+  };
+  for (const question of data.questions) {
+    const attributionCopy = JSON.stringify({
+      questioner: question.questioner,
+      questionTurns: question.questionTurns,
+      relatedTurns: question.relatedTurns,
+      uncertainties: question.uncertainties,
+    });
+    if (identifyingLocations[question.id]) assert.doesNotMatch(attributionCopy, identifyingLocations[question.id]);
+  }
+  assert.equal(rawData.match(/\[Questioner identification omitted\.\]/g)?.length, 13);
+  const allQuestionTurns = data.questions.flatMap((question) => [
+    ...question.questionTurns,
+    ...question.relatedTurns,
+    ...question.responses.flatMap((response) => response.turns),
+  ]);
+  assert.ok(allQuestionTurns.filter((turn) => turn.role === "questioner").every((turn) => turn.speaker === "Audience member"));
   const q02 = data.questions.find((question) => question.id === "Q02");
   const q02TimelineStarts = [
     ...q02.responses.map((response) => response.range?.start).filter(Boolean),
@@ -381,6 +418,17 @@ test("publishes the complete meeting transcript with statements and all 13 quest
   assert.match(page, /showTurnSpeakers = response\.turns\.length > 1/);
   assert.doesNotMatch(css, /:only-child/);
   assert.match(page, /Verbatim, source-linked/);
+  assert.match(page, /"use client"/);
+  assert.match(page, /useState<Record<CategoryKey, boolean>>/);
+  assert.match(page, /className="transcript-category shell"/);
+  assert.match(page, /className="question-picker" aria-label="Choose a meeting question"/);
+  assert.match(page, /aria-pressed=\{selectedQuestionId === question\.id\}/);
+  assert.match(page, /function questionLabel\(question: MeetingQuestion\)/);
+  assert.match(page, /Questioner names and identifying address or location details have been omitted/);
+  assert.doesNotMatch(page, /Asked by \{question\.questioner\}/);
+  assert.match(page, /className="meeting-question"/);
+  assert.match(page, /open=\{isOpen\}/);
+  assert.match(page, /Choose a question/);
   assert.match(page, /Opening statements/);
   assert.match(page, /Closing remarks/);
   assert.match(page, /openingStatements\.map/);
